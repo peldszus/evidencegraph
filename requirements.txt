@@ -1,0 +1,13 @@
+pytest
+pytest-cov
+numpy==1.10.2
+scikit-learn==0.15.2
+scipy==0.14.0
+pandas==0.17.1
+networkx==1.9
+bidict==0.1.5
+matplotlib==1.5.1
+lxml==3.6.0
+pydot==1.0.29
+spacy==1.6.0
+joblib==0.10.2

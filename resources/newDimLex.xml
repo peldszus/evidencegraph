@@ -1,0 +1,4697 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE dimlex SYSTEM "newDimLex.dtd">
+<!-- 29.06.2004 SH/MS -->
+<dimlex>
+  <eintrag id="1">
+    <orth type="cont">
+      <part type="single">aber</part>
+    </orth>
+    <syn><kat>konnadv</kat><konn><integr><konnadv><vorfeld>0</vorfeld><mittelfeld>1</mittelfeld><nacherst>1</nacherst><nachfeld>0</nachfeld><nullstelle>1</nullstelle><nachnachfeld>0</nachnachfeld><satzklammer>0</satzklammer></konnadv></integr></konn><abfolge><ante>0</ante><post>1</post><insert>0</insert></abfolge><sem><grfunktion><adversativ/></grfunktion><hbfunktion><adversativ/></hbfunktion><relation>contrast</relation><beispiel>Er ist gross, *aber* seine Frau ist klein.</beispiel><beispiel>Peter ist (zwar) klug, *aber* faul.</beispiel></sem><sem><grfunktion><adversativ/></grfunktion><hbfunktion><adversativ/></hbfunktion><relation>concession</relation><beispiel>Er ist gross, aber er kann nicht Basketball spielen.</beispiel><beispiel>Die Kollegin ist krank, *aber* sie arbeitet.</beispiel></sem>      
+      </syn>
+  </eintrag>
+  <eintrag id="2">
+    <orth type="cont">
+      <part type="single">allein</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <adversativ/>
+        </grfunktion>
+        <hbfunktion>
+          <adversativ/>
+        </hbfunktion>
+        <relation>contrast</relation>
+        <beispiel>Die Botschaft hoer ich wohl, mir fehlt *allein* der Glaube.</beispiel>
+        <beispiel>Die Botschaft hoer ich wohl, *allein* mir fehlt der Glaube.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="3">
+    <orth type="cont">
+      <part type="single">allenfalls</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>In der Regel handelt der Taeter rasch und kurz entschlossen. *Allenfalls* wendet er wenige Stunden fuer die Vorbereitung und Durchfuehrung seiner Tat auf.</beispiel>
+        <beispiel>Er wendet *allenfalls* wenige Stunden fuer die Vorbereitung und Durchfuehrung seiner Tat auf.</beispiel>
+        <beispiel>Wenige Stunden *allenfalls* wendet er fuer die Vorbereitung und Durchfuehrung seiner Tat auf.</beispiel>
+        <beispiel>Wenige Stunden wendet er fuer die Vorbereitung und Durchfuehrung seiner Tat auf, *allenfalls*.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="4">
+    <orth type="cont">
+      <part type="single">allerdings</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>?</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Es ist nicht direkt geheim, *allerdings* wuerde ich es nicht ueberall herumerzaehlen.</beispiel>
+        <beispiel>Ich wuerde es *allerdings* nicht ueberall herumerzaehlen.</beispiel>
+        <beispiel>ueberall *allerdings* wuerde ich es nicht herumerzaehlen.</beispiel>
+        <beispiel>*Allerdings*, ich wuerde es nicht ueberall herumerzaehlen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="5">
+    <orth type="cont">
+      <part type="single">als</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>during</interval>
+            <interval>equals</interval>
+            <interval>finishes</interval>
+            <interval>starts</interval>
+            <aktionsart scope="sc">transformative</aktionsart>
+            <aktionsart scope="sc">semelfactive</aktionsart>
+            <aspect scope="sc">imperfective</aspect>
+          </temporal>
+        </grfunktion>
+        <hbfunktion>
+          <temporal>
+            <gleichzeitigkeit/>
+            <nachzeitigkeit/>
+            <vorzeitigkeit/>
+          </temporal>
+        </hbfunktion>
+        <relation>circumstance</relation>
+        <beispiel>*Als* sie die Wohnung bereits verlassen hatte, kam der Anruf .</beispiel>
+        <beispiel>Der Anruf kam, *als* sie die Wohnung bereits verlassen hatte.</beispiel>
+        <beispiel>Der Frosch wollte, *als* er gegessen hatte, im Bett der Koenigstochter schlafen.</beispiel>
+      </sem>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Sie ist umso aengstlicher, *als* sie schon zweimal durch die Fahrpruefung gefallen ist.</beispiel>
+      </sem>
+      <sem>
+        <grfunktion>
+          <spezifizierend/>
+        </grfunktion>
+        <hbfunktion>
+          <modal>
+            <spezifizierung/>
+          </modal>
+        </hbfunktion>
+        <relation>elaboration</relation>
+        <beispiel>Ich habe ihn *als* einen hilfsbereiten Menschen erlebt.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="6">
+    <orth type="cont">
+      <part type="single">also</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Radio gab es damals noch nicht. *Also* mussten die Heilbronner warten, bis sie am naechsten Montag von dem Signal erfuhren.</beispiel>
+        <beispiel>Ich fand am linken Bein unterhalb des Knies eine weitere Verbrennung, dort muss *also* der Strom den Koerper wieder verlassen haben.</beispiel>
+        <beispiel>Um Grundsaetze und Ideen streiten sich ja die Menschen seit alters her [...]. Darum *also* beulen wir die Backen mit der Zungenspitze aus und schneiden Grimassen.</beispiel>
+        <beispiel>Ich hab sie und ihre drei Freunde auf deine Kosten zur Brotzeit eingeladen. *Also* geh zu und lass mich nicht im Stich.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="7">
+    <orth type="cont">
+      <part type="single">andererseits</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">andrerseits</part>
+    </orth>
+    <orth type="discont">
+      <part type="single">einerseits</part>
+      <part type="single">andererseits</part>
+    </orth>
+    <orth type="discont">
+      <part type="single">einerseits</part>
+      <part type="single">andrerseits</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>1</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Sabeth glaubte nicht, dass ich nichts davon verstehe, und hatte *einerseits* ein massloses Vertrauen zu mir, bloss weil man dreissig Jahre aelter ist, ein kindisches Vertrauen, anderseits ueberhaupt keinen Respekt.</beispiel>
+        <beispiel>Der Gesetzgeber demonstriert damit einerseits scheinbar Harte, tut *andererseits* aber niemandem wirklich weh.</beispiel>
+        <beispiel>Von den Bulgaren *anderseits*, hat die englische Sun herausgefunden, dass sie 'von breakfast bis zur bed-time im Militaerstil gedrillt werden'.</beispiel>
+        <beispiel>Dass dieser boeswillige Unsinn durchaus geeignet sein kann, insbesondere Eltern und Schueler gegen die Anwohner zu aktivieren, *einerseits*, und andererseits die Planer und Politiker ermuntert, gegenueber uns reaktionaeren Spiessern ueberhaupt keine Ruecksichten zu ueben, liegt leider auf der Hand.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="8">
+    <orth type="cont">
+      <part type="single">andernfalls</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">anderenfalls</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Der 15jaehrige muss sich beugen, *andernfalls* gibt es was aufs Maul.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kontrastiv/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>otherwise</relation>
+        <beispiel>Ueberweisen Sie den Betrag spaetestens zwei Wochen nach Erhalt der Rechnung, *andernfalls* wir Ihnen Verzugszinsen berechnen muessen.</beispiel>
+        <beispiel>Sie garantierte, dass Nadine bis Juni wieder normal essen werde, *andernfalls* sie das Geld zurueckzahlen wuerde.</beispiel>
+        <beispiel>Er fordert erstens Mehrheitsabstimmungen in ausgewaehlten Bereichen der Aussenpolitik, *andernfalls* die Gemeinschaft weiter auf kleinster Flamme koche.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="9">
+    <orth type="cont">
+      <part type="single">ansonsten</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kontrastiv/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Der EDV-Kurs musste leider abgesagt werden. *Ansonsten* konnten alle Angebote durchgefuehrt werden.</beispiel>
+        <beispiel>Alle Angebote konnten *ansonsten* durchgefuehrt werden.</beispiel>
+        <beispiel>Nur der moeglichen Brandgefahr hat der Verein interveniert. Die Aktivitaet *ansonsten* hat der Verein begruesst.</beispiel>
+        <beispiel>Und die dumpfen bayerischen Dorfrocker [...] schienen geradewegs der Rumpelkammer des Jugendprogramm-Archivs entsprungen. *Ansonsten*: Ein harmloses Filmchen mit schoenen Naturbildern und Happy-End.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="10">
+    <orth type="cont">
+      <part type="single">anstatt</part>
+    </orth>
+    <syn>
+      <kat>praep</kat>
+      <praep>
+        <ante>1</ante>
+        <post>0</post>
+        <kasus>gen</kasus>
+      </praep>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <substitutiv/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>*Anstatt* des Kindes, schickte er den Grossvater.</beispiel>
+        <beispiel>*Anstatt* seiner, ging seine Ehefrau.</beispiel>
+        <beispiel>*Anstatt* zu kommen, blieb er lieber im Bett.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="11">
+    <orth type="cont">
+      <part type="phrasal">anstatt dass</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <substitutiv/>
+        </grfunktion>
+        <hbfunktion>
+          <ersatz/>
+        </hbfunktion>
+        <relation>asymmetriccontrast</relation>
+        <beispiel>*Anstatt dass* du hier herumsitzt, koenntest du ja wirklich mal Staub wischen.</beispiel>
+        <beispiel>Da kann ich ja gleich selber vom Hochhaus springen, *anstatt dass* ich da mal mit ner Spritze im Arm tot gefunden werd.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="12">
+    <orth type="cont">
+      <part type="phrasal">anstelle dessen</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>asymmetriccontrast</relation>
+        <beispiel>Hier und da wurden erste Rufe nach 'Bowie' laut. *Anstelle dessen* kamen New Model Army und Rage Against The Machine.</beispiel>
+        <beispiel>Bei besagter Grillparty gab es kein Fleisch. Es kamen *anstelle dessen* Vegiburger und Tofuwuerste auf den Grill.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="13">
+    <orth type="cont">
+      <part type="single">auch</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Zu Weihnachten trifft sich die ganze Familie, *auch* Oma wird kommen.</beispiel>
+        <beispiel>Seit knapp einer Woche rollt bei der Frankfurter Eintracht wieder der Ball und damit *auch* der Rubel.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="14">
+    <orth type="cont">
+      <part type="single">aufgrund</part>
+    </orth>
+    <orth type="cont">
+      <part type="phrasal">auf Grund</part>
+    </orth>
+    <syn>
+      <kat>praep</kat>
+      <praep>
+        <ante>1</ante>
+        <post>0</post>
+        <kasus>gen</kasus>
+      </praep>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>*Aufgrund* der schlechten Witterung bleibt der St. Gotthard geschlossen.</beispiel>
+        <beispiel>Eine Schliessung *aufgrund* schlechter Witterung wird in Erwaegung gezogen.</beispiel>
+        <beispiel>Einen typisch deutschen Nonsens *aufgrund* von Prinzipienreiterei nennt der Praesident der Berliner Aerztekammer diese Einschraenkung.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="15">
+    <orth type="cont">
+      <part type="phrasal">aufgrund dessen</part>
+    </orth>
+    <orth type="cont">
+      <part type="phrasal">auf Grund dessen</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Ihre Vorlesung fiel aus, *aufgrund dessen* hatte sie frei.</beispiel>
+        <beispiel>Der Vorwurf, *aufgrund dessen* Alain Patrice N. am 21. April festgehalten wurde, lautete Erschleichen von Leistungen.</beispiel>
+        <beispiel>Der dortige Verkehrsverbund zaehlte morgens in den Bussen meist ueber 100 Fahrgaeste. Er entschloss sich *aufgrund dessen* fuer den Einsatz weiterer Verkehrsmittel.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="16">
+    <orth type="cont">
+      <part type="phrasal">aufgrunddessen, dass</part>
+    </orth>
+    <orth type="cont">
+      <part type="phrasal">auf Grund dessen, dass</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>*Aufgrund dessen, dass* die Stuetzpfeiler verfault sind, muss das Fundament ganz neu konzipiert werden.</beispiel>
+        <beispiel>Denn *aufgrund dessen, dass* sich diese Vereinigung von Kleinbetrieben ganz offensichtlich aus jungen und junggebliebenen Mitgliedern zusammensetzt, macht sie sich auch bei der Jugend im Dorf glaubwuerdig und attraktiv.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="17">
+    <orth type="cont">
+      <part type="phrasal">aus diesem Grund</part>
+    </orth>
+    <orth type="cont">
+      <part type="phrasal">aus diesem Grunde</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>*Aus diesem Grunde* wird das Kaufhaus voraussichtlich erst gegen 11.30 Uhr geoeffnet.</beispiel>
+        <beispiel>Er plaediert nicht nur *aus diesem Grunde* dafuer, beide Projekte zu verwirklichen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="18">
+    <orth type="cont">
+      <part type="phrasal">ausser</part>
+    </orth>
+    <syn>
+      <kat>einzel</kat>
+      <konn>
+        <einzel/>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <restriktiv/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Im Falle einer Scheidung bekommt das Sorgerecht die Mutter, *ausser* der Richter entscheidet anders.</beispiel>
+        <beispiel>Morgen fahre ich in die Berge, *ausser* das Wetter spielt nicht mit.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="19">
+    <orth type="cont">
+      <part type="phrasal">ausser dass</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <sem>
+        <grfunktion>
+          <restriktiv/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Es gibt keinen anderen Ausweg, *ausser dass* wir ihn um Hilfe bitten.</beispiel>
+        <beispiel>*Ausser dass* er gestern abgereist ist, habe ich nichts in Erfahrung bringen koennen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="20">
+    <orth type="cont">
+      <part type="single">ausserdem</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>1</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>circumstance</relation>
+        <beispiel>Ich habe keine Lust ins Kino zu gehen, *ausserdem* bin ich muede.</beispiel>
+        <beispiel>Hermann bittet *ausserdem* um etwas zu essen.</beispiel>
+        <beispiel>Splitt verursacht weniger Rostschaeden an Autos als Streusalz. Es ist *ausserdem* umweltfreundlicher.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="21">
+    <orth type="cont">
+      <part type="phrasal">ausser wenn</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <restriktiv-conditional/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Sie ist stets gut gelaunt, *ausser wenn* sie nicht ausgeschlafen hat.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="22">
+    <orth type="cont">
+      <part type="single">beispielsweise</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">bspw.</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Andere Theorien werden gehandelt. *Beispielsweise* koennte die Sonne schuld sein, die in den letzten Jahren besonders intensiv gestrahlt hat.</beispiel>
+        <beispiel>In Ecuador gingen die Behoerden *beispielsweise* gegen Indianervoelker vor, die gegen oelprojekte protestieren.</beispiel>
+        <beispiel>Geschmaecker sind bekanntlich verschieden. Mir *beispielsweise* gefallen keine Maenner mit Schnauzer.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="23">
+    <orth type="cont">
+      <part type="single">bevor</part>
+    </orth>
+    <orth type="discont">
+      <part type="single">bevor</part>
+      <part type="single">nicht</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>after</interval>
+            <interval>before</interval>
+            <interval>meets</interval>
+            <aktionsart scope="mc">not-durative</aktionsart>
+            <aspect scope="sc">imperfective</aspect>
+          </temporal>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>Ich gehe nie schlafen, *bevor* ich *nicht* gruendlich gelueftet habe.</beispiel>
+        <beispiel>*Bevor* die Stunde beginnt, nehmen die Schueler die Buecher und Hefte heraus.</beispiel>
+        <beispiel>Die Studentin arbeitet eine Gliederung aus, *bevor* sie den Aufsatz niederschreibt.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="24">
+    <orth type="cont">
+      <part type="single">beziehungsweise</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">bzw.</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>0</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <alternativ/>
+        </grfunktion>
+        <hbfunktion>
+          <alternativ/>
+        </hbfunktion>
+        <relation>elaboration</relation>
+        <beispiel>Sie wussten, dass sie verloren hatten *bzw.* dass keine Aussichten mehr auf einen Sieg bestanden</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="25">
+    <orth type="cont">
+      <part type="single">da</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>joint</relation>
+        <beispiel>Triefend nass betrat sie das Haus. *Da* geschah etwas Unvorhergesehenes.</beispiel>
+        <beispiel>Das ist nun mal so beschlossen. Man kann *da* nichts mehr aendern.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>1</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion>
+          <kausal/>
+        </hbfunktion>
+        <relation>cause</relation>
+        <beispiel>*Da* die Saengerin ploetzlich erkrankt ist, muss das Konzert ausfallen.</beispiel>
+        <beispiel>Der Ort ist sehr ruhig, *da* er abseits von den grossen Strassen liegt.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="26">
+    <orth type="cont">
+      <part type="single">dabei</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Immer wieder ging sie bei Glatteis spazieren. *Dabei* war sie oft genug vor der Glaette gewarnt worden.</beispiel>
+        <beispiel>Sie war *dabei* oft genug vor der Glaette gewarnt worden.</beispiel>
+        <beispiel>*Dabei*: Sie war oft genug vor der Glaette gewarnt worden.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="27">
+    <orth type="cont">
+      <part type="single">dadurch</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Gestern habe ich zuviel Wein getrunken. *Dadurch* habe ich heute furchtbare Kopfschmerzen.</beispiel>
+        <beispiel>Gestern habe ich zuviel Wein getrunken. Heute habe ich *dadurch* furchtbare Kopfschmerzen.</beispiel>
+        <beispiel>Gestern habe ich zuviel Wein getrunken. Heute habe ich furchtbare Kopfschmerzen *dadurch*.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="28">
+    <orth type="cont">
+      <part type="phrasal">dadurch, dass</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>*Dadurch, dass* es mir gelungen ist, diese Stadt in ein EU-Foerderprogramm aufzunehmen, haben wir jetzt neue Moeglichkeiten.</beispiel>
+        <beispiel>Wir haben jetzt neue Moeglichkeiten *dadurch, dass* es mir gelungen ist, diese Stadt in ein EU-Foerderprogramm aufzunehmen.</beispiel>
+        <beispiel>Wir haben jetzt *dadurch, dass* es mir gelungen ist, diese Stadt in ein EU-Foerderprogramm aufzunehmen, neue Moeglichkeiten.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="29">
+    <orth type="cont">
+      <part type="single">dafuer</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Sein Oldtimer ist in ausgezeichnetem Zustand. *Dafuer* hat er aber auch eine Menge Geld gekostet.</beispiel>
+        <beispiel>Sein Oldtimer ist in ausgezeichnetem Zustand. Er hat *dafuer* aber auch eine Menge Geld gekostet.</beispiel>
+        <beispiel>Rotschwaenze sind sehr selten geworden. Mehr Kleiber *dafuer* gibt es in Langen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="30">
+    <orth type="cont">
+      <part type="phrasal">dafuer, dass</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>*Dafuer, dass* sie schon so alt ist, sieht sie aber noch sehr jugendlich aus.</beispiel>
+        <beispiel>Sie sieht aber noch sehr jugendlich aus, *dafuer, dass* sie schon so alt ist.</beispiel>
+        <beispiel>Sie sieht aber, *dafuer, dass* sie schon so alt ist, noch sehr jugendlich aus.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="31">
+    <orth type="cont">
+      <part type="single">dagegen</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Einen Unternehmer, der noch keine Haelse abgeschnitten hat, darf man nicht Halsabschneider nennen. *Dagegen* darf ein Anwalt in einem Schriftsatz einen Abmahnverein als Absahnhai bezeichnen.</beispiel>
+        <beispiel>Stoiber ist schon Grossvater aus eigenem Samen, Schroeder *dagegen* liess bisher andere fuer sich arbeiten.</beispiel>
+        <beispiel>Allgemeine Zustimmung fand *dagegen* ein aehnlich kritischer, aber kuerzerer Bericht zur Einhaltung der Anti-Diskriminierungskonvention unter der chilenischen Militaerjunta.</beispiel>
+        <beispiel>Turnierfechten wird dabei nicht aussterben, aber es wird nur im Ghetto der Fans stattfinden, weil es im Fernsehen nicht vermittelbar ist. *Dagegen*: Alles was Spektakel ist, wird Karriere machen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="32">
+    <orth type="cont">
+      <part type="single">daher</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Sie hatte noch nicht gegessen. *Daher* fuehlte sie sich geschwaecht.</beispiel>
+        <beispiel>Sie hatte noch nicht gegessen und fuehlte sich *daher* geschwaecht.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="33">
+    <orth type="cont">
+      <part type="single">danach</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>after</interval>
+            <interval>before</interval>
+            <interval>meets</interval>
+          </temporal>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>Tomaten mit einem scharfen Messer einritzen und mit heissem Wasser uebergiessen. *Danach* kann man sie problemlos haeuten.</beispiel>
+        <beispiel>Der Anteil des juedischen Buergern geraubten Goldes hat *danach* einen Wert von zwei Milliarden Dollar.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="34">
+    <orth type="cont">
+      <part type="single">dann</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>In zwei Wochen ziehen wir um. *Dann* wird alles besser.</beispiel>
+        <beispiel>Gegner ist *dann* die Bundesliga-Mannschaft von Arminia Bielefeld.</beispiel>
+        <beispiel>So meinte etwa jene Teilnehmerin, die sich fuer einen Mostbecher entschied: 'Naechstes Jahr *dann* nehme ich den Mostkrug.'</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="35">
+    <orth type="cont">
+      <part type="single">darauf</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>Er erlangte am Lehrerseminar Rorschach das Primarlehrerpatent und unterrichtete *darauf* einige Jahre in Kaltbrunn.</beispiel>
+        <beispiel>Beide setzten sich mit mir in Verbindung. Ich habe ihnen *darauf* vorgeschlagen, eine solche Karte zu produzieren.</beispiel>
+        <beispiel>Das Land hat seine sozialen Aufwendungen erheblich erhoeht. Die Armutsgrenze sank *darauf* von 49 auf 16 Prozent.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="36">
+    <orth type="cont">
+      <part type="single">daraufhin</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>Klein-Krotzenburg gab *daraufhin* das Mittelfeld preis und liess den Moerlenbachern Platz fuer ihr schnelles und geradliniges Spiel.</beispiel>
+        <beispiel>*Daraufhin* wollten auch die Banken bei der Finanzierung nicht mehr mitziehen.</beispiel>
+        <beispiel>Die Klaegerin wuenschte, dass die Gesellschaft vor ihm geschuetzt werde. Der Beschuldigte brach *daraufhin* in Traenen aus.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="37">
+    <orth type="cont">
+      <part type="phrasal">darueber hinaus</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">darueberhinaus</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Tagsueber werden die Artikel staendig aktualisiert. *Darueber hinaus* enthaelt die elektronische Ausgabe weiteres Hintergrundmaterial.</beispiel>
+        <beispiel>Sie haben *darueber hinaus* Zugang zu Informationen der deutschen Botschaften.</beispiel>
+        <beispiel>Fuer mich liegt der Erfolg des Buchs an der sorgfaeltigen Arbeit. *Darueber hinaus*: Es wird die spuerbare Liebe zur Stadt deutlich.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="38">
+    <orth type="cont">
+      <part type="single">darum</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>1</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Hohe Fixkosten schmaelern jedoch die Gewinne. *Darum* sind einige Staatshotels an der Mittelmeerkueste im vergangen Sommer in die Schusslinie der Kritik geraten.</beispiel>
+        <beispiel>Seine Frau telefonierte *darum* immer oefter und ausgiebiger mit ihrer Freundin.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="39">
+    <orth type="cont">
+      <part type="phrasal">das heisst</part>
+    </orth>
+    <orth type="cont">
+      <part type="phrasal">d.h.</part>
+    </orth>
+    <syn>
+      <kat>konj</kat>
+      <konn>
+        <nintegr>
+          <konj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion>
+          <modal>
+            <spezifizierung/>
+          </modal>
+        </hbfunktion>
+        <relation>elaboration</relation>
+        <beispiel>Du solltest das Buch mal lesen, *das heisst*, du solltest es nicht nur im Regal stehen haben.</beispiel>
+        <beispiel>Durch das Abschneiden des Flusses von den Oberrheinauen zwischen Basel und Iffezheim gingen 130 Quadratkilometer, *das heisst* rund 60 Prozent der vormals vorhandenen ueberschwemmungsflaeche verloren.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="40">
+    <orth type="cont">
+      <part type="single">demgegenueber</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Die gerade stattfindenden Doping-Prozess gegen DDR- Trainer sieht Krenz ebenfalls 'die Siegerjustiz' am Werke, die 'uralte Rechnungen' begleichen wuerde. *Demgegenueber* wirkt selbst die FAZ wie ein Hort der Aufklaerung.</beispiel>
+        <beispiel>'Afrikanische Literatur ist eine Performance', erklaerte Hove dieses Phaenomen. Europaeische Literatur ist *demgegenueber* eine intellektuelle uebung.</beispiel>
+        <beispiel>In seiner Animation laesst er Tiere aus dem Zoo zu Wort kommen, die sich ueber das englische Wetter auslassen. Die anderen Filme *demgegenueber* fallen ein bisschen ab.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="41">
+    <orth type="cont">
+      <part type="single">denn</part>
+    </orth>
+    <syn>
+      <kat>einzel</kat>
+      <konn>
+        <einzel/>
+      </konn>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Das Konzert muss ausfallen, *denn* die Saeerin ist erkrankt.</beispiel>
+        <beispiel>Die Blumen auf dem Balkon sind erfroren, *denn* es hat heute nacht Frost gegeben.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="42">
+    <orth type="cont">
+      <part type="phrasal">denn als</part>
+    </orth>
+    <syn>
+      <sem>
+        <grfunktion>
+          <komparativ/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>asymmetriccontrast</relation>
+        <beispiel>Er war als [...] bedeutender *denn als* Wissenschaftler.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="43">
+    <orth type="cont">
+      <part type="single">dennoch</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Insgesamt 23 der Riesenjets vom Typ Boing 747 wurden durch Unfall oder Sabotage zu Totalverlusten. *Dennoch* gilt die 747 unter Piloten als zuverlaessiges und gutmuetiges Fluggeraet.</beispiel>
+        <beispiel>Ein deutscher Superlativ soll es *dennoch* werden.</beispiel>
+        <beispiel>Die Feuerwerkskoerper richteten keinen nennenswerten Schaden an. *Dennoch*: 800 Mal musste das Rote Kreuz bei kleineren Brandwunden helfen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="44">
+    <orth type="cont">
+      <part type="single">desweiteren</part>
+    </orth>
+    <orth type="cont">
+      <part type="phrasal">des Weiteren</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Der Tuerke an der Ecke hat den Vorteil, dass man den Doener von Tellern essen darf. Er hat *des Weiteren* den Vorteil, dass man freundlich gegruesst wird.</beispiel>
+        <beispiel>*Des weiteren* wurde das Buerogebaeude am Gewerbegebiet 1991 bezogen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="45">
+    <orth type="cont">
+      <part type="single">desgleichen</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Einzelheiten ueber die Modalitaeten einer Wirtschafts- und Waehrungsreform gab es nicht, *desgleichen* wartete man vergebens auf Vorstellungen der Bundesregierung darueber, wie die sozialen Folgen dieser uebernahme bewaeltigt werden koennten.</beispiel>
+        <beispiel>Und sie kamen ueber ganz aegyptenland und liessen sich nieder an allen Orten in aegypten, so sehr viel, dass zuvor *desgleichen* nie gewesen ist...</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="46">
+    <orth type="cont">
+      <part type="single">deshalb</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>1</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Die neue Trasse zwischen Koeln und Frankfurt ist zur Zeit im Bau. *Deshalb* errichten sowohl Montabaur als auch Limburg einen ICE-Bahnhof.</beispiel>
+        <beispiel>Er moechte *deshalb* aus der Kirche austreten, trotzdem aber weiterhin der Glaubensgemeinschaft seiner Kirche angehoeren.</beispiel>
+        <beispiel>Unehrlichkeit hat das gegenseitige Vertrauen oft schwer belastet. *Deshalb*: Schlechte Nachrichten duerfen nicht tabuisiert werden.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="47">
+    <orth type="cont">
+      <part type="single">dessenungeachtet</part>
+    </orth>
+    <orth type="cont">
+      <part type="phrasal">dessen ungeachtet</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Beide Seiten kuendigten ein zweites Treffen fuer Dienstag an. *Dessenungeachtet* gingen die Kaempfe in dem Land auch am Montag weiter.</beispiel>
+        <beispiel>Nun habe die Staatsanwaltschaft die Rueckgabe der beschlagnahmten Exemplare angeordnet. Das Ermittlungsverfahren gegen den Verlag wird *dessenungeachtet* fortgesetzt.</beispiel>
+        <beispiel>Er hatte die innenpolitische Lage seiner Heimat nicht richtig eingeschaetzt. Doch *dessen ungeachtet*: er waere unter jeden Umstaenden dorthin zurueckgekehrt.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="48">
+    <orth type="cont">
+      <part type="single">deswegen</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>1</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Ausserdem flog dieses medizinische Geschoss mal zwanzig, mal wieder fuenfunddreissig Meter weit, und *deswegen* trafen wir sehr selten.</beispiel>
+        <beispiel>Er wollte sich der Verantwortung stellen, und kandidierte *deswegen* erneut.</beispiel>
+        <beispiel>Auch die heilende Wirkung von pflanzlichen Praeparaten kann sich auf Dauer ins Gegenteil verkehren. *Deswegen*: Sie sollten unbedingt den Beipackzettel beachten.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="49">
+    <orth type="cont">
+      <part type="single">doch</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">jedoch</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <adversativ/>
+        </grfunktion>
+        <hbfunktion>
+          <adversativ/>
+        </hbfunktion>
+        <relation>elaboration</relation>
+        <beispiel>Er ist nicht gut im Sport, *doch* in den Sprachen ist er allen voraus.</beispiel>
+        <beispiel>Die Wohnung ist sehr klein, *doch* guenstig gelegen.</beispiel>
+        <beispiel>Die CD-ROM bietet dem Anwender die Kapazitaet, die er fuer speicherintensive Arbeiten benoetigt. *Doch*: Das Gros der Anwender haelt an der Diskette fest.</beispiel>
+      </sem>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Der Fluss der Historie wirkte wie eingefroren. *Jedoch* sind nun die Dinge fast heillos ins Treiben geraten.</beispiel>
+        <beispiel>Inzwischen hat sich *jedoch* fuer den Heimatforscher einiges geaendert.</beispiel>
+        <beispiel>Adorno *jedoch* liefert nicht nur eine Wirkungsaesthetik des Erhabenen, sondern schreibt zugleich eine Entwicklungsgeschichte erhabener Kunst.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="50">
+    <orth type="cont">
+      <part type="single">ebenfalls</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Der Nutzer laedt sich die Namen der Institute auf den Schirm. Er kann sich *ebenfalls* die Adressen und Telefonnummern ausgeben lassen.</beispiel>
+        <beispiel>*Ebenfalls* nicht bespielbar ist der suedliche der beiden Hartplaetze: Dioxinverseuchter Belag ist die Ursache.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="51">
+    <orth type="cont">
+      <part type="single">ebensowenig</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Einem zentralistischen Ansatz wuerden sich die Hochschulen 'mit Entschiedenheit widersetzen'. *Ebensowenig* liessen sie sich als 'Reparaturanstalten fuer Managementfehler in den Regionen' missbrauchen.</beispiel>
+        <beispiel>Als offene Plattform bietet sie Widerstandsprojekten Zugang zum Internet und nimmt als kritische Kulturinititiative *ebensowenig* ein Blatt vor den Mund.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="52">
+    <orth type="cont">
+      <part type="single">entgegen</part>
+    </orth>
+    <syn>
+      <kat>praep</kat>
+      <praep>
+        <ante>1</ante>
+        <post>0</post>
+        <kasus>gen</kasus>
+        <kasus>dat</kasus>
+      </praep>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Im 4. Quartal 1990 seien die oelvorraete *entgegen* dem Saisontrend nicht abgebaut, sondern aufgestockt worden.</beispiel>
+        <beispiel>*Entgegen* bisheriger Annahmen werden manche Wirkstoffmolekuele beim Kochen und Braten nicht vollstaendig zerstoert.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="53">
+    <orth type="cont">
+      <part type="single">oder</part>
+    </orth>
+    <orth type="discont">
+      <part type="single">entweder</part>
+      <part type="single">oder</part>
+    </orth>
+    <syn>
+      <kat>konj</kat>
+      <konn>
+        <nintegr>
+          <konj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <alternativ/>
+        </grfunktion>
+        <hbfunktion>
+          <alternativ/>
+        </hbfunktion>
+        <relation>contrast</relation>
+        <beispiel>Du kannst ihm schreiben, *oder* du kannst ihn auch anrufen.</beispiel>
+        <beispiel>Wir reden immer von der Kritik, *oder* wir reden nur von den Leuten, die meinen, die Kritik bestimmen zu koennen.</beispiel>
+        <beispiel>*Entweder* du isst jetzt deine Suppe, *oder* du darfst nicht fernsehen.</beispiel>
+        <beispiel>*Entweder* ist es ironisch gemeint *oder* man hat ihn dazu gezwungen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="54">
+    <orth type="cont">
+      <part type="single">ergo</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>*Ergo* muss, wer T-mobil ueber D1 surfen will, bis zu 68 Pfennig pro Minute berappen.</beispiel>
+        <beispiel>Selfmademan, Golden Boy - das klingt so gar nicht franzoesisch, ist *ergo* verdaechtig.</beispiel>
+        <beispiel>Das geht am schnellsten, wenn Hertha BSC moeglichst bald in einem internationalen Wettbewerb mitspielen kann. *Ergo*: Verstaerkungen sind unerlaesslich.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="55">
+    <orth type="cont">
+      <part type="single">falls</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>1</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <konditional/>
+        </grfunktion>
+        <hbfunktion>
+          <konditional/>
+        </hbfunktion>
+        <relation>condition</relation>
+        <beispiel>*Falls* er nach Dresden kommt, besucht er uns.</beispiel>
+        <beispiel>Nimm einen Schirm mit, *falls* es regnet.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="56">
+    <orth type="cont">
+      <part type="single">ferner</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>*Ferner* sind die Verluste nicht durchgaengig, beispielsweise sind alle Grossbanken im Plus.</beispiel>
+        <beispiel>Geplant sind *ferner* Sonntagsbrunchs, Jazz-Fruehschoppen und Sommernachtskino.</beispiel>
+        <beispiel>Es fehlt eine praezise Anordnung, dass ausschliesslich bei 'dringendem Tatverdacht' ermittelt werden darf. *Ferner*: Wann eigentlich darf belauscht werden?</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="57">
+    <orth type="cont">
+      <part type="single">folglich</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>?</nacherst>
+            <nachfeld>?</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Die Zahl der serbischen Neusiedler war nicht so hoch wie die der muslimischen Fluechtlinge. *Folglich* siegten die Moslems.</beispiel>
+        <beispiel>Pro eingesetzter Mark ist der Gewinn dann *folglich* fuenf Pfennig also fuenf Prozent.</beispiel>
+        <beispiel>Ohne Presseecho auszukommen, ist fuer die Kuenstler noch schlimmer als eine negative Kritik. *Folglich*: 'Man muss lernen, mit ihnen (den Kritikern) zu leben.'</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="58">
+    <orth type="cont">
+      <part type="single">gleichwohl</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>*Gleichwohl* sehen Diplomaten in Jakarta darin einen Hinweis, die indonesische Regierung wolle ihren schlechten internationalen Ruf aufpolieren.</beispiel>
+        <beispiel>Die juengsten Wirtschaftsdaten zeigen *gleichwohl*, dass Amerika noch immer in der Rezession steckt.</beispiel>
+        <beispiel>Das Medikament kann einige Symptome bessern, aber es kann nichts zu seiner Rettung tun. Der Arzt *gleichwohl* verschreibt ein Rezept.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="59">
+    <orth type="cont">
+      <part type="single">hierauf</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>?</vorfeld>
+            <mittelfeld>?</mittelfeld>
+            <nacherst>?</nacherst>
+            <nachfeld>?</nachfeld>
+            <nullstelle>?</nullstelle>
+            <nachnachfeld>?</nachnachfeld>
+            <satzklammer>?</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="60">
+    <orth type="cont">
+      <part type="single">hierdurch</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Einen Antrag der Telefongesellschaft Talkline wies die Regulierungsbehoerde fuer Telekommunikation und Post zurueck. *Hierdurch* werde die Monopolstellung der Telekom festgeschrieben, kritisierte Talkline.</beispiel>
+        <beispiel>Aber dieses Erdoel wurde raffiniert und als Benzin in den Westen verkauft; in manchen Jahren kam *hierdurch* ein Drittel der freien Devisen herein.</beispiel>
+        <beispiel>Der Konzern verkaufte die Sparten Kohle, Schrott und Logistik. Die Zahl der Stellen verringerte sich um 10 000 *hierdurch*.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="61">
+    <orth type="cont">
+      <part type="single">hiernach</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>Die Beschaeftigung von Studenten ist *hiernach* versicherungs- und beitragsfrei.</beispiel>
+        <beispiel>*Hiernach* gab es eine groessere Anzahl unterschiedlicher Hominiden in Afrika als bisher gedacht.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="62">
+    <orth type="cont">
+      <part type="single">hingegen</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Kanzlerkandidat Edmund Stoiber (CSU) sprach *hingegen* von 'einem Scheitern von Rot-Gruen'.</beispiel>
+        <beispiel>Die Reise nach Mallorca *hingegen* bindet den Schenkenden und die Beschenkte fuer zwei Wochen aneinander.</beispiel>
+        <beispiel>Im Sommersemester wieder wird ihm schon mal vorgeworfen, er sei launenhaft. *Hingegen* andere Studenten schaetzen den Mann als voellig 'i.O.'.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="63">
+    <orth type="cont">
+      <part type="single">indem</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <komitativ/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>means</relation>
+        <beispiel>Du kannst ihm eine Freude bereiten, *indem* du ihn besuchst.</beispiel>
+        <beispiel>*Indem* die Tonbandprotokolle zum Material der Komposition werden, geht ihr dokumentarischer Wert verloren.</beispiel>
+        <beispiel>Scalfaro aber bleibt weise: 'Kranke heilt man nicht, *indem* man sie umbringt.'</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="64">
+    <orth type="cont">
+      <part type="single">infolge</part>
+    </orth>
+    <syn>
+      <kat>praep</kat>
+      <praep>
+        <ante>1</ante>
+        <post>0</post>
+        <kasus>gen</kasus>
+      </praep>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>*Infolge* der schlechten Witterung bleibt der St. Gotthard geschlossen.</beispiel>
+        <beispiel>Eine Schliessung *infolge* schlechter Witterung wird in Erwaegung gezogen.</beispiel>
+        <beispiel>Gesundheitliche Schaeden bei Polizisten *infolge* von Castor-Transporten sollen in Zukunft auch in Berlin als Dienstunfaelle gelten.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="65">
+    <orth type="cont">
+      <part type="single">infolgedessen</part>
+    </orth>
+    <orth type="cont">
+      <part type="phrasal">infolge dessen</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>*Infolgedessen* hat die Zahl der arbeitslosen Bauarbeiter einen Rekordstand erreicht.</beispiel>
+        <beispiel>Die Bautaetigkeit werde sich *infolgedessen* in den naechsten Jahren verringern.</beispiel>
+        <beispiel>Dem Konzern war im Sommer vorgeworfen worden, die Jahresumsaetze nach unten geschoent zu haben. Die Staatsanwaltschaft *infolgedessen* ermittelt gegen die Verantwortlichen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="66">
+    <orth type="cont">
+      <part type="single">insofern</part>
+    </orth>
+    <orth type="discont">
+      <part type="single">insofern</part>
+      <part type="single">als</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion>
+          <modal>
+            <spezifizierung/>
+          </modal>
+        </hbfunktion>
+        <relation>means</relation>
+        <beispiel>Er ist uns nuetzlich gewesen, *insofern* er gelegentlich Beitraege beigesteuert hat.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>oede ist dieses Buch nie, *insofern* wird er seinem Gegenstand vollkommen gerecht.</beispiel>
+        <beispiel>Die Verwaltung der Schecks lag bei Eva Grosz - *insofern*: es trifft zu, dass ihr Sohn Peter sie beerbt hat.</beispiel>
+        <beispiel>Ich gebe dir auch *insofern* recht: Wir haben von der Schwarz-Gruen-Debatte enorm profitiert.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="67">
+    <orth type="cont">
+      <part type="single">inwiefern</part>
+    </orth>
+    <syn>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="68">
+    <orth type="cont">
+      <part type="single">inwieweit</part>
+    </orth>
+    <syn>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="69">
+    <orth type="cont">
+      <part type="single">inzwischen</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>*Inzwischen* ist es kurz nach acht Uhr, und es regnet wieder.</beispiel>
+        <beispiel>Als Sensation empfindet das in Schweden *inzwischen* niemand mehr.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="70">
+    <orth type="cont">
+      <part type="single">mithin</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Als Geissler sich rechtfertigte, er habe wegen seines Gleitschirmunfalls nicht am Wahlkampf teilgenommen, *mithin* koenne er nicht fuer CDU-Verluste verantwortlich gemacht werden, fiel ihm ein wild gestikulierender Kohl ins Wort.</beispiel>
+        <beispiel>Ausserdem stimmte die Mehrheit der Uniformierten in oeffentlichen Wahllokalen ab - ihr Votum sei *mithin* gar nicht ueberpruefbar.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="71">
+    <orth type="cont">
+      <part type="single">nachdem</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>after</interval>
+            <interval>before</interval>
+            <interval>meets</interval>
+            <aspect scope="mc">imperfective</aspect>
+            <aspect scope="sc">perfective</aspect>
+          </temporal>
+        </grfunktion>
+        <hbfunktion>
+          <temporal>
+            <vorzeitigkeit/>
+          </temporal>
+        </hbfunktion>
+        <relation>precondition</relation>
+        <beispiel>*Nachdem* ich in der Stadt angekommen war, suchte ich mir zuerst ein Hotelzimmer.</beispiel>
+        <beispiel>Er wird die Stelle als Bereichsleiter uebernehmen, *nachdem* er seine Dissertation verteidigt hat.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="72">
+    <orth type="cont">
+      <part type="single">naemlich</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>0</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Die Aehnlichkeit ist nicht weiter verwunderlich. Die beiden sind *naemlich* Schwestern.</beispiel>
+        <beispiel>Ich will nur eines wissen: Was *naemlich* hast du morgen vor?</beispiel>
+        <beispiel>*Naemlich* das Kabarett wurde geschlossen wegen eines Liedes, dessen Refrain einer Eigentuemlichkeit in der Sprechweise der Sachverwalterperson aehnelte.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="73">
+    <orth type="cont">
+      <part type="single">nebenher</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>joint</relation>
+        <beispiel>Sie studierte Politik, Geschichte und Slawistik in Heidelberg. *Nebenher* jobbte sie als freie Journalistin fuer die 'Rhein-Neckar-Zeitung' und den 'Mannheimer Morgen'.</beispiel>
+        <beispiel>Willi Brueggen (38) lebt als niedergelassener Arzt in Berlin. Er arbeitet *nebenher* als politischer Publizist und ist Mitglied von Buendnis 90/Die Gruenen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="74">
+    <orth type="cont">
+      <part type="single">nichtsdestoweniger</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">nichtsdestotrotz</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>?</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Das Konzert hatte dem Publikum sehr gut gefallen. An einigen schnellen Laeufen waren *nichtsdestoweniger* noch stoerende Unsicherheiten zu hoeren.</beispiel>
+        <beispiel>*Nichtsdestoweniger*, Ordnung existiert, und unser eigenes Leben auf dem Planeten Erde, die Zivilisation und Technologie beweisen, dass unter gewissen Bedingungen die Ordnung sich spontan aus dem Chaos entwickeln kann.</beispiel>
+        <beispiel>Die SPD zeigte sich ueber den Vorgang sehr veraergert. *Nichtsdestotrotz* loeste der Brief erneut grosse Nervositaet in der Staatskanzlei aus.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="75">
+    <orth type="cont">
+      <part type="phrasal">nur dass</part>
+    </orth>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <restriktiv/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Im Urlaub war es sehr schoen, *nur dass* es manchmal sehr heiss war.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="76">
+    <orth type="cont">
+      <part type="single">ob</part>
+    </orth>
+    <syn>
+      <kat>einzel</kat>
+      <konn>
+        <einzel/>
+      </konn>
+      <abfolge>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>*Ob* es regnet, *ob* es schneit, wir machen den Ausflug.</beispiel>
+        <beispiel>*Ob* es regnet oder schneit, wir machen den Ausflug.</beispiel>
+        <beispiel>*Ob* es regnet oder *ob* es schneit, wir machen den Ausflug.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>praep</kat>
+      <praep>
+        <ante>1</ante>
+        <post>0</post>
+        <kasus>gen</kasus>
+      </praep>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>*Ob* dieser Worte gerieten sie in Streit.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="77">
+    <orth type="cont">
+      <part type="single">obendrein</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>?</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>In der Tuerkei waere er allein, *obendrein* wuerde ihn zunaechst der Wehrdienst erwarten.</beispiel>
+        <beispiel>Wenn ich seinen Diebstahl dem Herrn anzeige, kriege ich eine Belohnung und er wird *obendrein* noch bestraft.</beispiel>
+        <beispiel>Viele Tierheime sind nach dem Erlass ueberfuellt. Kampfhunde *obendrein* sind schwer vermittelbar.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="78">
+    <orth type="cont">
+      <part type="single">obgleich</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>*Obgleich* Greff verheiratet war, war er mehr ein Pfadfinderfuehrer denn ein Ehemann.</beispiel>
+        <beispiel>Doch Blatter, das Chamaeleon, stuerzte nicht, *obgleich* er im Zusammenhang mit jener 'Wahl' mehrfach die Unwahrheit von sich gab.</beispiel>
+        <beispiel>Er uebt, *obgleich* er leidend ist, noch viele Funktionen aus.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="79">
+    <orth type="cont">
+      <part type="single">obschon</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Ivy hatte drei Stunden lang auf mich eingeschwatzt, *obschon* sie wusste, dass ich grundsaetzlich nicht heirate.</beispiel>
+        <beispiel>Baptist und Sabeth reden weiterhin ueber van Gogh, Lewin und ich reden ueber Dieselmotoren, wobei ich, *obschon* in Dieselmotoren interessiert, das Maedchen nicht aus den Augen lasse.</beispiel>
+        <beispiel>*Obschon* er hinten sass, wo es ihn hin und her schleuderte, pfiff er wie ein Bub.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="80">
+    <orth type="cont">
+      <part type="single">obwohl</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>1</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Wir verloren das Spiel, *obwohl* wir uns gut vorbereitet hatten.</beispiel>
+        <beispiel>*Obwohl* es regnet, gehe ich in den Park.</beispiel>
+        <beispiel>Ich gehe in den Park, *obwohl* es regnet.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="81">
+    <orth type="cont">
+      <part type="single">obzwar</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Dadurch ist die Anstrengung zum Beispiel des 10-Meilen-Rekordes groesser als die eines Grand Prix, *obzwar* die ganze Angelegenheit nur rund zwei Minuten vierzig Sekunden dauert.</beispiel>
+        <beispiel>Drei Tenoere (*obzwar* optisch nicht ganz so knackig) erklimmen die Popcharts, Scharen von Teenies stroemen zu 'Carmen' oder 'Carmina burana'.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="82">
+    <orth type="cont">
+      <part type="single">ohnedies</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Im Sommer ist mir Marokko viel zu heiss. Ich leide *ohnedies* unter Flugangst.</beispiel>
+        <beispiel>Wer in jenen Tagen an Russlands erfolgreichem Tschetschenienbezwinger Kritik uebte, lief Gefahr, sich unbeliebt zu machen. *Ohnedies* stand fest, dass Putin den zweiten Wahlgang gewinnen wuerde.</beispiel>
+        <beispiel>Da er *ohnedies* geht, setzt er nun mit seinem Entschluss ein wichtiges Zeichen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="83">
+    <orth type="cont">
+      <part type="single">ohnehin</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>*Ohnehin* wollen die Muehlheimer nicht in auswaertige Spieler investieren, sondern eine 'echte' Muehlheimer Mannschaft bilden.</beispiel>
+        <beispiel>Waehrend unseres Sommerurlaubs wird der Kater immer von den Nachbarn versorgt. Die fahren im Juli *ohnehin* nie weg.</beispiel>
+        <beispiel>Es hatte keinen Sinn zu luegen. *Ohnehin*, sie wusste sehr genau, wie es um ihn stand.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="84">
+    <orth type="cont">
+      <part type="single">seitdem</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>Der Vulkan war letzten Sommer wieder aktiv geworden. Er spuckte *seitdem* mehrmals Asche und Dampf.</beispiel>
+        <beispiel>1948 waren sie zum ersten Mal in Bruegge. *Seitdem* fahren sie fast jedes Jahr einmal hin.</beispiel>
+        <beispiel>Sein Bruder brachte ihn noch zum Heidelberger Hauptbahnhof. *Seitdem* ist er verschwunden und hat nichts mehr von sich hoeren lassen.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>after</interval>
+            <interval>before</interval>
+            <interval>meets</interval>
+            <aktionsart scope="mc">not-resultative</aktionsart>
+            <aktionsart scope="sc">semelfactive</aktionsart>
+            <aktionsart scope="sc">transformative</aktionsart>
+            <aspect scope="mc">imperfective</aspect>
+            <aspect scope="sc">perfective</aspect>
+          </temporal>
+        </grfunktion>
+        <hbfunktion>
+          <temporal>
+            <gleichzeitigkeit/>
+            <vorzeitigkeit/>
+          </temporal>
+        </hbfunktion>
+        <relation>not yet...</relation>
+        <beispiel>*Seitdem* ich die Alpen kenne, will ich dort immer wieder hin.</beispiel>
+        <beispiel>Ich will immer wieder in die Alpen, *seitdem* ich sie kenne.</beispiel>
+        <beispiel>Ich will, *seitdem* ich die Alpen kenne, dort immer wieder hin.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="85">
+    <orth type="cont">
+      <part type="single">seit</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>after</interval>
+            <interval>before</interval>
+            <interval>meets</interval>
+            <aktionsart scope="mc">not-resultative</aktionsart>
+            <aktionsart scope="sc">semelfactive</aktionsart>
+            <aktionsart scope="sc">transformative</aktionsart>
+            <aspect scope="mc">imperfective</aspect>
+            <aspect scope="sc">perfective</aspect>
+          </temporal>
+        </grfunktion>
+        <hbfunktion>
+          <temporal>
+            <gleichzeitigkeit/>
+            <vorzeitigkeit/>
+          </temporal>
+        </hbfunktion>
+        <relation>not yet...</relation>
+        <beispiel>*Seit* ich die Alpen kenne, will ich dort immer wieder hin.</beispiel>
+        <beispiel>Ich will immer wieder in die Alpen, *seit* ich sie kenne.</beispiel>
+        <beispiel>Ich will, *seit* ich die Alpen kenne, dort immer wieder hin.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>praep</kat>
+      <praep>
+        <ante>1</ante>
+        <post>0</post>
+        <kasus>dat</kasus>
+      </praep>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>*seit* dem ersten Januar</beispiel>
+        <beispiel>*Seit* gestern rauche ich nicht mehr.</beispiel>
+        <beispiel>*seit* vor dem Krieg</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="86">
+    <orth type="cont">
+      <part type="single">seither</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>1948 waren sie das erste Mal in Bruegge. *Seither* fahren sie fast jedes Jahr wieder hin.</beispiel>
+        <beispiel>Hat sie vorher noch ueberwiegend Portraits gemalt, so beschaeftigt sie sich *seither* mit Landschaftsmalerei und Tierdarstellungen.</beispiel>
+        <beispiel>Vor einigen Monaten wurde die Stadtruine platt gemacht; das Gelaende liegt brach *seither*.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="87">
+    <orth type="cont">
+      <part type="single">so</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <konzessiv/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>*So* er wieder gesund ist, wird er in ferne Laender reisen.</beispiel>
+        <beispiel>Er wird in ferne Laender reisen, *so* er wieder gesund ist.</beispiel>
+        <beispiel>Er wird, so er wieder gesund ist, in ferne Laender reisen.</beispiel>
+        <beispiel>*So* sch?i euch auch ist, ich muss jetzt unbedingt gehen.</beispiel>
+        <beispiel>Ich kann dir das Geld nicht geben, *so* leid es mir auch tut.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>Doch die Stadtplaner haben dazugelernt. *So* haben Studien gezeigt, dass grosszuegige Raeume das Wohlbefinden unter der Erde steigern.</beispiel>
+        <beispiel>Die neue Programmversion hat einiges zu bieten. Nutzer koennen *so* mit einfachem Mausklick ganze Dateien einbinden.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="88">
+    <orth type="cont">
+      <part type="phrasal">so oder so</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Wann immer ich bisher zu Indiaca-Turnieren gefahren bin, war die Stimmung *so oder so* sofort da.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="89">
+    <orth type="cont">
+      <part type="single">sobald</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>starts</interval>
+            <aktionsart scope="mc">not-stative</aktionsart>
+          </temporal>
+        </grfunktion>
+        <hbfunktion>
+          <temporal>
+            <vorzeitigkeit/>
+            <gleichzeitigkeit/>
+          </temporal>
+        </hbfunktion>
+        <relation>sequence</relation>
+        <beispiel>*Sobald* man ihm den kleinen Finger gibt, nimmt er die ganze Hand.</beispiel>
+        <beispiel>Er wird uns Bescheid geben, *sobald* er genauere Informationen hat.</beispiel>
+        <beispiel>*Sobald* sie uns sahen, liefen sie davon.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="90">
+    <orth type="cont">
+      <part type="single">sodann</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>*Sodann* vergleicht der explantierende Arzt mit dem KT die spenderrelevanten Daten.</beispiel>
+        <beispiel>Dieser Betrag war der Dame zu hoch; deshalb zahlte sie nicht. Ihr wurde *sodann* eine erste, zweite und dritte Mahnung zugeschickt.</beispiel>
+        <beispiel>Sie stehen zwischen zwei sehr verzierten, mit uebereinander gestellten tanzenden Kindern geschmueckten Pilastern. Alle Flaechen *sodann* deuten auf die gluecklichsten Familienverhaeltnisse.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="91">
+    <orth type="cont">
+      <part type="phrasal">so dass</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">sodass</part>
+    </orth>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <konsekutiv/>
+        </grfunktion>
+        <hbfunktion>
+          <konsekutiv/>
+        </hbfunktion>
+        <relation>cause</relation>
+        <beispiel>Er hinkte, *so dass* er nur langsam laufen kann.</beispiel>
+        <beispiel>Das Kind hatte Fieber, *so dass* es im Bett bleiben musste.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="92">
+    <orth type="cont">
+      <part type="single">soeben</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>*Soeben* hat der Aufsichtsrat hat die Plaene fuer die naechsten fuenf Jahre mit einem Volumen von 31 Milliarden Mark abgesegnet.</beispiel>
+        <beispiel>Zu Unrecht, wie eine Ausstellung im Museum Kuenstlerkolonie auf der Darmstaedter Mathildenhoehe *soeben* zeigt.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="93">
+    <orth type="cont">
+      <part type="single">sofern</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>1</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <konditional/>
+        </grfunktion>
+        <hbfunktion>
+          <modal>
+            <restriktiv/>
+          </modal>
+        </hbfunktion>
+        <relation>condition</relation>
+        <beispiel>*Sofern* Hans kommt, gehen wir noch heute aus.</beispiel>
+        <beispiel>Er will am Institut bleiben, *sofern* er die Stelle als Oberassistent erhaelt.</beispiel>
+        <beispiel>*Sofern* du nichts besseres vorhast: kommst du morgen mit ins Kino?</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="94">
+    <orth type="cont">
+      <part type="single">somit</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>?</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Auf den Kandidaten Mueller fielen 16 von 16 Stimmen. *Somit* ist er einstimmig fuer das Amt des Kassenwartes bestaetigt.</beispiel>
+        <beispiel>Der Verwaltungsleiter bestaetigte einige Unregelmaessigkeiten in der Buchfuehrung. Einer Entlassung stand *somit* nichts im Wege.</beispiel>
+        <beispiel>*Somit* koenne live aus jeder Ecke von Barcelona Berichte gesendet werden.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="95">
+    <orth type="cont">
+      <part type="single">sondern</part>
+    </orth>
+    <syn>
+      <kat>konj</kat>
+      <konn>
+        <nintegr>
+          <konj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <adversativ/>
+        </grfunktion>
+        <hbfunktion>
+          <adversativ/>
+        </hbfunktion>
+        <relation>contrast</relation>
+        <beispiel>Er kaufte sich vom Lottogewinn kein Auto, *sondern* machte mehrere Auslandsreisen.</beispiel>
+        <beispiel>Die Entscheidung ist ihm nicht leicht gefallen, *sondern* er hat sich viele Gedanken dazu gemacht.</beispiel>
+        <beispiel>Er blieb nicht einmal stehen, um sich umzuschauen, *sondern* lief so schnell er konnte um die naechste Ecke.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="96">
+    <orth type="cont">
+      <part type="single">sonst</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>Jeder muss an seinem Platz bleiben, bis auf Abruf. *Sonst* wuerden ja alle durcheinanderpurzeln!</beispiel>
+        <beispiel>Bitterlich weinend erzaehlte der Junge, dass er bessere Noten nach Hause bringen muesse. Sein Vater wolle *sonst* nichts mehr von ihm wissen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="97">
+    <orth type="cont">
+      <part type="single">soweit</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion>
+          <modal>
+            <restriktiv/>
+          </modal>
+        </hbfunktion>
+        <relation>not yet...</relation>
+        <beispiel>*Soweit* ich unterrichtet bin, findet der Sommerkurs dieses Jahr im August statt.</beispiel>
+        <beispiel>Er wollte seiner Frau diese Enttaeuschung ersparen, *soweit* es moeglich war.</beispiel>
+        <beispiel>Denn die Ost-Berliner Buerger steigen, *soweit* sie es bezahlen koennen, lieber in einen Mercedes [...].</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>Vor der Wahl stellen Regierung wie Opposition kraeftige Erhoehungen von Kindergeld und Erziehungsgeld in Aussicht. *Soweit* ist das alles nichts Neues.</beispiel>
+        <beispiel>Das Neugeborene wog 2600 Gramm bei einer Laenge von 46 Zentimetern. *Soweit* ein ganz normales, freudiges Ereignis.</beispiel>
+        <beispiel>Um dem bedrohlichen Waldsterben entgegen zu wirken, bleibt nur die Reduzierung der Luftschadstoffe. Die Politiker sind sich alle einig *soweit*.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="98">
+    <orth type="cont">
+      <part type="single">spaeter</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>Es gab ein ausgiebiges Abendessen und gute Gespraeche. *Spaeter* wurde getanzt.</beispiel>
+        <beispiel>Als die ersten Feuerwehrleute eintrafen, 'quoll der Rauch bereits aus allen Fenstern und Fugen', berichtete der stellvertretende Stadtbrandinspektor Michael Haub *spaeter* am Einsatzort.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="99">
+    <orth type="cont">
+      <part type="single">statt</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>*Statt* du hier herumsitzt, solltest du dich mal um deine Schwester kuemmern.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>einzel</kat>
+      <konn>
+        <einzel/>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>*Statt* einen Baukasten hat sie eine Puppe bekommen.</beispiel>
+        <beispiel>*Statt* fuer Puppen interessiert sie sich fuer Baukaesten.</beispiel>
+        <beispiel>*Statt* dass du hier rumsitzt, solltest du dich mal um deine Schwester kuemmern.</beispiel>
+        <beispiel>Sie hat einfach sein Auto verschenkt, *statt* ihm vorher etwas zu sagen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="100">
+    <orth type="cont">
+      <part type="single">trotz</part>
+    </orth>
+    <syn>
+      <kat>praep</kat>
+      <praep>
+        <ante>1</ante>
+        <kasus>gen</kasus>
+        <kasus>dat</kasus>
+      </praep>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Wir fahren *trotz* des schlechten Wetters.</beispiel>
+        <beispiel>Eine zweite Pantherin hat bis zum 67. Lebensjahr gearbeitet, um *trotz* niedrigstem Stundenlohn einen Rentenanspruch zu erwerben.</beispiel>
+        <beispiel>*Trotz* sommerlicher Hitze lief die Heizung auf vollen Touren.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="101">
+    <orth type="cont">
+      <part type="single">trotzdem</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>?</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>1</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion>
+          <konzessiv/>
+        </hbfunktion>
+        <relation>concession</relation>
+        <beispiel>Einen praktischen Nutzen als Hausteiere haben Katzen heute nicht mehr. *Trotzdem* sind sie ueberaus beliebt.</beispiel>
+        <beispiel>Im Hochtaunuskreis hat 1995 nur in 20 Faellen einer der beiden Betroffenen seine Zustimmung verweigert. Die Ehen wurden *trotzdem* geschieden.</beispiel>
+        <beispiel>Eigentlich war fuer heute gutes Wetter angesagt. *Trotzdem*: Es regnet in Stroemen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="102">
+    <orth type="cont">
+      <part type="single">ueberdies</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Von 14 Uhr an koennen die Besucher nicht nur schlemmen und schmausen, sondern auch diskutieren. *Ueberdies* ist eine Tombola geplant.</beispiel>
+        <beispiel>40 Prozent der Bundesbuerger sparen nur fuer den kurzfristigen Konsum und nicht fuers Alter. Zwei Millionen Haushalte sind *ueberdies* stark verschuldet.</beispiel>
+        <beispiel>Der Hundebesitzer weigerte sich, den Hund an die Leine zu nehmen. Mit Ohrfeigen *ueberdies* drohte er.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="103">
+    <orth type="cont">
+      <part type="single">und</part>
+    </orth>
+    <syn>
+      <kat>konj</kat>
+      <konn>
+        <nintegr>
+          <konj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kopulativ/>
+        </grfunktion>
+        <hbfunktion>
+          <kopulativ/>
+        </hbfunktion>
+        <relation>elaboration</relation>
+        <beispiel>Die Sonne schien, *und* die Voegel zwitscherten.</beispiel>
+        <beispiel>Im Gebirge schneit es *und* in der Ebene faellt nur noch Regen.</beispiel>
+        <beispiel>Carla hat einen gruenen *und* Janka einen roten Pullover an.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="104">
+    <orth type="cont">
+      <part type="single">unterdessen</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>joint</relation>
+        <beispiel>*Unterdessen* wird die in der Seefahrt so erfolgreiche Idee der Volks-AG nun auch in anderen Zweigen der Transportbranche erprobt.</beispiel>
+        <beispiel>Die Armee, die fuer die Sicherheit am Wahltag zustaendig ist, stellt *unterdessen* gemischte Einheiten aus Christen und Moslems auf.</beispiel>
+        <beispiel>Nach zweiwoechigen Massenstreiks haben die Bergleute die Arbeit wieder aufgenommen. Die Streiks in den Nachbarrevieren *unterdessen* haben sich erheblich ausgeweitet.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="105">
+    <orth type="cont">
+      <part type="single">vielmehr</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>?</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>asymmetriccontrast</relation>
+        <beispiel>Trotz seiner Wunden ist er nicht mehr im Krankenhaus. *Vielmehr* liegt er gemuetlich mit einem Glas Rotwein auf dem Sofa.</beispiel>
+        <beispiel>Die Berufshaftpflicht haftet nicht in jedem Fall. Man muss *vielmehr* zwischen geschaeftlichen und privaten Wegen unterscheiden.</beispiel>
+        <beispiel>Auch der Wunsch nach dem Wechsel entspringt nicht der Sehnsucht nach Rot-Gruen. *Vielmehr*: Die Leute wollen, dass das schwarz-gelbe Chaos, das sich Regierung nennt, aufhoert.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="106">
+    <orth type="cont">
+      <part type="phrasal">vorausgesetzt, dass</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>condition</relation>
+        <beispiel>*Vorausgesetzt, dass* es keine Absicht war, hat man es bei der Verwechslung mit krimineller Nachlaessigkeit zu tun.</beispiel>
+        <beispiel>230 Jahre lang sollen Sammler davon Stuecke nachkaufen koennen - *vorausgesetzt, dass* es die KPM so lange gibt.</beispiel>
+        <beispiel>Er wuerde auch noch im Himmel - *vorausgesetzt, dass* der Berliner in den Himmel kommt - um viere 'was vorhaben'.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="107">
+    <orth type="cont">
+      <part type="single">vorher</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>Im Herbst soll das neue Album von Zachary Richard erscheinen. *Vorher* geht er erstmals in Deutschland auf Tour.</beispiel>
+        <beispiel>Es ist ratsam, den Text *vorher* gruendlich zu lesen.</beispiel>
+        <beispiel>Morgen fliege ich nach Spanien. Es gibt noch vieles zu erledigen *vorher*.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="108">
+    <orth type="cont">
+      <part type="single">vorlaeufig</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>?</vorfeld>
+            <mittelfeld>?</mittelfeld>
+            <nacherst>?</nacherst>
+            <nachfeld>?</nachfeld>
+            <nullstelle>?</nullstelle>
+            <nachnachfeld>?</nachnachfeld>
+            <satzklammer>?</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="109">
+    <orth type="cont">
+      <part type="single">waehrend</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>during</interval>
+            <interval>equals</interval>
+            <interval>starts</interval>
+            <interval>finishes</interval>
+            <interval>overlaps</interval>
+            <aktionsart scope="sc">stative</aktionsart>
+            <aktionsart scope="sc">durative</aktionsart>
+            <aktionsart scope="sc">iterative</aktionsart>
+          </temporal>
+        </grfunktion>
+        <hbfunktion>
+          <temporal>
+            <gleichzeitigkeit/>
+          </temporal>
+          <adversativ/>
+        </hbfunktion>
+        <relation>joint</relation>
+        <beispiel>*Waehrend* es regnete, sassen wir in einer Gaststaette.</beispiel>
+        <beispiel>Der Vorfall ereignete sich, *waehrend* ich verreist war.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="110">
+    <orth type="cont">
+      <part type="single">waehrenddessen</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>1</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>Applaus brandet unter den nach Polizeischaetzungen 120.000 Zusehern auf. *Waehrenddessen* wird eine Gruppe von 150 Gegendemonstranten am Rathausplatz von einem starken Polizeiaufgebot streng im Auge behalten.</beispiel>
+        <beispiel>Die Kinder spielten im Garten. Die Erwachsenen diskutierten *waehrenddessen* das Wahlergebnis.</beispiel>
+        <beispiel>Ein Krankenwagen schlaengelte sich mit Blaulicht durch den dichten Verkehr. Einige Passanten *waehrenddessen* bemuehten sich um den Gestuerzten.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="111">
+    <orth type="cont">
+      <part type="single">warum</part>
+    </orth>
+    <syn>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="112">
+    <orth type="discont">
+      <part type="single">weder</part>
+      <part type="single">noch</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>?</vorfeld>
+            <mittelfeld>?</mittelfeld>
+            <nacherst>?</nacherst>
+            <nachfeld>?</nachfeld>
+            <nullstelle>?</nullstelle>
+            <nachnachfeld>?</nachnachfeld>
+            <satzklammer>?</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kopulativ/>
+        </grfunktion>
+        <hbfunktion>
+          <kopulativ/>
+        </hbfunktion>
+        <relation>not yet...</relation>
+        <beispiel>Gestern hat es *weder* geregnet, *noch* hat die Sonne geschienen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="113">
+    <orth type="cont">
+      <part type="single">wegen</part>
+    </orth>
+    <syn>
+      <kat>praep</kat>
+      <praep>
+        <ante>1</ante>
+        <post>1</post>
+        <kasus>gen</kasus>
+        <kasus>dat</kasus>
+      </praep>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>*Wegen* einer privaten Feier bleibt das Lokal heute geschlossen.</beispiel>
+        <beispiel>In zwei Faellen wird *wegen* Mordes ermittelt.</beispiel>
+        <beispiel>Er werde jedoch nicht *wegen* dem Mord an dem Modeschoepfer Gianni Versace gesucht, sondern wegen Verdachts auf Steuerhinterziehung und Betrug.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="114">
+    <orth type="cont">
+      <part type="single">weil</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>1</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion>
+          <kausal/>
+        </hbfunktion>
+        <relation>cause</relation>
+        <beispiel>Der Wagen begann zu schleudern, *weil* die Strasse ueberfroren war.</beispiel>
+        <beispiel>*Weil* er nichts sehen will, sieht er nichts.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="115">
+    <orth type="cont">
+      <part type="single">weiterhin</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Er stand den ganzen Tag am Fliessband und musste einen Metallstift in eine oese stecken. *Weiterhin* hatte er nichts zu tun.</beispiel>
+        <beispiel>Die Gewerbesteuereinnahmen waren auch dieses Jahr sehr niedrig. Die Gemeinde muss also *weiterhin* sparen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="116">
+    <orth type="cont">
+      <part type="single">wenn</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>1</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>during</interval>
+            <interval>equals</interval>
+            <interval>finishes</interval>
+            <interval>starts</interval>
+            <aktionsart scope="sc">transformative</aktionsart>
+            <aktionsart scope="sc">semelfactive</aktionsart>
+            <aspect scope="sc">imperfective</aspect>
+          </temporal>
+        </grfunktion>
+        <hbfunktion>
+          <temporal>
+            <gleichzeitigkeit/>
+            <vorzeitigkeit/>
+          </temporal>
+          <konditional/>
+        </hbfunktion>
+        <relation>not yet...</relation>
+        <beispiel>*Wenn* man auf den Knopf drueckt, oeffnet sich die Tuer von selbst.</beispiel>
+        <beispiel>Ich werde ihn auf jeden Fall besuchen, *wenn* er wieder gesund ist.</beispiel>
+        <beispiel>*Wenn* du mich fragst, ich wuerde die Finger davon lassen.</beispiel>
+        <beispiel>*Wenn* alle da sind, gehen wir los.</beispiel>
+        <beispiel>Er klingelt jedesmal dann bei mir, *wenn* er zur Arbeit geht.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="117">
+    <orth type="discont">
+      <part type="single">wenn</part>
+      <part type="single">auch</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <konzessiv/>
+        </grfunktion>
+        <hbfunktion>
+          <konzessiv/>
+        </hbfunktion>
+        <relation>concession</relation>
+        <beispiel>*Wenn auch* einige nicht gekommen waren, so gabe es doch viel Spass auf dem Abschiedsabend.</beispiel>
+        <beispiel>Er setzt nie eine Muetze auf, *auch wenn* es sehr kalt ist.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="118">
+    <orth type="cont">
+      <part type="single">wenngleich</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>1</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <konzessiv/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>Der Palast gibt uns auch heute noch eine Idee der damaligen Groesse, *wenngleich* er grossteils verfallen ist.</beispiel>
+        <beispiel>*Wenngleich* das Programm fuer europaeische Ohren manchmal etwas ungewohnt war, so eroberten doch musikalisches Engagement und technische Fertigkeit des Orchesters im Sturm die Herzen des Publikums.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="119">
+    <orth type="cont">
+      <part type="single">weshalb</part>
+    </orth>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <konzessiv/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Vor gut zehn Jahren machte man die Entdeckung, dass hoher Blutdruck guenstig auf Rauwolfia-Alkaloide an sprach, *weshalb* zur Zeit fast kein blutdrucksenkendes Medikament darauf verzichtet.</beispiel>
+        <beispiel>Und sie liess den Leser nicht lange im Zweifel, *weshalb* er sich flugs wappnen soll.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="120">
+    <orth type="cont">
+      <part type="single">weswegen</part>
+    </orth>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Das Wetter war sehr schlecht, *weswegen* sie statt zu wandern eine Ausstellung besuchten.</beispiel>
+        <beispiel>Es regnete, und ich stand auf dem Oberdeck, als das fremde Maedchen mit dem roetlichen Rossschwanz ueber die Bruecke ging, Gepaeck in beiden Haenden, *weswegen* sie nicht winken konnte.</beispiel>
+        <beispiel>Ich wusste nicht, *weswegen* er anrief.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="121">
+    <orth type="cont">
+      <part type="single">wie</part>
+    </orth>
+    <orth type="discont">
+      <part type="single">ebenso</part>
+      <part type="single">wie</part>
+    </orth>
+    <syn>
+      <kat>subj</kat>
+      <konn>
+        <nintegr>
+          <subj/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>1</ante>
+        <post>1</post>
+        <insert>1</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal>
+            <interval>during</interval>
+            <interval>equals</interval>
+            <interval>finishes</interval>
+            <interval>starts</interval>
+            <aktionsart scope="sc">transformative</aktionsart>
+            <aktionsart scope="sc">semelfactive</aktionsart>
+            <aspect scope="sc">imperfective</aspect>
+          </temporal>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>*Wie* die Kinder den Schneemann sahen, liefen sie sofort zu ihm hin.</beispiel>
+        <beispiel>Die beiden Katzen stuerzten ihr entgegen, *wie* sie die Tuer oeffnete.</beispiel>
+        <beispiel>Es war schon, *wie* er von der Arbeit kam, finstere Nacht.</beispiel>
+      </sem>
+      <sem>
+        <grfunktion>
+          <komparativ/>
+        </grfunktion>
+        <hbfunktion>
+          <modal>
+            <komparativ>realer_Vergleich</komparativ>
+          </modal>
+        </hbfunktion>
+        <relation>asymmetriccontrast</relation>
+        <beispiel>Sein Sohn ist groesser *wie* sein Vater.</beispiel>
+      </sem>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel/>
+        <beispiel/>
+        <beispiel/>
+      </sem>
+      <sem>
+        <grfunktion>
+          <komparativ/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Sein Sohn ist so alt, *wie* die meisten Jungen in der Gruppe (sind).</beispiel>
+      </sem>
+      <sem>
+        <grfunktion>
+          <referierend/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>circumstance</relation>
+        <beispiel>*Wie* er mir vorhin gesagt hat, hat er mich gestern mehrmals vergeblich angerufen.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Zahlreiche Auftritte im Taunus, im Rodgau oder auch in Rheinhessen gehoeren *ebenso* zum jaehrlichen Programm wie Ausfluege bis nach Ungarn und Frankreich.</beispiel>
+        <beispiel>*Ebenso* wie die soziale Distanz wird der Unterschied zwischen Hochkultur und Massenkultur tendenziell eingeebnet.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="122">
+    <orth type="cont">
+      <part type="single">wogegen</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">wohingegen</part>
+    </orth>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <adversativ/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>contrast</relation>
+        <beispiel>Zuwaechse erzielte vor allem das Stammhaus, *wogegen* der Gewinn in den Filialen eher stagnierte.</beispiel>
+        <beispiel>Das Vorsorgedenken vieler ostdeutscher Haushalte findet seinen Ausdruck in hoeheren Einzahlungen bei Bausparkassen, *wogegen* die Lebensversicherung in Ostdeutschland fast keinen Anklang findet.</beispiel>
+        <beispiel>Sie hat studiert, *wohingegen* ihre beiden Brueder ein Handwerk gelernt haben.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="123">
+    <orth type="cont">
+      <part type="single">womit</part>
+    </orth>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>not yet...</relation>
+        <beispiel>Hier hast du zwanzig Mark, *womit* die Sache wohl bereinigt sein duerfte.</beispiel>
+        <beispiel>Der Preis einer Karte betraegt zwei DM, *womit* sie gegenueber fuenf Einzelfahrten nicht billiger ist.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="124">
+    <orth type="cont">
+      <part type="single">wonach</part>
+    </orth>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>Sie wanderten fuenf Stunden lang im Nieselregen, *wonach* alle einen Punsch zum Aufwaermen brauchten.</beispiel>
+        <beispiel>Endlich fand er, *wonach* er jahrelang gesucht hatte.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="125">
+    <orth type="cont">
+      <part type="single">worauf</part>
+    </orth>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>Die Musiker packten ihre Instrumente ein, *worauf* das Publikum endlich den Saal verliess.</beispiel>
+        <beispiel>Der Koenig entscheidet, dass das Kind in der Mitte geteilt werden soll, *worauf* die eine Frau freiwillig auf ihr Kind verzichtet, es dann aber doch bekommt.</beispiel>
+        <beispiel>Mit dem Ellbogen traf er 17 Sekunden vor dem Abpfiff unterm Korb einen Giessener Spieler an der Brust, *worauf* ihn der Schiedsrichter vom Feld schickte.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="126">
+    <orth type="cont">
+      <part type="single">woraufhin</part>
+    </orth>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>Der Boxer stolperte hilflos in die Seile, *woraufhin* der Ringrichter die Begegnung abbrach.</beispiel>
+        <beispiel>Der Jockey des favorisierten Pferdes war aus dem Sattel gestuerzt, *woraufhin* Tausende Zuschauer, die auf das Tier gewettet hatten, in Wut gerieten.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="127">
+    <orth type="cont">
+      <part type="single">zudem</part>
+    </orth>
+    <syn>
+      <kat>padv</kat>
+      <konn>
+        <integr>
+          <padv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </padv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Splitt verursacht weniger Rostschaeden an Autos als Streusalz. *Zudem* ist es umweltfreundlicher.</beispiel>
+        <beispiel>Die Konzerte und Theaterauffuehrungen finden an der Uferpromenade statt. Sonntagsbrunch und Sommernachtskino sind *zudem *geplant.</beispiel>
+        <beispiel>*Zudem*, das DDR- Grenzsicherungsgesetz gab es 1964 noch nicht.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="128">
+    <orth type="cont">
+      <part type="single">zugleich</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>joint</relation>
+        <beispiel>*Zugleich* sind die Hypothekenzinsen auf 7,84 Prozent und damit den niedrigsten Stand in 19 Jahren gesunken.</beispiel>
+        <beispiel>Sie sagte, sie wolle sich direkt an die Basis in Mitte und Prenzlauer Berg wenden. Sie kritisierte *zugleich* das Vorgehen des Bundesvorstandes.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="129">
+    <orth type="cont">
+      <part type="phrasal">zum Beispiel</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">z.B.</part>
+    </orth>
+    <orth type="cont">
+      <part type="single">z.Bsp.</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>Viktor war sich sicher, dass das Leben zu seiner kleinen Schwester freundlicher war als zu ihm. *Zum Beispiel* kriegte sie im Sommer keinen Sonnenbrand.</beispiel>
+        <beispiel>Deshalb wurden *zum Beispiel* etliche Moebel fuer das 'Forsthaus' von ortsansaessigen Schreinern gefertigt.</beispiel>
+        <beispiel>Ein Angestellter *zum Beispiel* schreibt ueber seinen Untergebenen: 'Jeden Donnerstag verweigert er die ueberstunden und sagt, er habe private Verpflichtungen.'</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="130">
+    <orth type="cont">
+      <part type="single">zumal</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>?</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <kausal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>cause</relation>
+        <beispiel>Die Strassenumbenennungen in Goerlitz sind weiterhin ungeklaert. In den Neubauvierteln wird es *zumal* bei den alten Strassennamen bleiben.</beispiel>
+        <beispiel>Ein Verlag ist nicht einfach eine Buchfabrik. *Zumal* bei Surkamp steht das Buechermachen und -verkaufen fuer eine ganze Kultur.</beispiel>
+      </sem>
+    </syn>
+    <syn>
+      <kat>postp</kat>
+      <konn>
+        <nintegr>
+          <postp/>
+        </nintegr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+        <desintegr>0</desintegr>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion>
+          <kausal/>
+        </hbfunktion>
+        <relation>not yet...</relation>
+        <beispiel>Er gewann immer mehr Vorsprung, *zumal* die Kraefte seines Verfolgers offensichtlich nachliessen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="131">
+    <orth type="cont">
+      <part type="single">zunaechst</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>*Zunaechst* ging alles gut, bis 'von ganz oben' das Verdikt kam.</beispiel>
+        <beispiel>'Klar, die Hardcore-Fans waren *zunaechst* irritiert, aber das macht nichts', bewertet Hans die Veraenderung der Band nur positiv.</beispiel>
+        <beispiel>Was wird schliesslich Jesus dazu sagen? *Zunaechst*: Er stellt sich vor seine Juenger.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="132">
+    <orth type="cont">
+      <part type="single">zusaetzlich</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>elaboration</relation>
+        <beispiel>In der ersten Phase ist geplant, Fahrbahnmarkierungen anzubringen und Hinweisschilder aufzustellen. *Zusaetzlich* erhalten die Fussgaenger breitere Gehwege.</beispiel>
+        <beispiel>In den Behoerden wird die personelle Situation zunehmend schlechter. Es mangelt *zusaetzlich* an modernen Arbeitsgeraeten.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="133">
+    <orth type="cont">
+      <part type="single">zuvor</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>0</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>0</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion>
+          <temporal/>
+        </grfunktion>
+        <hbfunktion/>
+        <relation>sequence</relation>
+        <beispiel>*Zuvor* waren zwei Ex-Bundesligaprofis an der Aufgabe gescheitert.</beispiel>
+        <beispiel>Er war *zuvor* aber nach Suedamerika gereist, um Erfahrungen zu sammeln und dort lebt er noch heute.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+  <eintrag id="134">
+    <orth type="cont">
+      <part type="single">zwar</part>
+    </orth>
+    <orth type="discont">
+      <part type="single">zwar</part>
+      <part type="single">aber</part>
+    </orth>
+    <syn>
+      <kat>konnadv</kat>
+      <konn>
+        <integr>
+          <konnadv>
+            <vorfeld>1</vorfeld>
+            <mittelfeld>1</mittelfeld>
+            <nacherst>1</nacherst>
+            <nachfeld>0</nachfeld>
+            <nullstelle>1</nullstelle>
+            <nachnachfeld>0</nachnachfeld>
+            <satzklammer>0</satzklammer>
+          </konnadv>
+        </integr>
+      </konn>
+      <abfolge>
+        <ante>0</ante>
+        <post>1</post>
+        <insert>0</insert>
+      </abfolge>
+      <sem>
+        <grfunktion/>
+        <hbfunktion/>
+        <relation>concession</relation>
+        <beispiel>*Zwar* habe ich im Fach Mathematik Abitur gemacht, aber was Differentialrechnung ist, weiss ich auch nicht mehr so genau.</beispiel>
+        <beispiel>Die Bar hatte *zwar* geoeffnet, aber er trank sein Bier trotzdem lieber zu Hause.</beispiel>
+        <beispiel>*Zwar*: Eine Vielzahl von Mitarbeitern des kommunalen Verkehrsamtes freilich moegen diese Meinung nicht so ohne weiteres teilen.</beispiel>
+      </sem>
+    </syn>
+  </eintrag>
+</dimlex>

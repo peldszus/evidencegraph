@@ -1,0 +1,3709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?relations relSet="Martin1992"?>
+<!DOCTYPE conanolex SYSTEM "ConAnoLex.dtd">
+<conanolex>
+  <entry id="1">
+    <orth type="cont">
+      <part type="phrasal">in addition</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in addition</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="2">
+    <orth type="cont">
+      <part type="phrasal">at first blush</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at first blush</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="3">
+    <orth type="cont">
+      <part type="phrasal">in case</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in case</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="4">
+    <orth type="cont">
+      <part type="phrasal">even if</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: even if</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="5">
+    <orth type="cont">
+      <part type="phrasal">notwithstanding that,</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: notwithstanding that,</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="6">
+    <orth type="cont">
+      <part type="single">indeed</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: indeed</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="7">
+    <orth type="cont">
+      <part type="phrasal">the next time</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: the next time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="8">
+    <orth type="cont">
+      <part type="phrasal">at the same time</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at the same time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="9">
+    <orth type="cont">
+      <part type="single">anyway</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: anyway</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="10">
+    <orth type="cont">
+      <part type="phrasal">for the simple reason</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for the simple reason</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="11">
+    <orth type="cont">
+      <part type="phrasal">in the event</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in the event</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="12">
+    <orth type="cont">
+      <part type="phrasal">following this</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: following this</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="13">
+    <orth type="cont">
+      <part type="phrasal">whether or not</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: whether or not</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="14">
+    <orth type="cont">
+      <part type="phrasal">by and by</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: by and by</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="15">
+    <orth type="cont">
+      <part type="phrasal">not only</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: not only</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="16">
+    <orth type="cont">
+      <part type="phrasal">at first sight</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at first sight</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="17">
+    <orth type="cont">
+      <part type="single">still</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: still</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="18">
+    <orth type="cont">
+      <part type="phrasal">to begin with</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to begin with</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="19">
+    <orth type="cont">
+      <part type="phrasal">in doing this</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in doing this</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="20">
+    <orth type="cont">
+      <part type="single">before</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: before</example>
+      </sem>
+    </syn>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: before</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="21">
+    <orth type="cont">
+      <part type="single">certainly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: certainly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="22">
+    <orth type="cont">
+      <part type="single">now</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: now</example>
+      </sem>
+    </syn>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: now</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="23">
+    <orth type="cont">
+      <part type="single">secondly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: secondly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="24">
+    <orth type="cont">
+      <part type="single">just</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: just</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="25">
+    <orth type="cont">
+      <part type="single">true</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: true</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="26">
+    <orth type="cont">
+      <part type="phrasal">but then</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: but then</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="27">
+    <orth type="cont">
+      <part type="phrasal">for a start</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for a start</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="28">
+    <orth type="cont">
+      <part type="single">except</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: except</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="29">
+    <orth type="cont">
+      <part type="phrasal">by the time</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: by the time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="30">
+    <orth type="cont">
+      <part type="single">actually</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: actually</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="31">
+    <orth type="cont">
+      <part type="single">suddenly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: suddenly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="32">
+    <orth type="cont">
+      <part type="single">finally</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: finally</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="33">
+    <orth type="cont">
+      <part type="phrasal">not that</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: not that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="34">
+    <orth type="cont">
+      <part type="phrasal">for one thing</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for one thing</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="35">
+    <orth type="cont">
+      <part type="phrasal">as soon as</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as soon as</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="36">
+    <orth type="cont">
+      <part type="single">undoubtedly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: undoubtedly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="37">
+    <orth type="cont">
+      <part type="single">thereafter</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: thereafter</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="38">
+    <orth type="cont">
+      <part type="phrasal">each time</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: each time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="39">
+    <orth type="cont">
+      <part type="single">eventually</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: eventually</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="40">
+    <orth type="cont">
+      <part type="phrasal">only because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: only because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="41">
+    <orth type="cont">
+      <part type="phrasal">largely because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: largely because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="42">
+    <orth type="cont">
+      <part type="single">presently</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: presently</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="43">
+    <orth type="cont">
+      <part type="single">thereby</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: thereby</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="44">
+    <orth type="cont">
+      <part type="phrasal">in the end</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in the end</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="45">
+    <orth type="cont">
+      <part type="single">overall</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: overall</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="46">
+    <orth type="cont">
+      <part type="phrasal">sure enough</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: sure enough</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="47">
+    <orth type="cont">
+      <part type="phrasal">in conclusion</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in conclusion</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="48">
+    <orth type="cont">
+      <part type="phrasal">we might say</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: we might say</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="49">
+    <orth type="cont">
+      <part type="phrasal">that's when</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: that's when</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="50">
+    <orth type="cont">
+      <part type="phrasal">on the other hand</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on the other hand</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="51">
+    <orth type="cont">
+      <part type="phrasal">on top of this</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on top of this</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="52">
+    <orth type="cont">
+      <part type="phrasal">in sum</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in sum</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="53">
+    <orth type="cont">
+      <part type="single">instead</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: instead</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="54">
+    <orth type="cont">
+      <part type="phrasal">as long as</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as long as</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="55">
+    <orth type="cont">
+      <part type="phrasal">inasmuch as</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: inasmuch as</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="56">
+    <orth type="cont">
+      <part type="single">thus</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: thus</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="57">
+    <orth type="cont">
+      <part type="phrasal">much later</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: much later</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="58">
+    <orth type="cont">
+      <part type="phrasal">in the hope that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in the hope that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="59">
+    <orth type="cont">
+      <part type="phrasal">provided that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: provided that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="60">
+    <orth type="cont">
+      <part type="phrasal">by contrast</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: by contrast</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="61">
+    <orth type="cont">
+      <part type="phrasal">especially if</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: especially if</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="62">
+    <orth type="cont">
+      <part type="phrasal">insofar as</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: insofar as</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="63">
+    <orth type="cont">
+      <part type="phrasal">the fact is that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: the fact is that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="64">
+    <orth type="cont">
+      <part type="phrasal">the more often</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: the more often</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="65">
+    <orth type="cont">
+      <part type="single">whilst</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: whilst</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="66">
+    <orth type="cont">
+      <part type="phrasal">as a corollary</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as a corollary</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="67">
+    <orth type="cont">
+      <part type="single">alternatively</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: alternatively</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="68">
+    <orth type="cont">
+      <part type="phrasal">as a consequence</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as a consequence</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="69">
+    <orth type="cont">
+      <part type="single">wherever</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: wherever</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="70">
+    <orth type="cont">
+      <part type="phrasal">in that respect</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in that respect</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="71">
+    <orth type="cont">
+      <part type="phrasal">except when</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: except when</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="72">
+    <orth type="cont">
+      <part type="phrasal">it is because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: it is because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="73">
+    <orth type="cont">
+      <part type="phrasal">at least</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at least</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="74">
+    <orth type="cont">
+      <part type="phrasal">by all means</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: by all means</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="75">
+    <orth type="cont">
+      <part type="single">either</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: either</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="76">
+    <orth type="cont">
+      <part type="single">though</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: though</example>
+      </sem>
+    </syn>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: though</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="77">
+    <orth type="cont">
+      <part type="single">admittedly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: admittedly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="78">
+    <orth type="cont">
+      <part type="phrasal">that is to say</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: that is to say</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="79">
+    <orth type="cont">
+      <part type="single">where</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: where</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="80">
+    <orth type="cont">
+      <part type="phrasal">in this way</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in this way</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="81">
+    <orth type="cont">
+      <part type="phrasal">I mean</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: I mean</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="82">
+    <orth type="cont">
+      <part type="phrasal">seeing as</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: seeing as</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="83">
+    <orth type="cont">
+      <part type="phrasal">on one hand</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on one hand</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="84">
+    <orth type="cont">
+      <part type="phrasal">suppose that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: suppose that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="85">
+    <orth type="cont">
+      <part type="single">because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="86">
+    <orth type="cont">
+      <part type="phrasal">on the grounds that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on the grounds that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="87">
+    <orth type="cont">
+      <part type="phrasal">especially when</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: especially when</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="88">
+    <orth type="cont">
+      <part type="phrasal">in short</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in short</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="89">
+    <orth type="cont">
+      <part type="phrasal">on condition that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on condition that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="90">
+    <orth type="cont">
+      <part type="single">back</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: back</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="91">
+    <orth type="cont">
+      <part type="phrasal">on the other side</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on the other side</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="92">
+    <orth type="cont">
+      <part type="single">second</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: second</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="93">
+    <orth type="cont">
+      <part type="single">besides</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: besides</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="94">
+    <orth type="cont">
+      <part type="phrasal">after all</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: after all</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="95">
+    <orth type="cont">
+      <part type="single">incidentally</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: incidentally</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="96">
+    <orth type="cont">
+      <part type="phrasal">at once</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at once</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="97">
+    <orth type="cont">
+      <part type="phrasal">that is</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: that is</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="98">
+    <orth type="cont">
+      <part type="phrasal">as it turned out</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as it turned out</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="99">
+    <orth type="cont">
+      <part type="phrasal">simply because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: simply because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="100">
+    <orth type="cont">
+      <part type="phrasal">presumably because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: presumably because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="101">
+    <orth type="cont">
+      <part type="phrasal">put another way</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: put another way</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="102">
+    <orth type="cont">
+      <part type="single">even</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: even</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="103">
+    <orth type="cont">
+      <part type="phrasal">in the first place</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in the first place</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="104">
+    <orth type="cont">
+      <part type="single">ultimately</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: ultimately</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="105">
+    <orth type="cont">
+      <part type="single">and/or</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: and/or</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="106">
+    <orth type="cont">
+      <part type="phrasal">the first time</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: the first time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="107">
+    <orth type="cont">
+      <part type="single">for</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="108">
+    <orth type="cont">
+      <part type="phrasal">to the extent that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to the extent that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="109">
+    <orth type="cont">
+      <part type="phrasal">to conclude</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to conclude</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="110">
+    <orth type="cont">
+      <part type="single">furthermore</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: furthermore</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="111">
+    <orth type="cont">
+      <part type="single">since</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: since</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="112">
+    <orth type="cont">
+      <part type="phrasal">in which case</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in which case</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="113">
+    <orth type="cont">
+      <part type="phrasal">despite the fact that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: despite the fact that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="114">
+    <orth type="cont">
+      <part type="phrasal">before long</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: before long</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="115">
+    <orth type="cont">
+      <part type="single">yet</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: yet</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="116">
+    <orth type="cont">
+      <part type="single">when</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: when</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="117">
+    <orth type="cont">
+      <part type="phrasal">much sooner</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: much sooner</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="118">
+    <orth type="cont">
+      <part type="phrasal">for one,</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for one,</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="119">
+    <orth type="cont">
+      <part type="single">then</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: then</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="120">
+    <orth type="cont">
+      <part type="phrasal">summing up</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: summing up</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="121">
+    <orth type="cont">
+      <part type="phrasal">by comparison</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: by comparison</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="122">
+    <orth type="cont">
+      <part type="single">whereupon</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: whereupon</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="123">
+    <orth type="cont">
+      <part type="phrasal">to be precise</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to be precise</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="124">
+    <orth type="cont">
+      <part type="phrasal">as it is</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as it is</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="125">
+    <orth type="cont">
+      <part type="single">after</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: after</example>
+      </sem>
+    </syn>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: after</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="126">
+    <orth type="cont">
+      <part type="single">simultaneously</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: simultaneously</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="127">
+    <orth type="cont">
+      <part type="phrasal">this time</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: this time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="128">
+    <orth type="cont">
+      <part type="single">initially</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: initially</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="129">
+    <orth type="cont">
+      <part type="phrasal">to start with</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to start with</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="130">
+    <orth type="cont">
+      <part type="phrasal">for this reason</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for this reason</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="131">
+    <orth type="cont">
+      <part type="phrasal">to make matters worse</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to make matters worse</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="132">
+    <orth type="cont">
+      <part type="single">however</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: however</example>
+      </sem>
+    </syn>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: however</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="133">
+    <orth type="cont">
+      <part type="phrasal">regardless of that</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: regardless of that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="134">
+    <orth type="cont">
+      <part type="single">otherwise</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: otherwise</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="135">
+    <orth type="cont">
+      <part type="single">notably</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: notably</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="136">
+    <orth type="cont">
+      <part type="phrasal">for fear that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for fear that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="137">
+    <orth type="cont">
+      <part type="phrasal">or again</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: or again</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="138">
+    <orth type="cont">
+      <part type="single">not</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: not</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="139">
+    <orth type="cont">
+      <part type="single">surely</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: surely</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="140">
+    <orth type="cont">
+      <part type="single">although</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: although</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="141">
+    <orth type="cont">
+      <part type="single">thirdly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: thirdly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="142">
+    <orth type="cont">
+      <part type="single">therefore</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: therefore</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="143">
+    <orth type="cont">
+      <part type="phrasal">as luck would have it</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as luck would have it</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="144">
+    <orth type="cont">
+      <part type="phrasal">which means</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: which means</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="145">
+    <orth type="cont">
+      <part type="phrasal">even then</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: even then</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="146">
+    <orth type="cont">
+      <part type="phrasal">at first</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at first</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="147">
+    <orth type="cont">
+      <part type="phrasal">as a result</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as a result</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="148">
+    <orth type="cont">
+      <part type="single">last</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: last</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="149">
+    <orth type="cont">
+      <part type="phrasal">mind you</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: mind you</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="150">
+    <orth type="cont">
+      <part type="phrasal">let us assume</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: let us assume</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="151">
+    <orth type="cont">
+      <part type="phrasal">at first view</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at first view</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="152">
+    <orth type="cont">
+      <part type="phrasal">particularly if</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: particularly if</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="153">
+    <orth type="cont">
+      <part type="phrasal">only if</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: only if</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="154">
+    <orth type="cont">
+      <part type="phrasal">at that</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="155">
+    <orth type="cont">
+      <part type="phrasal">except if</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: except if</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="156">
+    <orth type="cont">
+      <part type="phrasal">only after</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: only after</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="157">
+    <orth type="cont">
+      <part type="single">lest</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: lest</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="158">
+    <orth type="cont">
+      <part type="phrasal">no doubt</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: no doubt</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="159">
+    <orth type="cont">
+      <part type="single">hence</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: hence</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="160">
+    <orth type="cont">
+      <part type="phrasal">the one time</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: the one time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="161">
+    <orth type="cont">
+      <part type="phrasal">every time</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: every time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="162">
+    <orth type="cont">
+      <part type="phrasal">in the case of X</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in the case of X</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="163">
+    <orth type="cont">
+      <part type="single">consequently</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: consequently</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="164">
+    <orth type="cont">
+      <part type="single">or</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: or</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="165">
+    <orth type="cont">
+      <part type="single">summarising</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: summarising</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="166">
+    <orth type="cont">
+      <part type="single">first</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: first</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="167">
+    <orth type="cont">
+      <part type="phrasal">only before</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: only before</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="168">
+    <orth type="cont">
+      <part type="single">equally</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: equally</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="169">
+    <orth type="cont">
+      <part type="phrasal">once more</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: once more</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="170">
+    <orth type="cont">
+      <part type="single">afterwards</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: afterwards</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="171">
+    <orth type="cont">
+      <part type="single">plainly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: plainly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="172">
+    <orth type="cont">
+      <part type="phrasal">until then</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: until then</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="173">
+    <orth type="cont">
+      <part type="single">previously</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: previously</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="174">
+    <orth type="cont">
+      <part type="phrasal">always assuming that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: always assuming that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="175">
+    <orth type="cont">
+      <part type="single">merely</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: merely</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="176">
+    <orth type="cont">
+      <part type="phrasal">next time</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: next time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="177">
+    <orth type="cont">
+      <part type="single">reciprocally</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: reciprocally</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="178">
+    <orth type="cont">
+      <part type="phrasal">it is only because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: it is only because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="179">
+    <orth type="cont">
+      <part type="phrasal">for instance</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for instance</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="180">
+    <orth type="cont">
+      <part type="phrasal">to the degree that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to the degree that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="181">
+    <orth type="cont">
+      <part type="phrasal">for that matter</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for that matter</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="182">
+    <orth type="cont">
+      <part type="single">specifically</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: specifically</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="183">
+    <orth type="cont">
+      <part type="phrasal">even though</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: even though</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="184">
+    <orth type="cont">
+      <part type="single">too</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: too</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="185">
+    <orth type="cont">
+      <part type="phrasal">most Xly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: most Xly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="186">
+    <orth type="cont">
+      <part type="single">moreover</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: moreover</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="187">
+    <orth type="cont">
+      <part type="single">lastly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: lastly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="188">
+    <orth type="cont">
+      <part type="single">soon</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: soon</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="189">
+    <orth type="cont">
+      <part type="phrasal">if ever</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: if ever</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="190">
+    <orth type="cont">
+      <part type="phrasal">regardless of whether</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: regardless of whether</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="191">
+    <orth type="cont">
+      <part type="phrasal">mainly because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: mainly because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="192">
+    <orth type="cont">
+      <part type="phrasal">even when</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: even when</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="193">
+    <orth type="cont">
+      <part type="single">similarly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: similarly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="194">
+    <orth type="cont">
+      <part type="phrasal">for example</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for example</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="195">
+    <orth type="cont">
+      <part type="phrasal">on balance</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on balance</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="196">
+    <orth type="cont">
+      <part type="phrasal">the thing is</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: the thing is</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="197">
+    <orth type="cont">
+      <part type="single">only</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: only</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="198">
+    <orth type="cont">
+      <part type="phrasal">even before</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: even before</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="199">
+    <orth type="cont">
+      <part type="single">next</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: next</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="200">
+    <orth type="cont">
+      <part type="phrasal">that's why</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: that's why</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="201">
+    <orth type="cont">
+      <part type="single">accordingly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: accordingly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="202">
+    <orth type="cont">
+      <part type="phrasal">especially because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: especially because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="203">
+    <orth type="cont">
+      <part type="phrasal">by the same token</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: by the same token</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="204">
+    <orth type="cont">
+      <part type="phrasal">on the contrary</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on the contrary</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="205">
+    <orth type="cont">
+      <part type="phrasal">just as</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: just as</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="206">
+    <orth type="cont">
+      <part type="phrasal">what is more</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: what is more</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="207">
+    <orth type="cont">
+      <part type="phrasal">in particular</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in particular</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="208">
+    <orth type="cont">
+      <part type="phrasal">another time</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: another time</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="209">
+    <orth type="cont">
+      <part type="single">until</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: until</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="210">
+    <orth type="cont">
+      <part type="single">naturally</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: naturally</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="211">
+    <orth type="cont">
+      <part type="phrasal">at the moment when</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at the moment when</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="212">
+    <orth type="cont">
+      <part type="phrasal">you know</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: you know</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="213">
+    <orth type="cont">
+      <part type="single">rather</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: rather</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="214">
+    <orth type="cont">
+      <part type="phrasal">from then on</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: from then on</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="215">
+    <orth type="cont">
+      <part type="phrasal">on the one hand</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on the one hand</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="216">
+    <orth type="cont">
+      <part type="phrasal">then again</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: then again</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="217">
+    <orth type="cont">
+      <part type="phrasal">if only</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: if only</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="218">
+    <orth type="cont">
+      <part type="phrasal">to summarise</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to summarise</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="219">
+    <orth type="cont">
+      <part type="single">but</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: but</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="220">
+    <orth type="cont">
+      <part type="single">else</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: else</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="221">
+    <orth type="cont">
+      <part type="phrasal">for another thing</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: for another thing</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="222">
+    <orth type="cont">
+      <part type="phrasal">at last</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at last</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="223">
+    <orth type="cont">
+      <part type="single">correspondingly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: correspondingly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="224">
+    <orth type="cont">
+      <part type="single">everywhere</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: everywhere</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="225">
+    <orth type="cont">
+      <part type="phrasal">in other respects</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in other respects</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="226">
+    <orth type="cont">
+      <part type="phrasal">considering that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: considering that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="227">
+    <orth type="cont">
+      <part type="phrasal">the moment</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: the moment</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="228">
+    <orth type="cont">
+      <part type="phrasal">if not</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: if not</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="229">
+    <orth type="cont">
+      <part type="phrasal">or else</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: or else</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="230">
+    <orth type="cont">
+      <part type="phrasal">in truth</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in truth</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="231">
+    <orth type="cont">
+      <part type="phrasal">of course</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: of course</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="232">
+    <orth type="cont">
+      <part type="phrasal">as it happened</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as it happened</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="233">
+    <orth type="cont">
+      <part type="phrasal">in the beginning</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in the beginning</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="234">
+    <orth type="cont">
+      <part type="phrasal">to take an example</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to take an example</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="235">
+    <orth type="cont">
+      <part type="phrasal">before then</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: before then</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="236">
+    <orth type="cont">
+      <part type="phrasal">except insofar as</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: except insofar as</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="237">
+    <orth type="cont">
+      <part type="phrasal">providing that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: providing that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="238">
+    <orth type="cont">
+      <part type="phrasal">in that case</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in that case</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="239">
+    <orth type="cont">
+      <part type="single">originally</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: originally</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="240">
+    <orth type="cont">
+      <part type="phrasal">to sum up</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to sum up</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="241">
+    <orth type="cont">
+      <part type="phrasal">in a different vein</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in a different vein</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="242">
+    <orth type="cont">
+      <part type="phrasal">even so</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: even so</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="243">
+    <orth type="cont">
+      <part type="phrasal">all the same</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: all the same</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="244">
+    <orth type="cont">
+      <part type="phrasal">despite this</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: despite this</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="245">
+    <orth type="cont">
+      <part type="single">whenever</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: whenever</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="246">
+    <orth type="cont">
+      <part type="single">while</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: while</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="247">
+    <orth type="cont">
+      <part type="phrasal">above all</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: above all</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="248">
+    <orth type="cont">
+      <part type="single">suppose</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: suppose</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="249">
+    <orth type="cont">
+      <part type="phrasal">by the way</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: by the way</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="250">
+    <orth type="cont">
+      <part type="phrasal">with that</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: with that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="251">
+    <orth type="cont">
+      <part type="phrasal">once again</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: once again</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="252">
+    <orth type="cont">
+      <part type="phrasal">in that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="253">
+    <orth type="cont">
+      <part type="phrasal">to be sure</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: to be sure</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="254">
+    <orth type="cont">
+      <part type="single">and</part>
+    </orth>
+    <syn type="coordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: and</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="255">
+    <orth type="cont">
+      <part type="phrasal">just then</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: just then</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="256">
+    <orth type="cont">
+      <part type="phrasal">having said that</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: having said that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="257">
+    <orth type="cont">
+      <part type="single">likewise</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: likewise</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="258">
+    <orth type="cont">
+      <part type="phrasal">come to think of it</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: come to think of it</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="259">
+    <orth type="cont">
+      <part type="phrasal">ever since</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: ever since</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="260">
+    <orth type="cont">
+      <part type="phrasal">it might seem that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: it might seem that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="261">
+    <orth type="cont">
+      <part type="phrasal">such that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: such that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="262">
+    <orth type="cont">
+      <part type="phrasal">particularly because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: particularly because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="263">
+    <orth type="cont">
+      <part type="single">as</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="264">
+    <orth type="cont">
+      <part type="phrasal">essentially, then</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: essentially, then</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="265">
+    <orth type="cont">
+      <part type="phrasal">which is why</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: which is why</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="266">
+    <orth type="cont">
+      <part type="single">further</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: further</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="267">
+    <orth type="cont">
+      <part type="phrasal">on the one side</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on the one side</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="268">
+    <orth type="cont">
+      <part type="single">obviously</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: obviously</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="269">
+    <orth type="cont">
+      <part type="single">conversely</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: conversely</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="270">
+    <orth type="cont">
+      <part type="single">clearly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: clearly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="271">
+    <orth type="cont">
+      <part type="phrasal">at any rate</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at any rate</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="272">
+    <orth type="cont">
+      <part type="single">if</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: if</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="273">
+    <orth type="cont">
+      <part type="single">again</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: again</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="274">
+    <orth type="cont">
+      <part type="phrasal">only when</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: only when</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="275">
+    <orth type="cont">
+      <part type="single">nonetheless</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: nonetheless</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="276">
+    <orth type="cont">
+      <part type="single">fortunately</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: fortunately</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="277">
+    <orth type="cont">
+      <part type="single">whereas</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: whereas</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="278">
+    <orth type="cont">
+      <part type="phrasal">at the outset</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at the outset</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="279">
+    <orth type="cont">
+      <part type="phrasal">at which point</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: at which point</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="280">
+    <orth type="cont">
+      <part type="single">wherein</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: wherein</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="281">
+    <orth type="cont">
+      <part type="single">also</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: also</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="282">
+    <orth type="cont">
+      <part type="phrasal">now that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: now that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="283">
+    <orth type="cont">
+      <part type="single">unfortunately</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: unfortunately</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="284">
+    <orth type="cont">
+      <part type="phrasal">all in all</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: all in all</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="285">
+    <orth type="cont">
+      <part type="phrasal">in other words</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in other words</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="286">
+    <orth type="cont">
+      <part type="phrasal">on one side</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on one side</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="287">
+    <orth type="cont">
+      <part type="single">instantly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: instantly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="288">
+    <orth type="cont">
+      <part type="phrasal">in any case</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in any case</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="289">
+    <orth type="cont">
+      <part type="phrasal">this means</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: this means</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="290">
+    <orth type="cont">
+      <part type="phrasal">which reminds me</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: which reminds me</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="291">
+    <orth type="cont">
+      <part type="phrasal">much as</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: much as</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="292">
+    <orth type="cont">
+      <part type="phrasal">in so doing</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in so doing</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="293">
+    <orth type="cont">
+      <part type="phrasal">even after</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: even after</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="294">
+    <orth type="cont">
+      <part type="phrasal">in actual fact</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in actual fact</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="295">
+    <orth type="cont">
+      <part type="single">unless</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: unless</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="296">
+    <orth type="cont">
+      <part type="phrasal">no sooner than</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: no sooner than</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="297">
+    <orth type="cont">
+      <part type="phrasal">supposing that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: supposing that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="298">
+    <orth type="cont">
+      <part type="phrasal">in turn</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in turn</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="299">
+    <orth type="cont">
+      <part type="phrasal">except before</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: except before</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="300">
+    <orth type="cont">
+      <part type="phrasal">in fact</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in fact</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="301">
+    <orth type="cont">
+      <part type="single">earlier</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: earlier</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="302">
+    <orth type="cont">
+      <part type="phrasal">apart from that</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: apart from that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="303">
+    <orth type="cont">
+      <part type="phrasal">given that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: given that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="304">
+    <orth type="cont">
+      <part type="phrasal">particularly when</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: particularly when</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="305">
+    <orth type="cont">
+      <part type="phrasal">in contrast</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in contrast</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="306">
+    <orth type="cont">
+      <part type="phrasal">on the assumption that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: on the assumption that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="307">
+    <orth type="cont">
+      <part type="phrasal">it might appear that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: it might appear that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="308">
+    <orth type="cont">
+      <part type="phrasal">after that</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: after that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="309">
+    <orth type="cont">
+      <part type="single">subsequently</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: subsequently</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="310">
+    <orth type="cont">
+      <part type="phrasal">as well</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: as well</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="311">
+    <orth type="cont">
+      <part type="phrasal">so that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: so that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="312">
+    <orth type="cont">
+      <part type="phrasal">failing that</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: failing that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="313">
+    <orth type="cont">
+      <part type="phrasal">in spite of that</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in spite of that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="314">
+    <orth type="cont">
+      <part type="phrasal">merely because</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: merely because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="315">
+    <orth type="cont">
+      <part type="single">third</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: third</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="316">
+    <orth type="cont">
+      <part type="phrasal">that's how</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: that's how</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="317">
+    <orth type="cont">
+      <part type="single">nevertheless</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: nevertheless</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="318">
+    <orth type="cont">
+      <part type="single">later</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: later</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="319">
+    <orth type="cont">
+      <part type="single">well</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: well</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="320">
+    <orth type="cont">
+      <part type="single">luckily</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: luckily</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="321">
+    <orth type="cont">
+      <part type="phrasal">neither is it the case</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: neither is it the case</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="322">
+    <orth type="cont">
+      <part type="phrasal">not because</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: not because</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="323">
+    <orth type="cont">
+      <part type="phrasal">if so</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: if so</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="324">
+    <orth type="cont">
+      <part type="phrasal">in the meantime</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: in the meantime</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="325">
+    <orth type="cont">
+      <part type="single">so</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: so</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="326">
+    <orth type="cont">
+      <part type="phrasal">except after</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: except after</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="327">
+    <orth type="cont">
+      <part type="phrasal">more Xly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: more Xly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="328">
+    <orth type="cont">
+      <part type="phrasal">it follows that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: it follows that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="329">
+    <orth type="cont">
+      <part type="single">firstly</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: firstly</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="330">
+    <orth type="cont">
+      <part type="phrasal">first of all</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: first of all</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="331">
+    <orth type="cont">
+      <part type="single">meanwhile</part>
+    </orth>
+    <syn type="adverbial">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: meanwhile</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="332">
+    <orth type="cont">
+      <part type="phrasal">by then</part>
+    </orth>
+    <syn type="prepositional">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: by then</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="333">
+    <orth type="cont">
+      <part type="phrasal">notwithstanding that</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: notwithstanding that</example>
+      </sem>
+    </syn>
+  </entry>
+  <entry id="334">
+    <orth type="cont">
+      <part type="single">once</part>
+    </orth>
+    <syn type="subordinating">
+      <sem>
+        <coh-relation>contrast</coh-relation>
+        <example>This is an example usage for the connective: once</example>
+      </sem>
+    </syn>
+  </entry>
+</conanolex>
