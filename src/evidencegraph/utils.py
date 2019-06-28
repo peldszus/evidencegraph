@@ -150,18 +150,3 @@ def hash_of_featureset(features):
     '4518ca2'
     """
     return md5(' '.join(sorted(features))).hexdigest()[:7]
-
-
-def save(obj, path, verbose=True):
-    """Save an object (typically a classifier model) using joblib."""
-    joblib.dump(obj, path, compress=1, cache_size=1e9)
-    if verbose:
-        print "Saved model {}".format(path)
-
-
-def load(path, verbose=True):
-    """Load an object (typically a classifier model) using joblib."""
-    if not os.path.isfile(path) or not os.access(path, os.R_OK):
-        raise RuntimeError("Can't load model from file {:s}".format(path))
-    print "Loaded model {}".format(path)
-    return joblib.load(path)

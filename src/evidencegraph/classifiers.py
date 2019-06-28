@@ -7,6 +7,9 @@ Created on 06.05.2016
 @author: Andreas Peldszus
 '''
 
+import os
+import joblib
+
 from functools import partial
 from copy import deepcopy
 from numpy import mean, zeros
@@ -335,3 +338,20 @@ class EvidenceGraphClassifier(object):
                     source, target, type=func_type,
                     cc=cc_weight, ro=ro_weight, fu=fu_weight, at=at_weight)
         return eg
+
+    def save(self, path, verbose=True):
+        """Save ensemble of base classifiers."""
+        pipelines = [(lvl, self.ensemble[lvl].pipeline) for lvl in sorted(self.ensemble.keys())]
+        joblib.dump(pipelines, path, compress=1)
+        if verbose:
+            print "Saved model {}".format(path)
+
+    def load(self, path, verbose=True):
+        """Load an object (typically a classifier model) using joblib."""
+        if not os.path.isfile(path) or not os.access(path, os.R_OK):
+            raise RuntimeError("Can't load model from file {:s}".format(path))
+        pipelines = joblib.load(path)
+        for lvl, pipeline in pipelines:
+            self.ensemble[lvl].pipeline = pipeline
+        if verbose:
+            print "Loaded model {}".format(path)

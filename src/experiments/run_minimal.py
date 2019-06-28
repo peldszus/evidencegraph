@@ -18,7 +18,7 @@ from evidencegraph.features_text import (feature_function_segmentpairs,
                                          feature_function_segments,
                                          init_language)
 from evidencegraph.folds import get_static_folds
-from evidencegraph.utils import load_corpus, hash_of_featureset, load, save
+from evidencegraph.utils import load_corpus, hash_of_featureset
 
 
 modelpath = "data/models/"
@@ -42,14 +42,14 @@ def folds_static(in_corpus, out_corpus, params, condition_name):
         train_arg = [g for t, g in out_corpus.iteritems() if t in train_tids]
         try:
             # load ensemble of pretrained base classifiers
-            clf.ensemble = load(modelpath + ensemble_name)
+            clf.load(modelpath + ensemble_name)
             if params['optimize_weighting']:
                 # and train metaclassifier (if desired)
                 clf.train_metaclassifier(train_txt, train_arg)
         except RuntimeError:
             # train ensemble
             clf.train(train_txt, train_arg)
-            save(clf.ensemble, modelpath + ensemble_name)
+            clf.save(modelpath + ensemble_name)
 
         # test
         test_txt = [g for t, g in in_corpus.iteritems() if t in test_tids]
