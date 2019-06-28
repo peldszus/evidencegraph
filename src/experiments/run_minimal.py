@@ -14,9 +14,7 @@ from numpy import mean
 
 from evidencegraph.argtree import SIMPLE_RELATION_SET
 from evidencegraph.classifiers import EvidenceGraphClassifier
-from evidencegraph.features_text import (feature_function_segmentpairs,
-                                         feature_function_segments,
-                                         init_language)
+from evidencegraph.features_text import init_language
 from evidencegraph.folds import get_static_folds
 from evidencegraph.utils import load_corpus, hash_of_featureset
 
@@ -24,7 +22,7 @@ from evidencegraph.utils import load_corpus, hash_of_featureset
 modelpath = "data/models/"
 
 
-def folds_static(in_corpus, out_corpus, params, condition_name):
+def folds_static(in_corpus, out_corpus, text_features, params, condition_name):
     maF1s = defaultdict(list)
     miF1s = defaultdict(list)
     folds = list(get_static_folds())
@@ -37,7 +35,10 @@ def folds_static(in_corpus, out_corpus, params, condition_name):
         ensemble_name = "{}__{}__{}".format(
             ensemble_basename, hash_of_featureset(params['feature_set']), i)
         clf = EvidenceGraphClassifier(
-                feature_function_segments, feature_function_segmentpairs, **params)
+            text_features.feature_function_segments,
+            text_features.feature_function_segmentpairs,
+            **params
+        )
         train_txt = [g for t, g in in_corpus.iteritems() if t in train_tids]
         train_arg = [g for t, g in out_corpus.iteritems() if t in train_tids]
         try:
@@ -107,11 +108,11 @@ if __name__ == '__main__':
     }
 
     # run all experiment conditions
-    init_language(language)
+    text_features = init_language(language)
     for condition_name, params in conditions.items():
         texts, trees = load_corpus(
             language, params.pop('segmentation'), params['relation_set'])
         print "### Running experiment condition", condition_name
-        predictions, _decisions = folds_static(texts, trees, params, condition_name)
+        predictions, _decisions = folds_static(texts, trees, text_features, params, condition_name)
         with open('data/{}.json'.format(condition_name), 'w') as f:
             json.dump(predictions, f, indent=1, sort_keys=True)
