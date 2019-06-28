@@ -24,7 +24,7 @@ download-spacy-data-en:
 	rm -f en-1.1.0.tar.gz
 
 test:
-	${VIRTUALENV_DIR}/bin/py.test -v --cov=src src
+	${VIRTUALENV_DIR}/bin/py.test -v --cov=src src/evidencegraph
 
 run-minimal-en:
 	stdbuf -o 0 ${VIRTUALENV_DIR}/bin/python src/experiments/run_minimal.py -l en | tee "data/m112en-test-adu-simple-noop|equal.log"
