@@ -149,25 +149,28 @@ class BaseClassifier(object):
 
 class EvidenceGraphClassifier(object):
 
-    def __init__(self,
-                 feature_function_segments,
-                 feature_function_segmentpairs,
-                 optimize=True,
-                 optimize_weighting=False,
-                 relation_set=FULL_RELATION_SET):
+    def __init__(
+        self,
+        feature_function_segments,
+        feature_function_segmentpairs,
+        optimize=True,
+        optimize_weighting=False,
+        relation_set=FULL_RELATION_SET,
+        base_classifier_class=BaseClassifier
+    ):
 
         self.relation_set = relation_set
         self.ensemble = {
-            'cc': BaseClassifier(
+            'cc': base_classifier_class(
                     feature_function=feature_function_segments,
                     label_function=label_function_cc),
-            'ro': BaseClassifier(
+            'ro': base_classifier_class(
                     feature_function=feature_function_segments,
                     label_function=label_function_ro),
-            'fu': BaseClassifier(
+            'fu': base_classifier_class(
                     feature_function=feature_function_segments,
                     label_function=label_function_fu),
-            'at': BaseClassifier(
+            'at': base_classifier_class(
                     feature_function=feature_function_segmentpairs,
                     label_function=label_function_at)
         }
