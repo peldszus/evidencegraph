@@ -53,7 +53,7 @@ class TextFeatures(object):
         :param feature_set: a list of strings defining the features to be used
         """
         self.nlp = nlp
-        self.connectives = connectives
+        self.connectives = connectives or {}
         # caching
         self.doc_cache = dict()
         self.seg_cache = defaultdict(dict)
