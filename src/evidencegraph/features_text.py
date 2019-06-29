@@ -32,6 +32,16 @@ def init_language(language):
 
 class TextFeatures(object):
 
+    F_SET_BOW_BASELINE = ['default', 'bow']
+    F_SET_ALL_BUT_VECTORS = [
+        'default', 'bow', 'bow_2gram', 'first_three',
+        'tags', 'deps_lemma', 'deps_tag',
+        'punct', 'verb_main', 'verb_all', 'discourse_marker',
+        'context', 'clusters', 'clusters_2gram', 'discourse_relation',
+        'vector_left_right', 'vector_source_target',
+        'verb_segment', 'same_sentence', 'matrix_clause'
+    ]
+
     def __init__(self, nlp=None, connectives=None, feature_set=None):
         """
         A featurizer producing dict-features for text input.
