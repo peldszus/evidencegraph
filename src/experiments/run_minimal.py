@@ -22,7 +22,7 @@ from evidencegraph.utils import load_corpus, hash_of_featureset
 modelpath = "data/models/"
 
 
-def folds_static(in_corpus, out_corpus, text_features, params, condition_name):
+def folds_static(in_corpus, out_corpus, features, params, condition_name):
     maF1s = defaultdict(list)
     miF1s = defaultdict(list)
     folds = list(get_static_folds())
@@ -33,10 +33,10 @@ def folds_static(in_corpus, out_corpus, text_features, params, condition_name):
         print "Iteration: {}".format(i)
         ensemble_basename = condition_name.split('|')[0]
         ensemble_name = "{}__{}__{}".format(
-            ensemble_basename, hash_of_featureset(params['feature_set']), i)
+            ensemble_basename, hash_of_featureset(features.feature_set), i)
         clf = EvidenceGraphClassifier(
-            text_features.feature_function_segments,
-            text_features.feature_function_segmentpairs,
+            features.feature_function_segments,
+            features.feature_function_segmentpairs,
             **params
         )
         train_txt = [g for t, g in in_corpus.iteritems() if t in train_tids]
@@ -87,7 +87,7 @@ if __name__ == '__main__':
     language = args.lang
     corpus_name = 'm112{}'.format(language)
 
-    features = [
+    feature_set = [
         'default', 'bow', 'bow_2gram', 'first_three',
         'tags', 'deps_lemma', 'deps_tag',
         'punct', 'verb_main', 'verb_all', 'discourse_marker',
@@ -99,7 +99,7 @@ if __name__ == '__main__':
     # define experiment conditions
     conditions = {
         '{}-test-adu-simple-noop|equal'.format(corpus_name): {
-            'feature_set': features,
+            'feature_set': feature_set,
             'relation_set': SIMPLE_RELATION_SET,
             'segmentation': 'adu',
             'optimize': False,
@@ -108,11 +108,12 @@ if __name__ == '__main__':
     }
 
     # run all experiment conditions
-    text_features = init_language(language)
+    features = init_language(language)
     for condition_name, params in conditions.items():
+        features.feature_set = params.pop('feature_set')
         texts, trees = load_corpus(
             language, params.pop('segmentation'), params['relation_set'])
         print "### Running experiment condition", condition_name
-        predictions, _decisions = folds_static(texts, trees, text_features, params, condition_name)
+        predictions, _decisions = folds_static(texts, trees, features, params, condition_name)
         with open('data/{}.json'.format(condition_name), 'w') as f:
             json.dump(predictions, f, indent=1, sort_keys=True)

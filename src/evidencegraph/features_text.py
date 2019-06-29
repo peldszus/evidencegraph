@@ -32,7 +32,7 @@ def init_language(language):
 
 class TextFeatures(object):
 
-    def __init__(self, nlp=None, connectives=None):
+    def __init__(self, nlp=None, connectives=None, feature_set=None):
         """
         A featurizer producing dict-features for text input.
 
@@ -40,6 +40,7 @@ class TextFeatures(object):
         :param connectives: a dictionary of discource connectives of the
             desired language mapping to potentially signalled discourse
             relations.
+        :param feature_set: a list of strings defining the features to be used
         """
         self.nlp = nlp
         self.connectives = connectives
@@ -47,6 +48,7 @@ class TextFeatures(object):
         self.doc_cache = dict()
         self.seg_cache = defaultdict(dict)
         self.idx_cache = defaultdict(dict)
+        self.feature_set = feature_set or ["default"]
         self.feature_set_allowed_for_context = [
             'default', 'bow', 'first_three', 'punct',
             'verb_main', 'verb_segment', 'verb_all',
@@ -101,7 +103,7 @@ class TextFeatures(object):
                 for token in sentence:
                     self.idx_cache[text][token.idx] = sentence_id
 
-    def feature_function_for_segments(self, segments, segment, feature_set=['default']):
+    def feature_function_for_segments(self, segments, segment, feature_set=None):
         """
         >>> features = init_language('en')
         >>> segments = [u'Hi there! ', u'My name is Peter. ', u'Therefore I am happy.']
@@ -155,6 +157,8 @@ class TextFeatures(object):
         >>> sorted(f.items())
         [('VR_left', 0.401...), ('VR_right', 0.328...)]
         """
+        if feature_set is None:
+            feature_set = self.feature_set
         d = {}
         tokens = self.get_tokens(segments, segment)
 
@@ -270,7 +274,7 @@ class TextFeatures(object):
         return any(token.head in trg_tokens for token in src_tokens if not token.is_punct)
 
 
-    def feature_function_for_segmentpairs(self, segments, source, target, feature_set=['default']):
+    def feature_function_for_segmentpairs(self, segments, source, target, feature_set=None):
         """
         >>> features = init_language('en')
         >>> segments = [u'Hi there! ', u'My name is Peter.']
@@ -280,6 +284,8 @@ class TextFeatures(object):
         [('VR_src_trg', 0.401...), ('direction', False), ('distance', -1),
         ('distance_abs', 1), ('distance_rel', 0.5), ('segment_length_ratio', 1.666...)]
         """
+        if feature_set is None:
+            feature_set = self.feature_set
         d = {}
         distance = target - source
         d['distance'] = distance

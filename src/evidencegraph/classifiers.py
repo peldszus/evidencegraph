@@ -154,24 +154,21 @@ class EvidenceGraphClassifier(object):
                  feature_function_segmentpairs,
                  optimize=True,
                  optimize_weighting=False,
-                 feature_set=['default'],
                  relation_set=FULL_RELATION_SET):
 
-        f_segments = partial(feature_function_segments, feature_set=feature_set)
-        f_pairs = partial(feature_function_segmentpairs, feature_set=feature_set)
         self.relation_set = relation_set
         self.ensemble = {
             'cc': BaseClassifier(
-                    feature_function=f_segments,
+                    feature_function=feature_function_segments,
                     label_function=label_function_cc),
             'ro': BaseClassifier(
-                    feature_function=f_segments,
+                    feature_function=feature_function_segments,
                     label_function=label_function_ro),
             'fu': BaseClassifier(
-                    feature_function=f_segments,
+                    feature_function=feature_function_segments,
                     label_function=label_function_fu),
             'at': BaseClassifier(
-                    feature_function=f_pairs,
+                    feature_function=feature_function_segmentpairs,
                     label_function=label_function_at)
         }
         self.optimize = optimize
