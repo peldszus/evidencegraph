@@ -67,7 +67,7 @@ class ArgTree(nx.DiGraph):
         'pro': 'opp',
         'opp': 'pro'
     }
-    """Roles and there inverse role"""
+    """Roles and their inverse role"""
 
     def __init__(self, from_arggraph=None, from_triples=None, text_id=None,
                  relation_set=SIMPLE_RELATION_SET):
