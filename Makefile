@@ -27,13 +27,13 @@ test:
 	${VIRTUALENV_DIR}/bin/py.test -v --cov=src src/evidencegraph
 
 run-minimal-en:
-	stdbuf -o 0 ${VIRTUALENV_DIR}/bin/python src/experiments/run_minimal.py -l en | tee "data/m112en-test-adu-simple-noop|equal.log"
+	stdbuf -o 0 ${VIRTUALENV_DIR}/bin/python src/experiments/run_minimal.py -c m112en | tee "data/m112en-test-adu-simple-noop|equal.log"
 
 run-minimal-de:
-	stdbuf -o 0 ${VIRTUALENV_DIR}/bin/python src/experiments/run_minimal.py -l de | tee "data/m112de-test-adu-simple-noop|equal.log"
+	stdbuf -o 0 ${VIRTUALENV_DIR}/bin/python src/experiments/run_minimal.py -c m112de | tee "data/m112de-test-adu-simple-noop|equal.log"
 
 eval-minimal-en:
-	stdbuf -o 0 ${VIRTUALENV_DIR}/bin/python src/experiments/eval_minimal.py -l en | tee data/m112en-test-evaluation.log
+	stdbuf -o 0 ${VIRTUALENV_DIR}/bin/python src/experiments/eval_minimal.py -c m112en | tee data/m112en-test-evaluation.log
 
 eval-minimal-de:
-	stdbuf -o 0 ${VIRTUALENV_DIR}/bin/python src/experiments/eval_minimal.py -l de | tee data/m112de-test-evaluation.log
+	stdbuf -o 0 ${VIRTUALENV_DIR}/bin/python src/experiments/eval_minimal.py -c m112de | tee data/m112de-test-evaluation.log

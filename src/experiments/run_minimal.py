@@ -6,17 +6,16 @@
 '''
 
 import json
-import os
 from argparse import ArgumentParser
 from collections import defaultdict
-from datetime import datetime
 from numpy import mean
 
 from evidencegraph.argtree import SIMPLE_RELATION_SET
 from evidencegraph.classifiers import EvidenceGraphClassifier
+from evidencegraph.corpus import GraphCorpus, CORPORA
 from evidencegraph.features_text import init_language
 from evidencegraph.folds import get_static_folds
-from evidencegraph.utils import load_corpus, hash_of_featureset
+from evidencegraph.utils import hash_of_featureset
 
 
 modelpath = "data/models/"
@@ -81,11 +80,13 @@ def folds_static(in_corpus, out_corpus, features, params, condition_name):
 
 if __name__ == '__main__':
     parser = ArgumentParser(description=("Learn"))
-    parser.add_argument('--lang', '-l', choices=['en', 'de'], default='en',
-                        help='the language to consider the predictions of')
+    parser.add_argument('--corpus', '-c', choices=CORPORA.keys(), default='m112en',
+                        help='the corpus to train on')
     args = parser.parse_args()
-    language = args.lang
-    corpus_name = 'm112{}'.format(language)
+    corpus_name = args.corpus
+    corpus = GraphCorpus()
+    corpus.load(CORPORA[corpus_name]['path'])
+    language = CORPORA[corpus_name]['language']
 
     feature_set = [
         'default', 'bow', 'bow_2gram', 'first_three',
@@ -111,8 +112,7 @@ if __name__ == '__main__':
     features = init_language(language)
     for condition_name, params in conditions.items():
         features.feature_set = params.pop('feature_set')
-        texts, trees = load_corpus(
-            language, params.pop('segmentation'), params['relation_set'])
+        texts, trees = corpus.segments_trees(params.pop('segmentation'), params['relation_set'])
         print "### Running experiment condition", condition_name
         predictions, _decisions = folds_static(texts, trees, features, params, condition_name)
         with open('data/{}.json'.format(condition_name), 'w') as f:

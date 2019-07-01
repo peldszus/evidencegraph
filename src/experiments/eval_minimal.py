@@ -7,11 +7,11 @@ from evidencegraph.evaluation import evaluate_setting
 if __name__ == '__main__':
     parser = ArgumentParser(
         description="""Evaluate argumentation parsing predictions""")
-    parser.add_argument('--lang', '-l', choices=['en', 'de'], default='en',
-                        help='the language to consider the predictions of')
+    parser.add_argument('--corpus', '-c', choices=CORPORA.keys(), default='m112en',
+                        help='the corpus to evaluate the predictions of')
     args = parser.parse_args()
-    language = args.lang
-    corpus_name = 'm112{}'.format(language)
+    corpus_name = args.corpus
+    language = CORPORA[corpus_name]['language']
 
     settings = {
         ('adu', SIMPLE_RELATION_SET): [

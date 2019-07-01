@@ -95,6 +95,10 @@ class GraphCorpus(object):
             tree_corpus[id_] = tree
         return tree_corpus
 
+    def segments_trees(self, segmentation, relation_set):
+        """Returns a tuple of both segments and trees."""
+        return self.segments(segmentation), self.trees(segmentation, relation_set)
+
     def role_type_labels(self):
         """
         TBA

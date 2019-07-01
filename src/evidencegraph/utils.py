@@ -26,6 +26,7 @@ CORPUS_PATH_BY_ID = {
 }
 
 
+# deprecated
 def load_graph_corpus(path, silent=True):
     r = {}
     _, _, filenames = os.walk(path).next()
@@ -39,6 +40,7 @@ def load_graph_corpus(path, silent=True):
     return r
 
 
+# deprecated
 def trees_from_graphs(graph_corpus, segmentation, relation_set):
     from_adu = segmentation == 'adu'
     long_names = relation_set != SIMPLE_RELATION_SET
@@ -51,6 +53,7 @@ def trees_from_graphs(graph_corpus, segmentation, relation_set):
     return tree_corpus
 
 
+# deprecated
 def segments_from_graphs(graph_corpus, segmentation):
     texts = {}
     for id_, arggraph in graph_corpus.iteritems():
@@ -61,6 +64,7 @@ def segments_from_graphs(graph_corpus, segmentation):
     return texts
 
 
+# deprecated
 def load_corpus(language, segmentation, relationset, corpus_id=None):
     assert language in ['de', 'en']
     assert segmentation in ['adu', 'edu']
