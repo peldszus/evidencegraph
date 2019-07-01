@@ -294,7 +294,7 @@ class ResultCollector(object):
         >>> rc.add_result('c2', 2, 'l1', {'score': .40})
         >>> rc.set_metric(['score'])
         >>> rc.wilcoxon('c1', 'c2', 'l1')
-        (0.0, 0.17971249487899976)
+        (0.0, 0.1797...)
         """
         result_a = self._get_result(conditionA, level)
         result_b = self._get_result(conditionB, level)
