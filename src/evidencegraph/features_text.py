@@ -30,6 +30,35 @@ def init_language(language):
     return TextFeatures(nlp=nlp, connectives=connectives)
 
 
+def generate_items_segments(segments):
+    """
+    Generates a segment-wise item index for a list of segments.
+
+    This method is used both by the featurizer as well as by the BaseClassifiers
+    to generate a common order of input items.
+
+    >>> segments = ["One,", "but two.", "Though three", "and four."]
+    >>> generate_items_segments(segments)
+    [1, 2, 3, 4]
+    """
+    return range(len(segments) + 1)[1:]
+
+
+def generate_items_segmentpairs(segments):
+    """
+    Generates a segment-pair-wise item index for a list of segments.
+
+    This method is used both by the featurizer as well as by the BaseClassifiers
+    to generate a common order of input items.
+
+    >>> segments = ["One,", "but two.", "Though three", "and four."]
+    >>> generate_items_segmentpairs(segments)
+    [(1, 2), (1, 3), (1, 4), (2, 1), (2, 3), (2, 4), (3, 1), (3, 2), (3, 4), (4, 1), (4, 2), (4, 3)]
+    """
+    return sorted(list(permutations(generate_items_segments(segments), 2)))
+
+
+
 class TextFeatures(object):
 
     F_SET_BOW_BASELINE = ['default', 'bow']
@@ -65,105 +94,110 @@ class TextFeatures(object):
             'discourse_marker', 'discourse_relation'
         ]
 
-    def get_tokens(self, segments, segment):
-        text = text_of_segments(segments)
-        return self.seg_cache[text][segment]
-
-    def preparse(self, segments):
-        self.parse(add_segment_final_space(ensure_unicode(segments)))
-
-    def parse(self, segments):
+    def feature_function_segments(self, segments, **kwargs):
         """
+        A feature function returning segment-wise features for every of the given segments.
+
         >>> features = init_language('en')
-        >>> segments = [u'Hi there! ', u'My name is Peter.']
-        >>> features.parse(segments)
-        >>> text = u'Hi there! My name is Peter.'
-        >>> text in features.doc_cache
+        >>> segments = ['Hi there!', 'My name is Peter.']
+        >>> f = features.feature_function_segments(segments, feature_set=['clusters_2gram'])
+        >>> len(f) == 2
         True
-        >>> [s in features.seg_cache[text] for s in [1,2]]
-        [True, True]
+        >>> sorted(f[0].items())
+        [(u'CLS_2_1726_986', True), (u'CLS_2_986_0', True)]
+        >>> sorted(f[1].items())
+        [(u'CLS_2_4021_762', True), (u'CLS_2_502_8', True),
+        (u'CLS_2_762_502', True), (u'CLS_2_94_4021', True)]
         """
-        text = text_of_segments(segments)
-        if text not in self.doc_cache:
-            # parse whole text
-            doc = list(self.nlp.pipe([text]))[0]
-            self.doc_cache[text] = doc
-            # match segments with parsed tokens
-            segments_to_match = deque(segments[:])
-            iterator = iter(doc)
-            count_segments = 1
-            consumed_tokens = u''
-            tokens = []
-            while segments_to_match:
-                if consumed_tokens == segments_to_match[0]:
-                    segments_to_match.popleft()
-                    self.seg_cache[text][count_segments] = tokens
-                    count_segments += 1
-                    consumed_tokens = u''
-                    tokens = []
-                else:
-                    try:
-                        token = next(iterator)
-                    except Exception:
-                        print segments
-                    tokens.append(token)
-                    consumed_tokens += token.string
-            # build offset -> sentence mapping
-            for sentence_id, sentence in enumerate(doc.sents):
-                for token in sentence:
-                    self.idx_cache[text][token.idx] = sentence_id
+        l = []
+        segments = add_segment_final_space(ensure_unicode(segments))
+        self.parse(segments)
+        for segment in generate_items_segments(segments):
+            l.append(self.feature_function_single_segment(segments, segment, **kwargs))
+        return l
 
-    def feature_function_for_segments(self, segments, segment, feature_set=None):
+
+    def feature_function_segmentpairs(self, segments, **kwargs):
         """
+        A feature function retuning segment-pair-wise features for every possible pair of
+        the given segments.
+
+        >>> features = init_language('en')
+        >>> segments = ['Hi there!', 'My name is Peter.']
+        >>> f = features.feature_function_segmentpairs(segments, feature_set=['bow'])
+        >>> len(f) == 2
+        True
+        >>> sorted(f[0].items())
+        [('direction', True), ('distance', 1), ('distance_abs', 1),
+        ('distance_rel', 0.5), ('segment_length_ratio', 0.6),
+        (u'source_TOK_!', True), (u'source_TOK_hi', True),
+        (u'source_TOK_there', True), (u'target_TOK_.', True),
+        (u'target_TOK_be', True), (u'target_TOK_my', True),
+        (u'target_TOK_name', True), (u'target_TOK_peter', True)]
+        """
+        l = []
+        segments = add_segment_final_space(ensure_unicode(segments))
+        self.parse(segments)
+        for source, target in generate_items_segmentpairs(segments):
+            f = self.feature_function_single_segmentpair(segments, source, target, **kwargs)
+            f = add_prefixed_dict(f, 'source', self.feature_function_single_segment(segments, source, **kwargs))
+            f = add_prefixed_dict(f, 'target', self.feature_function_single_segment(segments, target, **kwargs))
+            l.append(f)
+        return l
+
+    def feature_function_single_segment(self, segments, segment, feature_set=None):
+        """
+        Returns the segment-wise features for a single segment.
+
         >>> features = init_language('en')
         >>> segments = [u'Hi there! ', u'My name is Peter. ', u'Therefore I am happy.']
         >>> features.parse(segments)
 
-        >>> f = features.feature_function_for_segments(segments, 1, feature_set=['default'])
+        >>> f = features.feature_function_single_segment(segments, 1, feature_set=['default'])
         >>> sorted(f.items())
         [('POS_abs', 1), ('POS_first', True), ('POS_last', False), ('POS_rel', 0.333...)]
 
-        >>> f = features.feature_function_for_segments(segments, 1, feature_set=['bow'])
+        >>> f = features.feature_function_single_segment(segments, 1, feature_set=['bow'])
         >>> sorted(f.items())
         [(u'TOK_!', True), (u'TOK_hi', True), (u'TOK_there', True)]
 
-        >>> f = features.feature_function_for_segments(segments, 2, feature_set=['first_three'])
+        >>> f = features.feature_function_single_segment(segments, 2, feature_set=['first_three'])
         >>> sorted(f.keys())
         [u'F3L_1_my', u'F3L_2_name', u'F3L_3_be']
 
-        >>> f = features.feature_function_for_segments(segments, 1, feature_set=['clusters'])
+        >>> f = features.feature_function_single_segment(segments, 1, feature_set=['clusters'])
         >>> sorted(f.items())
         [('CLS_0', True), ('CLS_1726', True), ('CLS_986', True)]
 
-        >>> f = features.feature_function_for_segments(segments, 2, feature_set=['tags'])
+        >>> f = features.feature_function_single_segment(segments, 2, feature_set=['tags'])
         >>> sorted(f.keys())
         ['TAG_.', 'TAG_NN', 'TAG_NNP', 'TAG_PRP$', 'TAG_VBZ']
 
-        >>> f = features.feature_function_for_segments(segments, 2, feature_set=['deps_lemma'])
+        >>> f = features.feature_function_single_segment(segments, 2, feature_set=['deps_lemma'])
         >>> sorted(f.keys())
         [u'DPL_._punct_be', u'DPL_be_ROOT_be', u'DPL_my_poss_name', u'DPL_name_nsubj_be', u'DPL_peter_attr_be']
 
-        >>> f = features.feature_function_for_segments(segments, 2, feature_set=['deps_tag'])
+        >>> f = features.feature_function_single_segment(segments, 2, feature_set=['deps_tag'])
         >>> sorted(f.keys())
         ['DPT_._punct_VBZ', 'DPT_NNP_attr_VBZ', 'DPT_NN_nsubj_VBZ', 'DPT_PRP$_poss_NN', 'DPT_VBZ_ROOT_VBZ']
 
-        >>> f = features.feature_function_for_segments(segments, 2, feature_set=['punct'])
+        >>> f = features.feature_function_single_segment(segments, 2, feature_set=['punct'])
         >>> sorted(f.items())
         [('punctuation_count', 1)]
 
-        >>> f = features.feature_function_for_segments(segments, 2, feature_set=['verb_main'])
+        >>> f = features.feature_function_single_segment(segments, 2, feature_set=['verb_main'])
         >>> sorted(f.items())
         [(u'VM_lemma_be', True), (u'VM_text_is', True)]
 
-        >>> f = features.feature_function_for_segments(segments, 2, feature_set=['verb_all'])
+        >>> f = features.feature_function_single_segment(segments, 2, feature_set=['verb_all'])
         >>> sorted(f.items())
         [(u'VA_lemma_be', True), (u'VA_text_is', True)]
 
-        >>> f = features.feature_function_for_segments(segments, 3, feature_set=['discourse_marker', 'discourse_relation'])
+        >>> f = features.feature_function_single_segment(segments, 3, feature_set=['discourse_marker', 'discourse_relation'])
         >>> sorted(f.items())
         [(u'DM_therefore', True), (u'DR_result', True)]
 
-        >>> f = features.feature_function_for_segments(segments, 2, feature_set=['vector_left_right'])
+        >>> f = features.feature_function_single_segment(segments, 2, feature_set=['vector_left_right'])
         >>> sorted(f.items())
         [('VR_left', 0.401...), ('VR_right', 0.328...)]
         """
@@ -262,34 +296,20 @@ class TextFeatures(object):
             new_feature_set = [
                 f for f in feature_set if f in self.feature_set_allowed_for_context]
             if segment > 1:
-                d = add_prefixed_dict(d, 'left', self.feature_function_for_segments(segments, segment-1, feature_set=new_feature_set))
+                d = add_prefixed_dict(d, 'left', self.feature_function_single_segment(segments, segment-1, feature_set=new_feature_set))
             if segment < len(segments):
-                d = add_prefixed_dict(d, 'right', self.feature_function_for_segments(segments, segment+1, feature_set=new_feature_set))
+                d = add_prefixed_dict(d, 'right', self.feature_function_single_segment(segments, segment+1, feature_set=new_feature_set))
 
         return d
 
-    def same_sentence(self, segments, source, target):
-        text = text_of_segments(segments)
-        src_tokens = self.get_tokens(segments, source)
-        trg_tokens = self.get_tokens(segments, target)
-        sentence_id_of_token = self.idx_cache[text]
-        sentence_ids_of_source_tokens = set(sentence_id_of_token[t.idx] for t in src_tokens)
-        sentence_ids_of_target_tokens = set(sentence_id_of_token[t.idx] for t in trg_tokens)
-        return sentence_ids_of_source_tokens == sentence_ids_of_target_tokens
-
-
-    def matrix_clause(self, segments, source, target):
-        src_tokens = self.get_tokens(segments, source)
-        trg_tokens = self.get_tokens(segments, target)
-        return any(token.head in trg_tokens for token in src_tokens if not token.is_punct)
-
-
-    def feature_function_for_segmentpairs(self, segments, source, target, feature_set=None):
+    def feature_function_single_segmentpair(self, segments, source, target, feature_set=None):
         """
+        Returns the segment-pair-wise features for a single pair of segments.
+
         >>> features = init_language('en')
         >>> segments = [u'Hi there! ', u'My name is Peter.']
         >>> features.parse(segments)
-        >>> f = features.feature_function_for_segmentpairs(segments, 2, 1, feature_set=['vector_source_target'])
+        >>> f = features.feature_function_single_segmentpair(segments, 2, 1, feature_set=['vector_source_target'])
         >>> sorted(f.items())
         [('VR_src_trg', 0.401...), ('direction', False), ('distance', -1),
         ('distance_abs', 1), ('distance_rel', 0.5), ('segment_length_ratio', 1.666...)]
@@ -315,52 +335,67 @@ class TextFeatures(object):
 
         return d
 
+    def get_tokens(self, segments, segment):
+        text = text_of_segments(segments)
+        return self.seg_cache[text][segment]
 
-    def feature_function_segments(self, segments, **kwargs):
+    def preparse(self, segments):
+        self.parse(add_segment_final_space(ensure_unicode(segments)))
+
+    def parse(self, segments):
         """
         >>> features = init_language('en')
-        >>> segments = ['Hi there!', 'My name is Peter.']
-        >>> f = features.feature_function_segments(segments, feature_set=['clusters_2gram'])
-        >>> len(f) == 2
+        >>> segments = [u'Hi there! ', u'My name is Peter.']
+        >>> features.parse(segments)
+        >>> text = u'Hi there! My name is Peter.'
+        >>> text in features.doc_cache
         True
-        >>> sorted(f[0].items())
-        [(u'CLS_2_1726_986', True), (u'CLS_2_986_0', True)]
-        >>> sorted(f[1].items())
-        [(u'CLS_2_4021_762', True), (u'CLS_2_502_8', True),
-        (u'CLS_2_762_502', True), (u'CLS_2_94_4021', True)]
+        >>> [s in features.seg_cache[text] for s in [1,2]]
+        [True, True]
         """
-        l = []
-        segments = add_segment_final_space(ensure_unicode(segments))
-        self.parse(segments)
-        for segment in generate_items_segments(segments):
-            l.append(self.feature_function_for_segments(segments, segment, **kwargs))
-        return l
+        text = text_of_segments(segments)
+        if text not in self.doc_cache:
+            # parse whole text
+            doc = list(self.nlp.pipe([text]))[0]
+            self.doc_cache[text] = doc
+            # match segments with parsed tokens
+            segments_to_match = deque(segments[:])
+            iterator = iter(doc)
+            count_segments = 1
+            consumed_tokens = u''
+            tokens = []
+            while segments_to_match:
+                if consumed_tokens == segments_to_match[0]:
+                    segments_to_match.popleft()
+                    self.seg_cache[text][count_segments] = tokens
+                    count_segments += 1
+                    consumed_tokens = u''
+                    tokens = []
+                else:
+                    try:
+                        token = next(iterator)
+                    except Exception:
+                        print segments
+                    tokens.append(token)
+                    consumed_tokens += token.string
+            # build offset -> sentence mapping
+            for sentence_id, sentence in enumerate(doc.sents):
+                for token in sentence:
+                    self.idx_cache[text][token.idx] = sentence_id
 
+    def same_sentence(self, segments, source, target):
+        text = text_of_segments(segments)
+        src_tokens = self.get_tokens(segments, source)
+        trg_tokens = self.get_tokens(segments, target)
+        sentence_id_of_token = self.idx_cache[text]
+        sentence_ids_of_source_tokens = set(sentence_id_of_token[t.idx] for t in src_tokens)
+        sentence_ids_of_target_tokens = set(sentence_id_of_token[t.idx] for t in trg_tokens)
+        return sentence_ids_of_source_tokens == sentence_ids_of_target_tokens
 
-    def feature_function_segmentpairs(self, segments, **kwargs):
-        """
-        >>> features = init_language('en')
-        >>> segments = ['Hi there!', 'My name is Peter.']
-        >>> f = features.feature_function_segmentpairs(segments, feature_set=['bow'])
-        >>> len(f) == 2
-        True
-        >>> sorted(f[0].items())
-        [('direction', True), ('distance', 1), ('distance_abs', 1),
-        ('distance_rel', 0.5), ('segment_length_ratio', 0.6),
-        (u'source_TOK_!', True), (u'source_TOK_hi', True),
-        (u'source_TOK_there', True), (u'target_TOK_.', True),
-        (u'target_TOK_be', True), (u'target_TOK_my', True),
-        (u'target_TOK_name', True), (u'target_TOK_peter', True)]
-        """
-        l = []
-        segments = add_segment_final_space(ensure_unicode(segments))
-        self.parse(segments)
-        for source, target in generate_items_segmentpairs(segments):
-            f = self.feature_function_for_segmentpairs(segments, source, target, **kwargs)
-            f = add_prefixed_dict(f, 'source', self.feature_function_for_segments(segments, source, **kwargs))
-            f = add_prefixed_dict(f, 'target', self.feature_function_for_segments(segments, target, **kwargs))
-            l.append(f)
-        return l
+    def matrix_clause(self, segments, source, target):
+        src_tokens = self.get_tokens(segments, source)
+        trg_tokens = self.get_tokens(segments, target)
+        return any(token.head in trg_tokens for token in src_tokens if not token.is_punct)
 
     def vector_similarity(self, segments, seg1, seg2):
         vec1 = average_vector_of_segment(self.get_tokens(segments, seg1))
@@ -443,11 +478,3 @@ def average_vector_of_segment(tokens):
     return average([
         token.vector for token in tokens
         if token.has_vector and not (token.is_stop or token.is_space)])
-
-
-def generate_items_segments(segments):
-    return range(len(segments) + 1)[1:]
-
-
-def generate_items_segmentpairs(segments):
-    return sorted(list(permutations(generate_items_segments(segments), 2)))
