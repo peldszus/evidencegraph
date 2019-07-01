@@ -19,8 +19,9 @@ from argtree import ArgTree
 from argtree import SIMPLE_RELATION_SET
 from argtree import FULL_RELATION_SET
 from argtree import FULL_RELATION_SET_ADU
+from corpus import GraphCorpus, CORPORA
 from result_collector import ResultCollector
-from utils import load_corpus, window
+from utils import window
 
 
 def evaluate(ground_truth, prediction):
@@ -379,9 +380,6 @@ def evaluate_setting(
 
     # load gold corpus
     try:
-        # _, gold = load_corpus(language, segmentation, relationset,
-        #                       corpus_id=corpus_id)
-        from corpus import GraphCorpus, CORPORA
         gc = GraphCorpus()
         gc.load(CORPORA[corpus_id]['path'])
         gold = gc.trees(segmentation, relationset)
@@ -389,12 +387,7 @@ def evaluate_setting(
         print(e, '\n')
         return
 
-    runs_to_evaluate = [
-        run # run.format(language) if corpus_id is None else run.format(corpus_id)
-        for run in conditions
-    ]
-
-    for run in runs_to_evaluate:
+    for run in conditions:
         p = load_predictions(
             "data/{}.json".format(run), relation_set=relationset)
         evaluate_iterations(p, gold, rc, run)
@@ -404,6 +397,6 @@ def evaluate_setting(
     for level in levels:
         class_scores(rc, level)
 
-    for condition_1, condition_2 in combinations(runs_to_evaluate, 2): #) window(runs_to_evaluate, n=2):
+    for condition_1, condition_2 in combinations(conditions, 2): #) window(conditions, n=2):
         print_significance(rc, condition_1, condition_2, levels=levels)
 
