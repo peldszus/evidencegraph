@@ -10,7 +10,7 @@ from argparse import ArgumentParser
 from collections import defaultdict
 from numpy import mean
 
-from evidencegraph.argtree import SIMPLE_RELATION_SET
+from evidencegraph.argtree import RELATION_SETS_BY_NAME
 from evidencegraph.classifiers import EvidenceGraphClassifier
 from evidencegraph.corpus import GraphCorpus, CORPORA
 from evidencegraph.features_text import init_language
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     conditions = {
         '{}-test-adu-simple-noop|equal'.format(corpus_name): {
             'feature_set': feature_set,
-            'relation_set': SIMPLE_RELATION_SET,
+            'relation_set': "SIMPLE_RELATION_SET",
             'segmentation': 'adu',
             'optimize': False,
             'optimize_weighting': False
@@ -112,6 +112,7 @@ if __name__ == '__main__':
     features = init_language(language)
     for condition_name, params in conditions.items():
         features.feature_set = params.pop('feature_set')
+        params['relation_set'] = RELATION_SETS_BY_NAME.get(params['relation_set'])
         texts, trees = corpus.segments_trees(params.pop('segmentation'), params['relation_set'])
         print "### Running experiment condition", condition_name
         predictions, _decisions = folds_static(texts, trees, features, params, condition_name)

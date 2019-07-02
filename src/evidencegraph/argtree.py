@@ -59,6 +59,14 @@ FULL_RELATION_SET_ADU = RelationSet(
    relation."""
 
 RELATION_SETS = [SIMPLE_RELATION_SET, FULL_RELATION_SET, FULL_RELATION_SET_ADU]
+"""List of all predefined relationsets."""
+
+RELATION_SETS_BY_NAME = {
+    "SIMPLE_RELATION_SET": SIMPLE_RELATION_SET,
+    "FULL_RELATION_SET": FULL_RELATION_SET,
+    "FULL_RELATION_SET_ADU": FULL_RELATION_SET_ADU
+}
+"""Mapping of name to object for all predefined relationsets."""
 
 
 class ArgTree(nx.DiGraph):
