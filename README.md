@@ -35,13 +35,13 @@ Make sure all the tests pass.
 
 Run a (shortened and simplified) minimal experiment, to see that everything is working:
 
-    env/bin/python src/experiments/run_minimal.py --lang en
+    env/bin/python src/experiments/run_minimal.py --corpus m112en
 
 You should (see last lines of the output) get an average macro F1 of the *base classifiers* similar to: (cc ~= 0.846, ro ~= 0.758, fu ~= 0.745, at ~= 0.705).
 
 Evaluate the results, which have been written to `data/`:
 
-    env/bin/python src/experiments/eval_minimal.py --lang en
+    env/bin/python src/experiments/eval_minimal.py --corpus m112en
 
 You should (see first lines of the output) get an average macro F1 for the *decoded results* similar to: (cc ~= 0.861, ro ~= 0.771, fu ~= 0.754, at ~= 0.712).
 
