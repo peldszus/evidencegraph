@@ -55,7 +55,7 @@ class BasicWeightingSearch(object):
 
         >>> s = BasicWeightingSearch(lambda *x: 1.0)
         >>> r = s._random_weighting()
-        >>> 0.9 <= sum(r) <= 1.0
+        >>> abs(1 - sum(r)) < 1e-6
         True
         """
         x = np.random.random(4)
