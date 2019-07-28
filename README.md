@@ -53,6 +53,6 @@ You should (see first lines of the output) get an average macro F1 for the *deco
 ## Replicate published results
 
 Adjust run_minimal.py:
-* In the `folds_static` main loop, change `folds[:5]` by `folds`, to do all 50 train/test splits.
+* Remove the line `folds = folds[:5]` in order to run all 50 train/test splits.
 * In the experimental conditions, set `optimize` to `True` so that the local model's hyperparameters are optimized.
 * In the experimental conditions, set `optimize_weights` to `True` so that the global model's hyperparameters are optimized.
