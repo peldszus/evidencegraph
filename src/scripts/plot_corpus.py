@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-'''
+"""
 Created on 05.08.2014
 
 @author: andi
-'''
+"""
 from __future__ import print_function
 
 import argparse
@@ -16,13 +16,14 @@ from evidencegraph.arggraph import ArgGraph
 
 if __name__ == "__main__":
     aparser = argparse.ArgumentParser(
-        description="plot the arg graph specified in the input xml as a png file")
-    aparser.add_argument("input", help="input xml file(s)", nargs='+')
+        description="plot the arg graph specified in the input xml as a png file"
+    )
+    aparser.add_argument("input", help="input xml file(s)", nargs="+")
     args = aparser.parse_args(sys.argv[1:])
 
     for i in args.input:
-        if i.endswith('.xml'):
-            print(i, '...')
+        if i.endswith(".xml"):
+            print (i, "...")
             id = i[:-4]
             g = ArgGraph()
             g.load_from_xml(i)
@@ -30,8 +31,8 @@ if __name__ == "__main__":
             # export dot, png and pdf of graph
             # with open(id + '.dot', 'w') as f:
             #     f.write(g.render_as_dot())
-            g.render_as_png(id + '.png')
-            g.render_as_pdf(id + '.pdf')
+            g.render_as_png(id + ".png")
+            g.render_as_pdf(id + ".pdf")
 
             # new_xml = g.to_xml()
             # with open(i[:-4]+'.new.xml', 'w') as f:

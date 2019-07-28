@@ -1,9 +1,9 @@
 #!/usr/bin/env python2.7
 # -*- mode: python; coding: utf-8; -*-
 
-'''
+"""
 @author: Andreas Peldszus
-'''
+"""
 from __future__ import print_function
 
 import json
@@ -24,27 +24,29 @@ class BaselineAttachFirst(object):
 
 class BaselineAttachPreceeding(object):
     def predict(self, number_of_nodes, label):
-        triples = [(i, i-1, label) for i in range(2, number_of_nodes + 1)]
+        triples = [(i, i - 1, label) for i in range(2, number_of_nodes + 1)]
         return ArgTree(from_triples=triples)
 
 
 def folds_static(trees, relation_set, baseline):
     # determine the majority relation label
-    relation_labels = Counter([
-        relation_label
-        for tree in trees.values()
-        for _, _, relation_label in tree.get_triples()
-    ])
+    relation_labels = Counter(
+        [
+            relation_label
+            for tree in trees.values()
+            for _, _, relation_label in tree.get_triples()
+        ]
+    )
     majority_label = relation_labels.most_common(1)[0][0]
-    print("Determined '{}' as the majority label.".format(majority_label))
+    print ("Determined '{}' as the majority label.".format(majority_label))
 
     # produce the predictions
     predictions = defaultdict(dict)
     for _train_tids, test_tids, i in get_static_folds():
-        print("[{}] Iteration: {}\t".format(datetime.now(), i))
-        if baseline == 'first':
+        print ("[{}] Iteration: {}\t".format(datetime.now(), i))
+        if baseline == "first":
             clf = BaselineAttachFirst()
-        elif baseline == 'prec':
+        elif baseline == "prec":
             clf = BaselineAttachPreceeding()
         else:
             raise ValueError("Unknown baseline type.")
@@ -57,92 +59,92 @@ def folds_static(trees, relation_set, baseline):
     return predictions
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     conditions = {
         # de adu
         "m112de-diss-adu-simple-baseline-first": {
             "corpus": "m112de",
             "relation_set": "SIMPLE_RELATION_SET",
             "segmentation": "adu",
-            "baseline": "first"
+            "baseline": "first",
         },
         "m112de-diss-adu-simple-baseline-prec": {
             "corpus": "m112de",
             "relation_set": "SIMPLE_RELATION_SET",
             "segmentation": "adu",
-            "baseline": "prec"
+            "baseline": "prec",
         },
         "m112de-diss-adu-full-baseline-first": {
             "corpus": "m112de",
             "relation_set": "FULL_RELATION_SET_ADU",
             "segmentation": "adu",
-            "baseline": "first"
+            "baseline": "first",
         },
         "m112de-diss-adu-full-baseline-prec": {
             "corpus": "m112de",
             "relation_set": "FULL_RELATION_SET_ADU",
             "segmentation": "adu",
-            "baseline": "prec"
+            "baseline": "prec",
         },
         # en adu
         "m112en-diss-adu-simple-baseline-first": {
             "corpus": "m112en",
             "relation_set": "SIMPLE_RELATION_SET",
             "segmentation": "adu",
-            "baseline": "first"
+            "baseline": "first",
         },
         "m112en-diss-adu-simple-baseline-prec": {
             "corpus": "m112en",
             "relation_set": "SIMPLE_RELATION_SET",
             "segmentation": "adu",
-            "baseline": "prec"
+            "baseline": "prec",
         },
         "m112en-diss-adu-full-baseline-first": {
             "corpus": "m112en",
             "relation_set": "FULL_RELATION_SET_ADU",
             "segmentation": "adu",
-            "baseline": "first"
+            "baseline": "first",
         },
         "m112en-diss-adu-full-baseline-prec": {
             "corpus": "m112en",
             "relation_set": "FULL_RELATION_SET_ADU",
             "segmentation": "adu",
-            "baseline": "prec"
+            "baseline": "prec",
         },
         # en edu
         "m112en-diss-edu-simple-baseline-first": {
             "corpus": "m112en_fine",
             "relation_set": "SIMPLE_RELATION_SET",
             "segmentation": "edu",
-            "baseline": "first"
+            "baseline": "first",
         },
         "m112en-diss-edu-simple-baseline-prec": {
             "corpus": "m112en_fine",
             "relation_set": "SIMPLE_RELATION_SET",
             "segmentation": "edu",
-            "baseline": "prec"
+            "baseline": "prec",
         },
         "m112en-diss-edu-full-baseline-first": {
             "corpus": "m112en_fine",
             "relation_set": "FULL_RELATION_SET",
             "segmentation": "edu",
-            "baseline": "first"
+            "baseline": "first",
         },
         "m112en-diss-edu-full-baseline-prec": {
             "corpus": "m112en_fine",
             "relation_set": "FULL_RELATION_SET",
             "segmentation": "edu",
-            "baseline": "prec"
-        }
+            "baseline": "prec",
+        },
     }
 
     # run all experiment conditions
     for condition, params in conditions.items():
-        print("### Running experiment condition", condition)
+        print ("### Running experiment condition", condition)
         corpus = GraphCorpus()
-        corpus.load(CORPORA[params["corpus"]]['path'])
+        corpus.load(CORPORA[params["corpus"]]["path"])
         relation_set = RELATION_SETS_BY_NAME[params["relation_set"]]
         trees = corpus.trees(params["segmentation"], relation_set)
         predictions = folds_static(trees, relation_set, params["baseline"])
-        with open('data/{}.json'.format(condition), 'w') as f:
+        with open("data/{}.json".format(condition), "w") as f:
             json.dump(predictions, f, indent=1, sort_keys=True)

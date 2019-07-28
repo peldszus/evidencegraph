@@ -5,21 +5,57 @@ from itertools import chain
 import random
 
 example_data_1 = {
-    'g01': "BBDE", 'g02': "CBEDF", 'g03': "BBAA", 'g04': "ABCD",
-    'g05': "ABBDF", 'g06': "ABC", 'g07': "ABBAA", 'g08': "ACBD",
-    'g09': "DEBBA", 'g10': "AABC", 'g11': "AAAAF", 'g12': "CCDACD",
-    'g13': "CCADB", 'g14': "CBAF", 'g15': "ABCD", 'g16': "CDBD"
+    "g01": "BBDE",
+    "g02": "CBEDF",
+    "g03": "BBAA",
+    "g04": "ABCD",
+    "g05": "ABBDF",
+    "g06": "ABC",
+    "g07": "ABBAA",
+    "g08": "ACBD",
+    "g09": "DEBBA",
+    "g10": "AABC",
+    "g11": "AAAAF",
+    "g12": "CCDACD",
+    "g13": "CCADB",
+    "g14": "CBAF",
+    "g15": "ABCD",
+    "g16": "CDBD",
 }
 
 example_data_2 = {
-    'g01': "BBDE", 'g02': "CBEDF", 'g03': "BBAA", 'g04': "ABCD",
-    'g05': "ABBDF", 'g06': "ABC", 'g07': "ABBAA", 'g08': "ACBD",
-    'g09': "DEBBA", 'g10': "AABC", 'g11': "AAAAF", 'g12': "CCDACD",
-    'g13': "CCADB", 'g14': "CBAF", 'g15': "ABCD", 'g16': "CDBD",
-    'g17': "BBDE", 'g18': "CBEDF", 'g19': "BBAA", 'g20': "ABCD",
-    'g21': "ABBDF", 'g22': "ABC", 'g23': "ABBAA", 'g24': "ACBD",
-    'g25': "DEBBA", 'g26': "AABC", 'g27': "AAAAF", 'g28': "CCDACD",
-    'g29': "CCADB", 'g30': "CBAF", 'g31': "ABCD", 'g32': "CDBD"
+    "g01": "BBDE",
+    "g02": "CBEDF",
+    "g03": "BBAA",
+    "g04": "ABCD",
+    "g05": "ABBDF",
+    "g06": "ABC",
+    "g07": "ABBAA",
+    "g08": "ACBD",
+    "g09": "DEBBA",
+    "g10": "AABC",
+    "g11": "AAAAF",
+    "g12": "CCDACD",
+    "g13": "CCADB",
+    "g14": "CBAF",
+    "g15": "ABCD",
+    "g16": "CDBD",
+    "g17": "BBDE",
+    "g18": "CBEDF",
+    "g19": "BBAA",
+    "g20": "ABCD",
+    "g21": "ABBDF",
+    "g22": "ABC",
+    "g23": "ABBAA",
+    "g24": "ACBD",
+    "g25": "DEBBA",
+    "g26": "AABC",
+    "g27": "AAAAF",
+    "g28": "CCDACD",
+    "g29": "CCADB",
+    "g30": "CBAF",
+    "g31": "ABCD",
+    "g32": "CDBD",
 }
 
 
@@ -64,7 +100,6 @@ def join_distributions(a, b):
 
 
 class GroupwiseStratifiedKFold(object):
-
     def __init__(self, number_of_folds, data, shuffle=False, seed=0):
         """
         Groupwise, stratified k-fold splits of a dataset for validation.
@@ -72,7 +107,7 @@ class GroupwiseStratifiedKFold(object):
         across the splits. It is groupwise, because classification items are grouped,
         i.e. considered belonging together, so that not items but groups of items
         are sampled.
-        
+
         In our case we sample classification items grouped together because they
         belong to one input text, so that the kfold does not contain fragments of texts.
 
@@ -80,7 +115,7 @@ class GroupwiseStratifiedKFold(object):
         labels.
 
         >>> folds = list(GroupwiseStratifiedKFold(4, example_data_1))
-        
+
         Correct length of folds.
         >>> len(folds) == 4
         True
@@ -109,12 +144,17 @@ class GroupwiseStratifiedKFold(object):
         counts_class_absolute = absolute_class_counts(ungrouped_data)
         counts_class_relative = relative_class_counts(counts_class_absolute)
         classes = list(counts_class_absolute.keys())
-        class_weights = {k: 1-v for k, v in counts_class_relative.iteritems()}
-        group_distribution = {k: absolute_class_counts(
-                                    list(v), expected_classes=classes)
-                              for k, v in data.iteritems()}
-        folds = {n: {k: 0 for k in counts_class_relative}
-                 for n in range(1, number_of_folds + 1)}
+        class_weights = {
+            k: 1 - v for k, v in counts_class_relative.iteritems()
+        }
+        group_distribution = {
+            k: absolute_class_counts(list(v), expected_classes=classes)
+            for k, v in data.iteritems()
+        }
+        folds = {
+            n: {k: 0 for k in counts_class_relative}
+            for n in range(1, number_of_folds + 1)
+        }
         fold_register = {n: [] for n in folds.keys()}
         pool = set(group_distribution.keys())
 
@@ -139,15 +179,18 @@ class GroupwiseStratifiedKFold(object):
 
                 # find the group in the pool, that minimizes the difference of
                 # this fold to the base distribution
-                min_diff = float('+inf')
+                min_diff = float("+inf")
                 min_group = None
                 min_joint_dist = None
                 for group in pool:
-                    joint_dist = join_distributions(this_folds_dist,
-                                                    group_distribution[group])
-                    diff = diff_distribution(counts_class_relative,
-                                             relative_class_counts(joint_dist),
-                                             weights=class_weights)
+                    joint_dist = join_distributions(
+                        this_folds_dist, group_distribution[group]
+                    )
+                    diff = diff_distribution(
+                        counts_class_relative,
+                        relative_class_counts(joint_dist),
+                        weights=class_weights,
+                    )
                     if diff < min_diff:
                         min_diff = diff
                         min_group = group
@@ -174,10 +217,10 @@ class GroupwiseStratifiedKFold(object):
             yield train_ids, test_ids
 
 
-class RepeatedGroupwiseStratifiedKFold():
-
-    def __init__(self, number_of_folds, data, shuffle=False, seed=0,
-                 repeats=10):
+class RepeatedGroupwiseStratifiedKFold:
+    def __init__(
+        self, number_of_folds, data, shuffle=False, seed=0, repeats=10
+    ):
         """
         Repeated, groupwise, stratified k-fold splits of a dataset for validation.
         The GroupwiseStratifiedKFold is repeated with different random seeds in order
@@ -197,10 +240,12 @@ class RepeatedGroupwiseStratifiedKFold():
         self.iterations = []
         for repeat_nr in range(repeats):
             foldes = GroupwiseStratifiedKFold(
-                number_of_folds, data, shuffle=shuffle, seed=seed + repeat_nr)
+                number_of_folds, data, shuffle=shuffle, seed=seed + repeat_nr
+            )
             for fold_nr, (train, test) in enumerate(foldes):
-                self.iterations.append((train, test,
-                                        '%d-%d' % (repeat_nr, fold_nr)))
+                self.iterations.append(
+                    (train, test, "%d-%d" % (repeat_nr, fold_nr))
+                )
 
     def __iter__(self):
         """Yields group ids of training items, testing items, and the iteration id."""
@@ -215,6 +260,8 @@ def build_kfold_reference_dataset(corpus):
     which is not in the datafiles loaded above. I thus extract it from
     the corpus of files directly.
     """
-    data = {tid: graph.get_role_type_labels().values()
-            for tid, graph in corpus.iteritems()}
+    data = {
+        tid: graph.get_role_type_labels().values()
+        for tid, graph in corpus.iteritems()
+    }
     return data

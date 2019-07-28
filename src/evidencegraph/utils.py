@@ -1,10 +1,10 @@
 # -*- mode: python; coding: utf-8; -*-
 
-'''
+"""
 Created on 20.05.2016
 
 @author: Andreas Peldszus
-'''
+"""
 
 from itertools import islice
 from hashlib import md5
@@ -36,8 +36,9 @@ def split(a, n):
     http://stackoverflow.com/a/2135920
     """
     k, m = len(a) / n, len(a) % n
-    return (a[i * k + min(i, m):(i + 1) * k + min(i + 1, m)]
-            for i in xrange(n))
+    return (
+        a[i * k + min(i, m) : (i + 1) * k + min(i + 1, m)] for i in xrange(n)
+    )
 
 
 def foldsof(X, y, n=3):
@@ -73,4 +74,4 @@ def hash_of_featureset(features):
     >>> hash_of_featureset(features)
     '4518ca2'
     """
-    return md5(' '.join(sorted(features))).hexdigest()[:7]
+    return md5(" ".join(sorted(features))).hexdigest()[:7]

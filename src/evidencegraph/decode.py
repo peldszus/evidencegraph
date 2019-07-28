@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-'''
+"""
 @author: Andreas Peldszus
-'''
+"""
 from __future__ import absolute_import
 
 import networkx as nx
@@ -14,8 +14,8 @@ from collections import defaultdict
 from .argtree import ArgTree
 
 
-def multidigraph_to_digraph(g, field='weight', func=max):
-    '''
+def multidigraph_to_digraph(g, field="weight", func=max):
+    """
     Returns a DiGraph from a MultiDiGraph. If there are multiple edges
     from one node to the other, the edges is chosen which has the
     minimal or maximal value in some data field.
@@ -30,7 +30,7 @@ def multidigraph_to_digraph(g, field='weight', func=max):
     True
     >>> d.edges(data=True) == [(1, 2, {'count': 0, 'weight': 0.8}), (2, 1, {'count': 0, 'weight': 0.6})]
     True
-    '''
+    """
     f = nx.DiGraph()
     f.graph = g.graph
     for n in g.nodes():
@@ -63,8 +63,8 @@ def nxdigraph_to_depdigraph(g, field="weight"):
         succs[s].append(t)
         succs[t]
         weights[(s, t)] = w
-    succs['root'] = list(succs.keys())
-    weights.update({('root', n): 0 for n in succs.keys()})
+    succs["root"] = list(succs.keys())
+    weights.update({("root", n): 0 for n in succs.keys()})
     return DepDigraph(succs, get_score=lambda s, t: weights[(s, t)])
 
 
@@ -100,7 +100,7 @@ def find_mst(weg, from_root=False, field="weight"):
     out.graph = copy.deepcopy(g.graph)
     out.add_nodes_from([copy.deepcopy((n, d)) for n, d in g.nodes(data=True)])
     for s, t in m.iteredges():
-        if s == 'root':
+        if s == "root":
             # don't add the root link
             continue
         out.add_edge(s, t, g.succ[s][t])

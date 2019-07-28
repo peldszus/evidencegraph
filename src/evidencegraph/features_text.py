@@ -1,10 +1,10 @@
 # -*- mode: python; coding: utf-8; -*-
 
-'''
+"""
 Created on 20.05.2016
 
 @author: Andreas Peldszus
-'''
+"""
 from __future__ import print_function
 from __future__ import absolute_import
 
@@ -22,11 +22,11 @@ from .resources import connectives_de
 
 
 def init_language(language):
-    assert language in ['en', 'de']
-    if language == 'de':
+    assert language in ["en", "de"]
+    if language == "de":
         nlp = spacy.load(language)
         connectives = connectives_de
-    elif language == 'en':
+    elif language == "en":
         nlp = spacy.load(language)
         connectives = connectives_en
     return TextFeatures(nlp=nlp, connectives=connectives)
@@ -60,17 +60,30 @@ def generate_items_segmentpairs(segments):
     return sorted(list(permutations(generate_items_segments(segments), 2)))
 
 
-
 class TextFeatures(object):
 
-    F_SET_BOW_BASELINE = ['default', 'bow']
+    F_SET_BOW_BASELINE = ["default", "bow"]
     F_SET_ALL_BUT_VECTORS = [
-        'default', 'bow', 'bow_2gram', 'first_three',
-        'tags', 'deps_lemma', 'deps_tag',
-        'punct', 'verb_main', 'verb_all', 'discourse_marker',
-        'context', 'clusters', 'clusters_2gram', 'discourse_relation',
-        'vector_left_right', 'vector_source_target',
-        'verb_segment', 'same_sentence', 'matrix_clause'
+        "default",
+        "bow",
+        "bow_2gram",
+        "first_three",
+        "tags",
+        "deps_lemma",
+        "deps_tag",
+        "punct",
+        "verb_main",
+        "verb_all",
+        "discourse_marker",
+        "context",
+        "clusters",
+        "clusters_2gram",
+        "discourse_relation",
+        "vector_left_right",
+        "vector_source_target",
+        "verb_segment",
+        "same_sentence",
+        "matrix_clause",
     ]
 
     def __init__(self, nlp=None, connectives=None, feature_set=None):
@@ -91,9 +104,15 @@ class TextFeatures(object):
         self.idx_cache = defaultdict(dict)
         self.feature_set = feature_set or ["default"]
         self.feature_set_allowed_for_context = [
-            'default', 'bow', 'first_three', 'punct',
-            'verb_main', 'verb_segment', 'verb_all',
-            'discourse_marker', 'discourse_relation'
+            "default",
+            "bow",
+            "first_three",
+            "punct",
+            "verb_main",
+            "verb_segment",
+            "verb_all",
+            "discourse_marker",
+            "discourse_relation",
         ]
 
     def feature_function_segments(self, segments, **kwargs):
@@ -115,9 +134,12 @@ class TextFeatures(object):
         segments = add_segment_final_space(ensure_unicode(segments))
         self.parse(segments)
         for segment in generate_items_segments(segments):
-            l.append(self.feature_function_single_segment(segments, segment, **kwargs))
+            l.append(
+                self.feature_function_single_segment(
+                    segments, segment, **kwargs
+                )
+            )
         return l
-
 
     def feature_function_segmentpairs(self, segments, **kwargs):
         """
@@ -141,13 +163,29 @@ class TextFeatures(object):
         segments = add_segment_final_space(ensure_unicode(segments))
         self.parse(segments)
         for source, target in generate_items_segmentpairs(segments):
-            f = self.feature_function_single_segmentpair(segments, source, target, **kwargs)
-            f = add_prefixed_dict(f, 'source', self.feature_function_single_segment(segments, source, **kwargs))
-            f = add_prefixed_dict(f, 'target', self.feature_function_single_segment(segments, target, **kwargs))
+            f = self.feature_function_single_segmentpair(
+                segments, source, target, **kwargs
+            )
+            f = add_prefixed_dict(
+                f,
+                "source",
+                self.feature_function_single_segment(
+                    segments, source, **kwargs
+                ),
+            )
+            f = add_prefixed_dict(
+                f,
+                "target",
+                self.feature_function_single_segment(
+                    segments, target, **kwargs
+                ),
+            )
             l.append(f)
         return l
 
-    def feature_function_single_segment(self, segments, segment, feature_set=None):
+    def feature_function_single_segment(
+        self, segments, segment, feature_set=None
+    ):
         """
         Returns the segment-wise features for a single segment.
 
@@ -208,103 +246,134 @@ class TextFeatures(object):
         d = {}
         tokens = self.get_tokens(segments, segment)
 
-        if 'default' in feature_set:
-            d['POS_abs'] = segment
-            d['POS_rel'] = float(segment) / len(segments)
-            d['POS_first'] = segment == 1
-            d['POS_last'] = segment == len(segments)
+        if "default" in feature_set:
+            d["POS_abs"] = segment
+            d["POS_rel"] = float(segment) / len(segments)
+            d["POS_first"] = segment == 1
+            d["POS_last"] = segment == len(segments)
 
-        if 'bow' in feature_set:
+        if "bow" in feature_set:
             for token in tokens:
-                d[u'TOK_{}'.format(token.lemma_)] = True
+                d[u"TOK_{}".format(token.lemma_)] = True
 
-        if 'bow_2gram' in feature_set:
+        if "bow_2gram" in feature_set:
             for tok1, tok2 in window(tokens, n=2):
-                d[u'TOK_2_{}_{}'.format(tok1.lemma_, tok2.lemma_)] = True
+                d[u"TOK_2_{}_{}".format(tok1.lemma_, tok2.lemma_)] = True
 
-        if 'first_three' in feature_set:
+        if "first_three" in feature_set:
             for i, token in enumerate(tokens[:3], 1):
-                d[u'F3L_{}_{}'.format(i, token.lemma_)] = True
+                d[u"F3L_{}_{}".format(i, token.lemma_)] = True
 
-        if 'clusters' in feature_set:
+        if "clusters" in feature_set:
             for token in tokens:
-                d['CLS_{}'.format(token.cluster)] = True
+                d["CLS_{}".format(token.cluster)] = True
 
-        if 'clusters_2gram' in feature_set:
+        if "clusters_2gram" in feature_set:
             for tok1, tok2 in window(tokens, n=2):
-                d[u'CLS_2_{}_{}'.format(tok1.cluster, tok2.cluster)] = True
+                d[u"CLS_2_{}_{}".format(tok1.cluster, tok2.cluster)] = True
 
-        if 'vectors' in feature_set:
+        if "vectors" in feature_set:
             for i, v in enumerate(average_vector_of_segment(tokens)):
-                d['VEC_{}'.format(i)] = v
+                d["VEC_{}".format(i)] = v
 
-        if 'tags' in feature_set:
+        if "tags" in feature_set:
             for token in tokens:
-                d['TAG_{}'.format(token.tag_)] = True
+                d["TAG_{}".format(token.tag_)] = True
 
-        if 'deps_lemma' in feature_set:
+        if "deps_lemma" in feature_set:
             for token in tokens:
-                d[u'DPL_{}_{}_{}'.format(token.lemma_, token.dep_, token.head.lemma_)] = True
+                d[
+                    u"DPL_{}_{}_{}".format(
+                        token.lemma_, token.dep_, token.head.lemma_
+                    )
+                ] = True
 
-        if 'deps_tag' in feature_set:
+        if "deps_tag" in feature_set:
             for token in tokens:
-                d['DPT_{}_{}_{}'.format(token.tag_, token.dep_, token.head.tag_)] = True
+                d[
+                    "DPT_{}_{}_{}".format(
+                        token.tag_, token.dep_, token.head.tag_
+                    )
+                ] = True
 
-        if 'punct' in feature_set:
-            d['punctuation_count'] = sum(1 for token in tokens if token.is_punct)
+        if "punct" in feature_set:
+            d["punctuation_count"] = sum(
+                1 for token in tokens if token.is_punct
+            )
 
-        if 'verb_main' in feature_set:
+        if "verb_main" in feature_set:
             for token in tokens:
-                if token.pos_ == 'VERB' and token.dep_ == 'ROOT':
-                    d[u'VM_text_{}'.format(token.text)] = True
-                    d[u'VM_lemma_{}'.format(token.lemma_)] = True
+                if token.pos_ == "VERB" and token.dep_ == "ROOT":
+                    d[u"VM_text_{}".format(token.text)] = True
+                    d[u"VM_lemma_{}".format(token.lemma_)] = True
 
-        if 'verb_segment' in feature_set:
+        if "verb_segment" in feature_set:
             for token in tokens:
-                if token.pos_ == 'VERB' and token.head not in tokens:
-                    d[u'VS_text_{}'.format(token.text)] = True
-                    d[u'VS_lemma_{}'.format(token.lemma_)] = True
+                if token.pos_ == "VERB" and token.head not in tokens:
+                    d[u"VS_text_{}".format(token.text)] = True
+                    d[u"VS_lemma_{}".format(token.lemma_)] = True
 
-        if 'verb_all' in feature_set:
+        if "verb_all" in feature_set:
             for token in tokens:
-                if token.pos_ == 'VERB':
-                    d[u'VA_text_{}'.format(token.text)] = True
-                    d[u'VA_lemma_{}'.format(token.lemma_)] = True
+                if token.pos_ == "VERB":
+                    d[u"VA_text_{}".format(token.text)] = True
+                    d[u"VA_lemma_{}".format(token.lemma_)] = True
 
-        if 'discourse_marker' in feature_set:
-            seg_text = u''.join(token.string for token in tokens).lower()
+        if "discourse_marker" in feature_set:
+            seg_text = u"".join(token.string for token in tokens).lower()
             tok_texts = [token.text.lower() for token in tokens]
             for marker, relations in self.connectives.iteritems():
                 match = False
-                if u' ' in marker:
+                if u" " in marker:
                     if marker in seg_text:
                         match = True
                 else:
                     if marker in tok_texts:
                         match = True
                 if match:
-                    d[u'DM_{}'.format(marker)] = True
-                    if 'discourse_relation' in feature_set:
+                    d[u"DM_{}".format(marker)] = True
+                    if "discourse_relation" in feature_set:
                         for rel in relations:
-                            d[u'DR_{}'.format(rel)] = True
+                            d[u"DR_{}".format(rel)] = True
 
-        if 'vector_left_right' in feature_set:
+        if "vector_left_right" in feature_set:
             if segment > 1:
-                d['VR_left'] = self.vector_similarity(segments, segment, segment - 1)
+                d["VR_left"] = self.vector_similarity(
+                    segments, segment, segment - 1
+                )
             if segment < len(segments):
-                d['VR_right'] = self.vector_similarity(segments, segment, segment + 1)
+                d["VR_right"] = self.vector_similarity(
+                    segments, segment, segment + 1
+                )
 
-        if 'context' in feature_set:
+        if "context" in feature_set:
             new_feature_set = [
-                f for f in feature_set if f in self.feature_set_allowed_for_context]
+                f
+                for f in feature_set
+                if f in self.feature_set_allowed_for_context
+            ]
             if segment > 1:
-                d = add_prefixed_dict(d, 'left', self.feature_function_single_segment(segments, segment-1, feature_set=new_feature_set))
+                d = add_prefixed_dict(
+                    d,
+                    "left",
+                    self.feature_function_single_segment(
+                        segments, segment - 1, feature_set=new_feature_set
+                    ),
+                )
             if segment < len(segments):
-                d = add_prefixed_dict(d, 'right', self.feature_function_single_segment(segments, segment+1, feature_set=new_feature_set))
+                d = add_prefixed_dict(
+                    d,
+                    "right",
+                    self.feature_function_single_segment(
+                        segments, segment + 1, feature_set=new_feature_set
+                    ),
+                )
 
         return d
 
-    def feature_function_single_segmentpair(self, segments, source, target, feature_set=None):
+    def feature_function_single_segmentpair(
+        self, segments, source, target, feature_set=None
+    ):
         """
         Returns the segment-pair-wise features for a single pair of segments.
 
@@ -320,20 +389,24 @@ class TextFeatures(object):
             feature_set = self.feature_set
         d = {}
         distance = target - source
-        d['distance'] = distance
-        d['distance_abs'] = abs(distance)
-        d['distance_rel'] = 1.0 * abs(distance) / len(segments)
-        d['direction'] = distance > 0
-        d['segment_length_ratio'] = 1.0 * len(self.get_tokens(segments, source)) / len(self.get_tokens(segments, target))
+        d["distance"] = distance
+        d["distance_abs"] = abs(distance)
+        d["distance_rel"] = 1.0 * abs(distance) / len(segments)
+        d["direction"] = distance > 0
+        d["segment_length_ratio"] = (
+            1.0
+            * len(self.get_tokens(segments, source))
+            / len(self.get_tokens(segments, target))
+        )
 
-        if 'vector_source_target' in feature_set:
-            d['VR_src_trg'] = self.vector_similarity(segments, source, target)
+        if "vector_source_target" in feature_set:
+            d["VR_src_trg"] = self.vector_similarity(segments, source, target)
 
-        if 'same_sentence' in feature_set:
-            d['same_sentence'] = self.same_sentence(segments, source, target)
+        if "same_sentence" in feature_set:
+            d["same_sentence"] = self.same_sentence(segments, source, target)
 
-        if 'matrix_clause' in feature_set:
-            d['matrix_clause'] = self.matrix_clause(segments, source, target)
+        if "matrix_clause" in feature_set:
+            d["matrix_clause"] = self.matrix_clause(segments, source, target)
 
         return d
 
@@ -364,20 +437,20 @@ class TextFeatures(object):
             segments_to_match = deque(segments[:])
             iterator = iter(doc)
             count_segments = 1
-            consumed_tokens = u''
+            consumed_tokens = u""
             tokens = []
             while segments_to_match:
                 if consumed_tokens == segments_to_match[0]:
                     segments_to_match.popleft()
                     self.seg_cache[text][count_segments] = tokens
                     count_segments += 1
-                    consumed_tokens = u''
+                    consumed_tokens = u""
                     tokens = []
                 else:
                     try:
                         token = next(iterator)
                     except Exception:
-                        print(segments)
+                        print (segments)
                     tokens.append(token)
                     consumed_tokens += token.string
             # build offset -> sentence mapping
@@ -390,14 +463,22 @@ class TextFeatures(object):
         src_tokens = self.get_tokens(segments, source)
         trg_tokens = self.get_tokens(segments, target)
         sentence_id_of_token = self.idx_cache[text]
-        sentence_ids_of_source_tokens = set(sentence_id_of_token[t.idx] for t in src_tokens)
-        sentence_ids_of_target_tokens = set(sentence_id_of_token[t.idx] for t in trg_tokens)
+        sentence_ids_of_source_tokens = set(
+            sentence_id_of_token[t.idx] for t in src_tokens
+        )
+        sentence_ids_of_target_tokens = set(
+            sentence_id_of_token[t.idx] for t in trg_tokens
+        )
         return sentence_ids_of_source_tokens == sentence_ids_of_target_tokens
 
     def matrix_clause(self, segments, source, target):
         src_tokens = self.get_tokens(segments, source)
         trg_tokens = self.get_tokens(segments, target)
-        return any(token.head in trg_tokens for token in src_tokens if not token.is_punct)
+        return any(
+            token.head in trg_tokens
+            for token in src_tokens
+            if not token.is_punct
+        )
 
     def vector_similarity(self, segments, seg1, seg2):
         vec1 = average_vector_of_segment(self.get_tokens(segments, seg1))
@@ -414,8 +495,7 @@ def text_of_segments(segments):
     >>> text_of_segments(segments)
     u'Hi there! My name is Peter.'
     """
-    return u''.join(segments)
-
+    return u"".join(segments)
 
 
 def ensure_unicode(segments):
@@ -435,7 +515,7 @@ def add_segment_final_space(segments):
     """
     r = []
     for segment in segments[:-1]:
-        r.append(segment.rstrip()+' ')
+        r.append(segment.rstrip() + " ")
     r.append(segments[-1].rstrip())
     return r
 
@@ -452,7 +532,7 @@ def add_prefixed_dict(output_dictionary, prefix, input_dictionary, copy=False):
         output_dictionary = copy(output_dictionary)
     for key, value in input_dictionary.iteritems():
         assert isinstance(key, basestring)
-        output_dictionary[prefix+'_'+key] = value
+        output_dictionary[prefix + "_" + key] = value
     return output_dictionary
 
 
@@ -477,6 +557,10 @@ def bucket_percent(number):
 
 
 def average_vector_of_segment(tokens):
-    return average([
-        token.vector for token in tokens
-        if token.has_vector and not (token.is_stop or token.is_space)])
+    return average(
+        [
+            token.vector
+            for token in tokens
+            if token.has_vector and not (token.is_stop or token.is_space)
+        ]
+    )
