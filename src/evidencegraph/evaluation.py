@@ -84,13 +84,10 @@ def evaluate(ground_truth, prediction):
     classwise = precision_recall_fscore_support(
         ground_truth, prediction, average=None, warn_for=())
     results['true_cat_dist'] = list(classwise[-1])
-    try:
-        results['classwise'] = {
-            str(cl): prfs_to_dict([
-                classwise[0][cl], classwise[1][cl], classwise[2][cl]])
-            for cl in categories}
-    except IndexError:
-        pass
+    results['classwise'] = {
+        str(cl): prfs_to_dict([
+            classwise[0][cl], classwise[1][cl], classwise[2][cl]])
+        for cl in categories}
 
     # average precision, recall & f1
     results['macro_avg'] = prfs_to_dict(precision_recall_fscore_support(
