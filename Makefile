@@ -15,11 +15,11 @@ install-requirements: virtualenv
 download-corpora:
 	mkdir -p ${CORPUS_DIR}
 	curl -o /tmp/arg-microtexts-1.zip -LO https://github.com/peldszus/arg-microtexts/archive/master.zip
-	unzip /tmp/arg-microtexts-1.zip -d ${CORPUS_DIR}
+	unzip -qq /tmp/arg-microtexts-1.zip -d ${CORPUS_DIR}
 	curl -o /tmp/arg-microtexts-1-multi.zip -LO https://github.com/peldszus/arg-microtexts-multilayer/archive/master.zip
-	unzip /tmp/arg-microtexts-1-multi.zip -d ${CORPUS_DIR}
+	unzip -qq /tmp/arg-microtexts-1-multi.zip -d ${CORPUS_DIR}
 	curl -o /tmp/arg-microtexts-2.zip -LO https://github.com/discourse-lab/arg-microtexts-part2/archive/master.zip
-	unzip /tmp/arg-microtexts-2.zip -d ${CORPUS_DIR}
+	unzip -qq /tmp/arg-microtexts-2.zip -d ${CORPUS_DIR}
 
 download-spacy-data-de:
 	curl -LO https://github.com/explosion/spaCy/releases/download/v1.6.0/de-1.0.0.tar.gz
