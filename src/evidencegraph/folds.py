@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 
 '''
+The static folds to be used for evaluation on the
+* arg-microtext corpus (m112de, m112en) and
+* arg-microtext-multilayer (m112en_fine).
+
+Result of RepeatedGroupwiseStratifiedKFold with 5 folds and 10 iterations.
+
 @author: Andreas Peldszus
 '''
 

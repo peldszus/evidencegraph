@@ -18,19 +18,19 @@ from folding import RepeatedGroupwiseStratifiedKFold
 CORPORA = {
     'm112de': {
         'language': 'de',
-        'path': 'data/corpus/german/arg/'
+        'path': 'data/corpus/arg-microtexts-master/corpus/de/'
     },
     'm112en': {
         'language': 'en',
-        'path': 'data/corpus/english/arg/'
+        'path': 'data/corpus/arg-microtexts-master/corpus/en/'
     },
     'm112en_fine': {
         'language': 'en',
-        'path': 'data/corpus/english/arg_fine/'
+        'path': 'data/corpus/arg-microtexts-multilayer-master/corpus/arg/'
     },
-    'm3-v5': {
+    'm112en_part2': {
         'language': 'en',
-        'path': 'data/corpus/english/m3-v5/'
+        'path': 'data/corpus/arg-microtexts-part2-master/corpus/'
     }
 }
 
