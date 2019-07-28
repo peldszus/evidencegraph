@@ -158,8 +158,10 @@ class EvidenceGraphClassifier(object):
         relation_set=FULL_RELATION_SET,
         base_classifier_class=BaseClassifier
     ):
-
+        self.feature_function_segments = feature_function_segments
+        self.feature_function_segmentpairs = feature_function_segmentpairs
         self.relation_set = relation_set
+        self.base_classifier_class = base_classifier_class
         self.ensemble = {
             'cc': base_classifier_class(
                     feature_function=feature_function_segments,
@@ -192,15 +194,20 @@ class EvidenceGraphClassifier(object):
     def train_metaclassifier(self, input_trees, output_trees):
         if self.optimize_weighting == 'inner_cv':
             # predict all items in trainingset as unseen via inner CV
-            egclf = deepcopy(self)
-            egclf.optimize = False
-            egclf.optimize_weighting = False
             egs = []
             for (train_X, train_y), (test_X, test_y) in foldsof(input_trees, output_trees):
+                egclf = EvidenceGraphClassifier(
+                    self.feature_function_segments,
+                    self.feature_function_segmentpairs,
+                    relation_set=self.relation_set,
+                    base_classifier_class=self.base_classifier_class,
+                    optimize=False,
+                    optimize_weighting=False,
+                )
                 egclf.train(train_X, train_y)
                 fold_egs = [egclf._predict_evidence_graph(t) for t in test_X]
+                del egclf
                 egs.extend(fold_egs)
-            del egclf
         else:
             egs = [self._predict_evidence_graph(t) for t in input_trees]
 
