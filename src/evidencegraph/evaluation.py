@@ -11,18 +11,14 @@ import json
 import os
 from itertools import chain, combinations
 from collections import defaultdict
-from argparse import ArgumentParser
 from numpy import mean
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_recall_fscore_support
 
 from argtree import ArgTree
-from argtree import SIMPLE_RELATION_SET
 from argtree import FULL_RELATION_SET
-from argtree import FULL_RELATION_SET_ADU
 from corpus import GraphCorpus, CORPORA
 from result_collector import ResultCollector
-from utils import window
 
 
 def evaluate(ground_truth, prediction):

@@ -9,13 +9,11 @@ Created on 05.08.2014
 
 import argparse
 import sys
-import codecs
 
 from evidencegraph.arggraph import ArgGraph
 
 
 if __name__ == "__main__":
-    # initialize argument parser
     aparser = argparse.ArgumentParser(
         description="plot the arg graph specified in the input xml as a png file")
     aparser.add_argument("input", help="input xml file(s)", nargs='+')

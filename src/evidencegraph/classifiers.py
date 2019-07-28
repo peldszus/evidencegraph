@@ -11,7 +11,6 @@ import os
 import joblib
 
 from functools import partial
-from copy import deepcopy
 from numpy import mean, zeros
 from sklearn.pipeline import Pipeline
 from sklearn.grid_search import GridSearchCV

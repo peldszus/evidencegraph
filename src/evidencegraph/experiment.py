@@ -3,7 +3,6 @@
 @author: Andreas Peldszus
 '''
 
-import json
 from collections import defaultdict
 from datetime import datetime
 

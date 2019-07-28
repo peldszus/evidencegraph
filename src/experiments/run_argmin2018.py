@@ -9,7 +9,7 @@
 import json
 
 from evidencegraph.argtree import RELATION_SETS_BY_NAME
-from evidencegraph.corpus import GraphCorpus, CORPORA, combine_corpora
+from evidencegraph.corpus import combine_corpora
 from evidencegraph.experiment import run_experiment_condition
 from evidencegraph.features_text import init_language
 

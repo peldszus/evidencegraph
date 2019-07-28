@@ -10,7 +10,6 @@ import os
 
 from arggraph import ArgGraph
 from argtree import ArgTree
-from argtree import RELATION_SETS
 from argtree import SIMPLE_RELATION_SET
 from folding import RepeatedGroupwiseStratifiedKFold
 
