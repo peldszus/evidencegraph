@@ -397,6 +397,6 @@ def evaluate_setting(
     for level in levels:
         class_scores(rc, level)
 
-    for condition_1, condition_2 in combinations(conditions, 2): #) window(conditions, n=2):
+    for condition_1, condition_2 in combinations(conditions, 2):
         print_significance(rc, condition_1, condition_2, levels=levels)
 
