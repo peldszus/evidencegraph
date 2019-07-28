@@ -124,3 +124,55 @@ class GraphCorpus(object):
             number, self.role_type_labels(),
             shuffle=shuffle, seed=seed, repeats=repeats
         )
+
+
+def combine_corpora(corpora, mode="normal"):
+    """
+    Combine multiple corpora into one corpus and return the corpus
+    and the folds.
+
+    corpora: list of corpus ids to load
+    mode:
+        'normal' = train and test folded on all corpora
+                   A" + B" + C" >> A' + B' + C'
+        'cross'  = train on all but last corpus, test folded on last
+                   A + B >> C'
+        'add'    = train on all and last corpus, test folded on last
+                   A + B + C" >> C'
+    """
+    assert all(corpus in CORPORA for corpus in corpora)
+
+    if mode == "normal":
+        gc = GraphCorpus()
+        for corpus in corpora:
+            gc.load(CORPORA[corpus]['path'])
+        folds = list(gc.create_folds())
+
+    elif mode == "cross":
+        gc = GraphCorpus()
+        assert len(corpora) > 1
+        last = corpora[-1]
+        gc.load(CORPORA[last]['path'])
+        last_folds = list(gc.create_folds())
+        first_corpora_text_ids = []
+        for corpus in corpora[:-1]:
+            ids = gc.load(CORPORA[corpus]['path'])
+            first_corpora_text_ids.extend(ids)
+        folds = [(first_corpora_text_ids, test, n)
+                 for _, test, n in last_folds]
+
+    elif mode == "add":
+        gc = GraphCorpus()
+        assert len(corpora) > 1
+        last = corpora[-1]
+        all_corpora_text_ids = []
+        ids = gc.load(CORPORA[last]['path'])
+        all_corpora_text_ids.extend(ids)
+        last_folds = list(gc.create_folds())
+        for corpus in corpora[:-1]:
+            ids = gc.load(CORPORA[corpus]['path'])
+            all_corpora_text_ids.extend(ids)
+        folds = [([i for i in all_corpora_text_ids if i not in test], test, n)
+                 for _, test, n in last_folds]
+
+    return gc, folds
