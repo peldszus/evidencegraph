@@ -8,6 +8,7 @@
 from __future__ import print_function
 
 import json
+import os
 from itertools import chain, combinations
 from collections import defaultdict
 from argparse import ArgumentParser
@@ -367,7 +368,7 @@ def class_scores(result_collector, level):
 
 
 def evaluate_setting(
-    language, segmentation, relationset, conditions, corpus_id=None
+    language, segmentation, relationset, conditions, corpus_id=None, predictions_path=None
 ):
     levels = ['cc', 'ro', 'fu', 'at']
     rc = ResultCollector()
@@ -376,17 +377,18 @@ def evaluate_setting(
         language, segmentation, relationset.functions))
 
     # load gold corpus
-    try:
-        gc = GraphCorpus()
-        gc.load(CORPORA[corpus_id]['path'])
-        gold = gc.trees(segmentation, relationset)
-    except AssertionError as e:
-        print(e, '\n')
-        return
+    gc = GraphCorpus()
+    gc.load(CORPORA[corpus_id]['path'])
+    gold = gc.trees(segmentation, relationset)
 
+    if not predictions_path:
+        predictions_path = "data"
+    
     for run in conditions:
         p = load_predictions(
-            "data/{}.json".format(run), relation_set=relationset)
+            os.path.join(predictions_path, "{}.json".format(run)),
+            relation_set=relationset
+        )
         evaluate_iterations(p, gold, rc, run)
 
     print_scores(rc)
@@ -397,3 +399,4 @@ def evaluate_setting(
     for condition_1, condition_2 in combinations(conditions, 2):
         print_significance(rc, condition_1, condition_2, levels=levels)
 
+    return rc
