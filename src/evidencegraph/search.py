@@ -3,6 +3,7 @@
 '''
 @author: Andreas Peldszus
 '''
+from __future__ import print_function
 
 from scipy.spatial.distance import cosine
 import numpy as np
@@ -79,8 +80,8 @@ class BasicWeightingSearch(object):
         n = len(self.scores)
         min_score = min(self.scores.values())
         max_score = max(self.scores.values())
-        print "Searched {} weightings, scoring from {} up to {}.".format(
-            n, min_score, max_score)
+        print("Searched {} weightings, scoring from {} up to {}.".format(
+            n, min_score, max_score))
 
 
 class ThrowRiceSearch(BasicWeightingSearch):
@@ -113,7 +114,7 @@ class ThrowRiceSearch(BasicWeightingSearch):
             searched_weightings += 1
             self.test_weighting(*weighting)
         if verbose:
-            print '!'
+            print('!')
 
 
 class EvolutionarySearch(BasicWeightingSearch):
@@ -169,8 +170,8 @@ class EvolutionarySearch(BasicWeightingSearch):
             rate = rate * self.factor
             if verbose:
                 best = top_weightings[0]
-                print "### rate=%.4f - top weighting: score=%.3f weighting=(%s)" % (
-                    rate, best[0], ', '.join(['%.3f' % w for w in best[1]]))
+                print("### rate=%.4f - top weighting: score=%.3f weighting=(%s)" % (
+                    rate, best[0], ', '.join(['%.3f' % w for w in best[1]])))
             # jitter!
             for _score, weighting in top_weightings[:n_to_keep]:
                 for _i in range(int(self.n_to_start_with / n_to_keep / 4)):

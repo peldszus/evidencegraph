@@ -3,6 +3,7 @@
 '''
 @author: Andreas Peldszus
 '''
+from __future__ import print_function
 
 import networkx as nx
 
@@ -74,8 +75,8 @@ class EvidenceGraph(nx.MultiDiGraph):
         sum_of_weighted_weights = 0.0
         for weight_id, weight in weights.iteritems():
             if weight_id not in self.weight_ids or weight_id not in d:
-                print ("Warning: '%s' is not a registered weight id. "
-                       "skipping.") % weight_id
+                print(("Warning: '%s' is not a registered weight id. "
+                       "skipping.") % weight_id)
                 continue
             else:
                 w = d[weight_id]

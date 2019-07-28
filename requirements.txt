@@ -11,3 +11,4 @@ lxml==3.6.0
 pydot==1.0.29
 spacy==1.6.0
 joblib==0.10.2
+future==0.17.1

@@ -4,6 +4,7 @@
 '''
 @author: Andreas Peldszus
 '''
+from __future__ import print_function
 
 import json
 from argparse import ArgumentParser
@@ -53,7 +54,7 @@ if __name__ == '__main__':
         features.feature_set = params.pop('feature_set')
         params['relation_set'] = RELATION_SETS_BY_NAME.get(params['relation_set'])
         texts, trees = corpus.segments_trees(params.pop('segmentation'), params['relation_set'])
-        print "### Running experiment condition", condition_name
+        print("### Running experiment condition", condition_name)
         predictions, _decisions = run_experiment_condition(texts, trees, folds, features, params, condition_name)
         with open('data/{}.json'.format(condition_name), 'w') as f:
             json.dump(predictions, f, indent=1, sort_keys=True)

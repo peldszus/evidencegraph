@@ -5,6 +5,8 @@ Created on 20.05.2016
 
 @author: Andreas Peldszus
 '''
+from __future__ import print_function
+from __future__ import absolute_import
 
 
 from itertools import permutations
@@ -14,9 +16,9 @@ from collections import deque
 from scipy.spatial.distance import cosine
 import spacy
 
-from utils import window
-from resources import connectives_en
-from resources import connectives_de
+from .utils import window
+from .resources import connectives_en
+from .resources import connectives_de
 
 
 def init_language(language):
@@ -375,7 +377,7 @@ class TextFeatures(object):
                     try:
                         token = next(iterator)
                     except Exception:
-                        print segments
+                        print(segments)
                     tokens.append(token)
                     consumed_tokens += token.string
             # build offset -> sentence mapping

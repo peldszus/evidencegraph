@@ -3,13 +3,14 @@
 '''
 @author: Andreas Peldszus
 '''
+from __future__ import absolute_import
 
 from collections import deque
 from itertools import permutations
 
 import networkx as nx
 
-from arggraph import ArgGraph, get_very_complex_arggraph
+from .arggraph import ArgGraph, get_very_complex_arggraph
 
 
 class RelationSet(object):

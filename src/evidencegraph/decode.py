@@ -3,14 +3,15 @@
 '''
 @author: Andreas Peldszus
 '''
+from __future__ import absolute_import
 
 import networkx as nx
 import copy
 from operator import itemgetter
 
-from depparse.graph import Digraph as DepDigraph
+from .depparse.graph import Digraph as DepDigraph
 from collections import defaultdict
-from argtree import ArgTree
+from .argtree import ArgTree
 
 
 def multidigraph_to_digraph(g, field='weight', func=max):

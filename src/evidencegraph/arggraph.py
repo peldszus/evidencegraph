@@ -4,6 +4,7 @@
 '''
 @author: Andreas Peldszus
 '''
+from __future__ import print_function
 
 import re
 import networkx as nx
@@ -164,7 +165,7 @@ class ArgGraph (nx.DiGraph):
 
             edge_src = elm.get('src')
             if edge_src not in self.nodes():
-                print "Error: source unknown\n", etree.tostring(elm)
+                print("Error: source unknown\n", etree.tostring(elm))
 
             edge_trg = elm.get('trg')
             if edge_trg not in self.nodes():
@@ -182,8 +183,8 @@ class ArgGraph (nx.DiGraph):
                                          ('joint', 'adu')]:
                     self.add_seg_edge(edge_src, edge_trg)
                 else:
-                    print "Error: malformed segmentation edge\n", \
-                        etree.tostring(elm)
+                    print("Error: malformed segmentation edge\n", \
+                        etree.tostring(elm))
 
             elif edge_type in ['sup', 'exa', 'reb']:
                 if (self.node[edge_src]['type'] == 'adu' and
@@ -191,7 +192,7 @@ class ArgGraph (nx.DiGraph):
                     self.add_edge_with_relation_node(edge_id, edge_src,
                                                      edge_trg, edge_type)
                 else:
-                    print "Error: malformed direct edge\n", etree.tostring(elm)
+                    print("Error: malformed direct edge\n", etree.tostring(elm))
 
             elif edge_type == 'und':
                 if (self.node[edge_src]['type'] == 'adu' and
@@ -199,18 +200,18 @@ class ArgGraph (nx.DiGraph):
                     self.add_edge_with_relation_node(edge_id, edge_src,
                                                      edge_trg, edge_type)
                 else:
-                    print ("Error: malformed undercutting edge\n",
-                           etree.tostring(elm))
+                    print(("Error: malformed undercutting edge\n",
+                           etree.tostring(elm)))
 
             elif edge_type == 'add':
                 if (self.node[edge_src]['type'] == 'adu' and
                         self.node[edge_trg]['type'] == 'rel'):
                     self.add_edge(elm.get('src'), elm.get('trg'), type='src')
                 else:
-                    print "Error: malformed adding edge\n", etree.tostring(elm)
+                    print("Error: malformed adding edge\n", etree.tostring(elm))
 
             else:
-                print "Error: unknown edge type\n", etree.tostring(elm)
+                print("Error: unknown edge type\n", etree.tostring(elm))
 
         # update adu short names
         self.update_adu_labels()
@@ -218,7 +219,7 @@ class ArgGraph (nx.DiGraph):
     def to_xml(self):
         """
         >>> a = get_complex_arggraph()
-        >>> print a.to_xml()
+        >>> print(a.to_xml())
         <?xml version='1.0' encoding='UTF-8'?>
         <arggraph id="g1">
           <edu id="e1"><![CDATA[Swim!]]></edu>

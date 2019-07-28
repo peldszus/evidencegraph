@@ -6,6 +6,7 @@ Created on 05.08.2014
 
 @author: andi
 '''
+from __future__ import print_function
 
 import argparse
 import sys
@@ -21,7 +22,7 @@ if __name__ == "__main__":
 
     for i in args.input:
         if i.endswith('.xml'):
-            print i, '...'
+            print(i, '...')
             id = i[:-4]
             g = ArgGraph()
             g.load_from_xml(i)
@@ -32,9 +33,9 @@ if __name__ == "__main__":
             g.render_as_png(id + '.png')
             g.render_as_pdf(id + '.pdf')
 
-            #new_xml = g.to_xml()
-            #with open(i[:-4]+'.new.xml', 'w') as f:
-            #    f.write(new_xml)
+            # new_xml = g.to_xml()
+            # with open(i[:-4]+'.new.xml', 'w') as f:
+            #     f.write(new_xml)
 
             # # export dot, png and pdf of reduced graph
             # r = g.get_relation_node_free_graph()

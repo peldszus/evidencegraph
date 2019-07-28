@@ -6,6 +6,8 @@ Created on 06.05.2016
 
 @author: Andreas Peldszus
 '''
+from __future__ import print_function
+from __future__ import absolute_import
 
 import os
 import joblib
@@ -20,14 +22,14 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import precision_recall_fscore_support
 
-from argtree import FULL_RELATION_SET
-from decode import find_mst as find_mst
-from result_collector import filter_params
-from evidence_graph import EvidenceGraph
-from search import EvolutionarySearch
-from features_text import generate_items_segments
-from features_text import generate_items_segmentpairs
-from utils import foldsof
+from .argtree import FULL_RELATION_SET
+from .decode import find_mst as find_mst
+from .result_collector import filter_params
+from .evidence_graph import EvidenceGraph
+from .search import EvolutionarySearch
+from .features_text import generate_items_segments
+from .features_text import generate_items_segmentpairs
+from .utils import foldsof
 
 
 def label_function_cc(argtree):
@@ -102,7 +104,7 @@ class BaseClassifier(object):
         self.best_params = filter_params(
             self.pipeline.best_estimator_.get_params(deep=False))
         if verbose:
-            print self.best_params
+            print(self.best_params)
 
     def _train(self, features, labels):
         self.pipeline.fit(features, labels)
@@ -243,7 +245,7 @@ class EvidenceGraphClassifier(object):
         elif isinstance(clf, Pipeline):
             fu_classes_learned = clf.steps[-1][1].classes_
         else:
-            raise StandardError("Unknown classifier object")
+            raise Exception("Unknown classifier object")
         result_shape = (len(probas), len(fu_classes_all))
         result = zeros(result_shape)
         for idx, cl in enumerate(fu_classes_learned):
@@ -337,9 +339,9 @@ class EvidenceGraphClassifier(object):
                 try:
                     fu_weight = p_fu[map_fu_to_vec[func_type]]
                 except IndexError:
-                    print p_fu
-                    print map_fu_to_vec
-                    print func_type
+                    print(p_fu)
+                    print(map_fu_to_vec)
+                    print(func_type)
                 eg.add_edge(
                     source, target, type=func_type,
                     cc=cc_weight, ro=ro_weight, fu=fu_weight, at=at_weight)
@@ -350,7 +352,7 @@ class EvidenceGraphClassifier(object):
         pipelines = [(lvl, self.ensemble[lvl].pipeline) for lvl in sorted(self.ensemble.keys())]
         joblib.dump(pipelines, path, compress=1)
         if verbose:
-            print "Saved model {}".format(path)
+            print("Saved model {}".format(path))
 
     def load(self, path, verbose=True):
         """Load an object (typically a classifier model) using joblib."""
@@ -360,4 +362,4 @@ class EvidenceGraphClassifier(object):
         for lvl, pipeline in pipelines:
             self.ensemble[lvl].pipeline = pipeline
         if verbose:
-            print "Loaded model {}".format(path)
+            print("Loaded model {}".format(path))

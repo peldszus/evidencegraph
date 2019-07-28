@@ -5,13 +5,15 @@ Created on 18.09.2017
 
 @author: Andreas Peldszus
 '''
+from __future__ import print_function
+from __future__ import absolute_import
 
 import os
 
-from arggraph import ArgGraph
-from argtree import ArgTree
-from argtree import SIMPLE_RELATION_SET
-from folding import RepeatedGroupwiseStratifiedKFold
+from .arggraph import ArgGraph
+from .argtree import ArgTree
+from .argtree import SIMPLE_RELATION_SET
+from .folding import RepeatedGroupwiseStratifiedKFold
 
 
 CORPORA = {
@@ -44,12 +46,12 @@ class GraphCorpus(object):
         Loads the graphs of the corpus and return the freshly
         added text ids.
         """
-        _, _, filenames = os.walk(path).next()
+        _, _, filenames = next(os.walk(path))
         ids = []
         for fn in filenames:
             if fn.endswith('.xml'):
                 if not silent:
-                    print fn, '...'
+                    print(fn, '...')
                 g = ArgGraph()
                 g.load_from_xml(os.path.join(path, fn))
                 graph_id = g.graph['id']
@@ -60,7 +62,7 @@ class GraphCorpus(object):
                         self.graphs[graph_id] = g
                         ids.append(graph_id)
                 except Exception as e:
-                    print "Could not load {} :".format(fn), e
+                    print("Could not load {} :".format(fn), e)
         return ids
 
     def segments(self, segmentation):
@@ -111,7 +113,7 @@ class GraphCorpus(object):
             try:
                 labels[tid] = graph.get_role_type_labels().values()
             except Exception:
-                print "Error", tid
+                print("Error", tid)
                 pass
         return labels
 

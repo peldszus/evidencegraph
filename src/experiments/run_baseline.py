@@ -4,6 +4,7 @@
 '''
 @author: Andreas Peldszus
 '''
+from __future__ import print_function
 
 import json
 from collections import defaultdict, Counter
@@ -35,12 +36,12 @@ def folds_static(trees, relation_set, baseline):
         for _, _, relation_label in tree.get_triples()
     ])
     majority_label = relation_labels.most_common(1)[0][0]
-    print "Determined '{}' as the majority label.".format(majority_label)
+    print("Determined '{}' as the majority label.".format(majority_label))
 
     # produce the predictions
     predictions = defaultdict(dict)
     for _train_tids, test_tids, i in get_static_folds():
-        print "[{}] Iteration: {}\t".format(datetime.now(), i)
+        print("[{}] Iteration: {}\t".format(datetime.now(), i))
         if baseline == 'first':
             clf = BaselineAttachFirst()
         elif baseline == 'prec':
@@ -137,7 +138,7 @@ if __name__ == '__main__':
 
     # run all experiment conditions
     for condition, params in conditions.items():
-        print "### Running experiment condition", condition
+        print("### Running experiment condition", condition)
         corpus = GraphCorpus()
         corpus.load(CORPORA[params["corpus"]]['path'])
         relation_set = RELATION_SETS_BY_NAME[params["relation_set"]]

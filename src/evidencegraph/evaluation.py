@@ -6,6 +6,7 @@
 '''
 
 from __future__ import print_function
+from __future__ import absolute_import
 
 import json
 import os
@@ -15,10 +16,10 @@ from numpy import mean
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_recall_fscore_support
 
-from argtree import ArgTree
-from argtree import FULL_RELATION_SET
-from corpus import GraphCorpus, CORPORA
-from result_collector import ResultCollector
+from .argtree import ArgTree
+from .argtree import FULL_RELATION_SET
+from .corpus import GraphCorpus, CORPORA
+from .result_collector import ResultCollector
 
 
 def evaluate(ground_truth, prediction):
