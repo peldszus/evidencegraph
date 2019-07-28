@@ -4,7 +4,7 @@ VIRTUALENV_DIR=./env
 CORPUS_DIR=./data/corpus
 
 virtualenv:
-	if [ ! -e env/bin/pip ]; then virtualenv --python=python2.7 ${VIRTUALENV_DIR}; fi
+	if [ ! -e ${VIRTUALENV_DIR}/bin/pip ]; then virtualenv --python=python2.7 ${VIRTUALENV_DIR}; fi
 
 install-requirements: virtualenv
 	${VIRTUALENV_DIR}/bin/pip install --upgrade pip
