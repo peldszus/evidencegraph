@@ -11,6 +11,7 @@ install-requirements: virtualenv
 	${VIRTUALENV_DIR}/bin/pip install --upgrade wheel
 	cat requirements.txt | xargs -n 1 -L 1 ${VIRTUALENV_DIR}/bin/pip install
 	${VIRTUALENV_DIR}/bin/python setup.py develop
+	${VIRTUALENV_DIR}/bin/pre-commit install
 
 download-corpora:
 	mkdir -p ${CORPUS_DIR}
