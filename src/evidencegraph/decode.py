@@ -5,12 +5,13 @@
 """
 from __future__ import absolute_import
 
-import networkx as nx
+from collections import defaultdict
 import copy
 from operator import itemgetter
 
+import networkx as nx
+
 from .depparse.graph import Digraph as DepDigraph
-from collections import defaultdict
 from .argtree import ArgTree
 
 

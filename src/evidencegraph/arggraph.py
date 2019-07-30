@@ -7,10 +7,11 @@
 from __future__ import print_function
 
 import re
-import networkx as nx
-from lxml import etree
 from Queue import Queue
 from textwrap import wrap
+
+import networkx as nx
+from lxml import etree
 from pydot import graph_from_dot_data
 
 

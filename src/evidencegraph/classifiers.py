@@ -10,9 +10,9 @@ from __future__ import print_function
 from __future__ import absolute_import
 
 import os
-import joblib
-
 from functools import partial
+
+import joblib
 from numpy import mean, zeros
 from sklearn.pipeline import Pipeline
 from sklearn.grid_search import GridSearchCV
