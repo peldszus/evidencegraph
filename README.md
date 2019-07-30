@@ -1,6 +1,10 @@
 Evidence graphs for parsing argumentation structure
 ===================================================
 
+[![GitHub](https://img.shields.io/github/license/peldszus/evidencegraph)](LICENSE)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
+
 ## About
 
 This repository holds the code of the Evidence Graph model, a model for parsing the argumentation structure of text.
