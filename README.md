@@ -67,6 +67,58 @@ Adjust run_minimal.py:
 For more details, see the actual experiment definitions in `src/experiments`.
 
 
+## Reusing / extending components of the library
+
+### Use the same features for a new language
+
+Load a spacy nlp for the desired language and pass it together with a connective lexicon to the TextFeatures.
+
+```python
+from evidencegraph.features_text import TextFeatures
+from evidencegraph.classifiers import EvidenceGraphClassifier
+
+my_features = TextFeatures(
+    nlp=spacy.load("klingon"),
+    connectives={}, # add a connective lexicon here
+    feature_set=TextFeatures.F_SET_ALL_BUT_VECTORS
+)
+clf = EvidenceGraphClassifier(
+    my_features.feature_function_segments,
+    my_features.feature_function_segmentpairs
+)
+```
+
+### Use a custom base classifier
+
+Derive a custom base classifier class (stick to the interface) and pass this class to the EvidenceGraphClassifier.
+
+```python
+from evidencegraph.classifiers import BaseClassifier
+
+class MyBaseClassifier(BaseClassifier):
+    # do something different here
+    pass
+
+clf = EvidenceGraphClassifier(
+    my_features.feature_function_segments,
+    my_features.feature_function_segmentpairs,
+    base_classifier_class=MyBaseClassifier
+)
+```
+
+### Load a custom corpus
+
+Simply load a folder containing argument graph xml files into a GraphCorpus.
+
+```python
+from evidencegraph.corpus import GraphCorpus
+
+corpus = GraphCorpus()
+corpus.load("path/to/my/folder")
+texts, trees = corpus.segments_trees()
+```
+
+
 ## References
 
 1) [Joint prediction in MST-style discourse parsing for argumentation mining](https://aclweb.org/anthology/D/D15/D15-1110.pdf)  
