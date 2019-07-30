@@ -5,7 +5,7 @@ EvidenceGraphs for parsing argumentation structure
 
 This repository holds the code of the Evidence Graph model, a model for parsing the argumentation structure of text.
 
-It basically is a re-implementation of the model presented first in (1), and was used in the experiments of (2), (3) and (4).
+It basically is a re-implementation of the model presented first in [(1)](#references), and was used in the experiments of [(2)](#references), [(3)](#references) and [(4)](#references).
 
 
 ## Prerequisites
@@ -75,7 +75,7 @@ For more details, see the actual experiment definitions in `src/experiments`.
 
 2) [Automatic recognition of argumentation structure in short monological texts](https://publishup.uni-potsdam.de/files/42144/diss_peldszus.pdf)  
    Andreas Peldszus.  
-   Ph.D. thesis, Universität Potsdam, 2018
+   Ph.D. thesis, Universität Potsdam, 2018.
 
 3) [Comparing decoding mechanisms for parsing argumentative structures](https://content.iospress.com/download/argument-and-computation/aac033?id=argument-and-computation%2Faac033)  
    Stergos Afantenos, Andreas Peldszus, Manfred Stede.  
@@ -83,4 +83,4 @@ For more details, see the actual experiment definitions in `src/experiments`.
 
 4) [More or less controlled elicitation of argumentative text: Enlarging a microtext corpus via crowdsourcing](http://www.aclweb.org/anthology/W/W18/W18-5218.pdf)  
    Maria Skeppstedt, Andreas Peldszus, Manfred Stede.  
-   In: Proceedings of the 5th Workshop on Argument Mining. EMNLP 2018, Belgium, Brussels, November 2018
+   In: Proceedings of the 5th Workshop on Argument Mining. EMNLP 2018, Belgium, Brussels, November 2018.
