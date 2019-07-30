@@ -1,6 +1,7 @@
 Evidence graphs for parsing argumentation structure
 ===================================================
 
+[![Build Status](https://travis-ci.org/peldszus/evidencegraph.svg?branch=master)](https://travis-ci.org/peldszus/evidencegraph)
 [![GitHub](https://img.shields.io/github/license/peldszus/evidencegraph)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
