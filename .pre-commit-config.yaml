@@ -7,6 +7,7 @@ repos:
       - id: check-symlinks
       - id: check-yaml
       - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
       - id: flake8
   - repo: https://github.com/python/black
     rev: stable
