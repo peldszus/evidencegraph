@@ -10,7 +10,7 @@ Evidence graphs for parsing argumentation structure
 
 This repository holds the code of the Evidence Graph model, a model for parsing the argumentation structure of text.
 
-It basically is a re-implementation of the model presented first in [(1)](#references). Most work was done 2016-2017. It and was used in the experiments of [(2)](#references), [(3)](#references) and [(4)](#references).
+It basically is a re-implementation of the model presented first in [(1)](#references). Most work was done 2016-2017. It was used in the experiments of [(2)](#references), [(3)](#references) and [(4)](#references).
 
 
 ## Prerequisites
