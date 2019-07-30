@@ -1,5 +1,5 @@
-EvidenceGraphs for parsing argumentation structure
-==================================================
+Evidence graphs for parsing argumentation structure
+===================================================
 
 ## About
 
