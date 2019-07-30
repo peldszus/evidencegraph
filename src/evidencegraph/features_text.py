@@ -130,16 +130,16 @@ class TextFeatures(object):
         [(u'CLS_2_4021_762', True), (u'CLS_2_502_8', True),
         (u'CLS_2_762_502', True), (u'CLS_2_94_4021', True)]
         """
-        l = []
+        results = []
         segments = add_segment_final_space(ensure_unicode(segments))
         self.parse(segments)
         for segment in generate_items_segments(segments):
-            l.append(
+            results.append(
                 self.feature_function_single_segment(
                     segments, segment, **kwargs
                 )
             )
-        return l
+        return results
 
     def feature_function_segmentpairs(self, segments, **kwargs):
         """
@@ -159,7 +159,7 @@ class TextFeatures(object):
         (u'target_TOK_be', True), (u'target_TOK_my', True),
         (u'target_TOK_name', True), (u'target_TOK_peter', True)]
         """
-        l = []
+        results = []
         segments = add_segment_final_space(ensure_unicode(segments))
         self.parse(segments)
         for source, target in generate_items_segmentpairs(segments):
@@ -180,8 +180,8 @@ class TextFeatures(object):
                     segments, target, **kwargs
                 ),
             )
-            l.append(f)
-        return l
+            results.append(f)
+        return results
 
     def feature_function_single_segment(
         self, segments, segment, feature_set=None
@@ -486,7 +486,7 @@ class TextFeatures(object):
         return cosine(vec1, vec2)
 
 
-### HELPER METHODS
+# HELPER METHODS
 
 
 def text_of_segments(segments):

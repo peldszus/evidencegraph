@@ -211,8 +211,8 @@ class GroupwiseStratifiedKFold(object):
         for test_fold in self.fold_register.keys():
             train_foldes = list(self.fold_register.keys())
             train_foldes.remove(test_fold)
-            l = [self.fold_register[f] for f in train_foldes]
-            train_ids = list(chain(*l))
+            train_ids_per_fold = [self.fold_register[f] for f in train_foldes]
+            train_ids = list(chain(*train_ids_per_fold))
             test_ids = self.fold_register[test_fold]
             yield train_ids, test_ids
 

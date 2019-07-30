@@ -5,7 +5,6 @@
 """
 from __future__ import print_function
 
-from scipy.spatial.distance import cosine
 import numpy as np
 import sys
 
@@ -92,6 +91,7 @@ class ThrowRiceSearch(BasicWeightingSearch):
         A very simple search, which draws `n` random
         weightings and tests the score of all of them.
 
+        >>> from scipy.spatial.distance import cosine
         >>> f = lambda *w: 1.0 / cosine(w, [0.5, 0.3, 0.2, 0.0])
         >>> s = ThrowRiceSearch(f, n=1000)
         >>> s.search()
@@ -134,6 +134,7 @@ class EvolutionarySearch(BasicWeightingSearch):
         drawn weightings, and then gradually refines the best weightings
         by randomly jittering them with a decreasing jitter rate.
 
+        >>> from scipy.spatial.distance import cosine
         >>> f = lambda *w: 1.0 / cosine(w, [0.5, 0.3, 0.2, 0.0])
         >>> s = EvolutionarySearch(f)
         >>> s.search()

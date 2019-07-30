@@ -280,7 +280,7 @@ class ArgGraph(nx.DiGraph):
         # xml serialization only for non-transformed graphs
         if (
             "relation-node-free" in self.graph
-            and self.graph["relation-node-free"] == True
+            and self.graph["relation-node-free"] is True
         ):
             return None
 
@@ -472,7 +472,7 @@ class ArgGraph(nx.DiGraph):
 
         if (
             "relation-node-free" in a.graph
-            and a.graph["relation-node-free"] == True
+            and a.graph["relation-node-free"] is True
         ):
             return a
 
@@ -761,7 +761,7 @@ class ArgGraph(nx.DiGraph):
         # make sure to extract relations from a relation node free graph
         if (
             "relation-node-free" in self.graph
-            and self.graph["relation-node-free"] == True
+            and self.graph["relation-node-free"] is True
         ):
             g = self
         else:
@@ -921,7 +921,7 @@ class ArgGraph(nx.DiGraph):
     def get_adu_functions(self, adu):  # todo central claim
         if (
             "relation-node-free" in self.graph
-            and self.graph["relation-node-free"] == True
+            and self.graph["relation-node-free"] is True
         ):
             return self.edges(adu, data=True)
         else:

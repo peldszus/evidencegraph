@@ -9,7 +9,6 @@ def loadDimlex(filename):
     dimlex_tree = etree.parse(filename)
     # iterate over all lexicon entries
     for entry in dimlex_tree.iter("eintrag"):
-        dm_id = int(entry.get("id"))
         # get all continous orthographies (get single or phrasal typed parts)
         dm_orths = []
         for orth in entry.iter("orth"):
@@ -37,7 +36,6 @@ def loadConanolex(filename):
     dimlex_tree = etree.parse(filename)
     # iterate over all lexicon entries
     for entry in dimlex_tree.iter("entry"):
-        dm_id = int(entry.get("id"))
         # get all continous orthographies (get single or phrasal typed parts)
         dm_orths = []
         for orth in entry.iter("orth"):

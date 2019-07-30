@@ -54,8 +54,8 @@ class BaseClassifier(object):
         "sgd__alpha": [0.001, 0.005],
         "sgd__n_iter": [100, 250, 500],
         "sgd__l1_ratio": [0.1, 0.15, 0.2, 0.25],
-        #'sgd__average': [False, 50, 100, 500, 1],
-        #'k_b__k': [50, 100, 500, 'all'],
+        # 'sgd__average': [False, 50, 100, 500, 1],
+        # 'k_b__k': [50, 100, 500, 'all'],
     }
 
     DEFAULT_PARAMS_FIXED = {

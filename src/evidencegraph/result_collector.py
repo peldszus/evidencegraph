@@ -327,8 +327,8 @@ class ResultCollector(object):
         assert level in self.levels
         relevant_data = [
             value_in_nested_dict(d, self.path_to_metric)
-            for c, _i, l, d in self.data
-            if c == condition and l == level
+            for c, _i, lvl, d in self.data
+            if c == condition and lvl == level
         ]
         return relevant_data
 

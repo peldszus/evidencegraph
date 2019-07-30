@@ -10,7 +10,7 @@ from itertools import permutations
 
 import networkx as nx
 
-from .arggraph import ArgGraph, get_very_complex_arggraph
+from .arggraph import ArgGraph
 
 
 class RelationSet(object):
@@ -154,6 +154,7 @@ class ArgTree(nx.DiGraph):
         """
         Loads the ArgTree from an ArgGraph.
 
+        >>> from .arggraph import get_very_complex_arggraph
         >>> g = get_very_complex_arggraph()
         >>> t = ArgTree(relation_set=SIMPLE_RELATION_SET)
         >>> t.load_from_arggraph(g)
