@@ -17,13 +17,34 @@ from evidencegraph.argtree import RELATION_SETS_BY_NAME
 
 
 class BaselineAttachFirst(object):
+    """Pseudo classifier for producing the attach-to-first baseline."""
+
     def predict(self, number_of_nodes, label):
+        """
+        Returns an ArgTree with `number_of_nodes`, where every node
+        except the first one is connected to the first node with a
+        relation of type `label`.
+        >>> clf = BaselineAttachFirst()
+        >>> tree = clf.predict(4, 'sup')
+        >>> tree.get_triples()
+        [[2, 1, 'sup'], [3, 1, 'sup'], [4, 1, 'sup']]
+        """
         triples = [(i, 1, label) for i in range(2, number_of_nodes + 1)]
         return ArgTree(from_triples=triples)
 
 
 class BaselineAttachPreceeding(object):
+    """Pseudo classifier for producing the attach-to-preceeding baseline."""
+
     def predict(self, number_of_nodes, label):
+        """
+        Returns an ArgTree with `number_of_nodes`, where every node
+        is connected to its preceeding node with a relation of type `label`.
+        >>> clf = BaselineAttachPreceeding()
+        >>> tree = clf.predict(4, 'sup')
+        >>> tree.get_triples()
+        [[2, 1, 'sup'], [3, 2, 'sup'], [4, 3, 'sup']]
+        """
         triples = [(i, i - 1, label) for i in range(2, number_of_nodes + 1)]
         return ArgTree(from_triples=triples)
 
