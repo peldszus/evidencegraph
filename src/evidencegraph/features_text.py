@@ -536,26 +536,6 @@ def add_prefixed_dict(output_dictionary, prefix, input_dictionary, copy=False):
     return output_dictionary
 
 
-def bucket(number):
-    if 0 <= number <= 2:
-        return number
-    else:
-        return 3
-
-
-def bucket_percent(number):
-    if number > 0.8:
-        return 5
-    elif number > 0.6:
-        return 4
-    elif number > 0.4:
-        return 3
-    elif number > 0.2:
-        return 2
-    else:
-        return 1
-
-
 def average_vector_of_segment(tokens):
     return average(
         [
