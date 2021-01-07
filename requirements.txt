@@ -7,7 +7,7 @@ pandas==0.18.1
 networkx==1.9
 bidict==0.1.5
 matplotlib==1.5.1
-lxml==3.6.0
+lxml==4.6.2
 pydot==1.0.29
 spacy==1.6.0
 joblib==0.10.2
