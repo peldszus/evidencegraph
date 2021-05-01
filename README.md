@@ -16,11 +16,11 @@ It basically is a re-implementation of the model presented first in [(1)](#refer
 
 ## Prerequisites
 
-This code runs in Python 2.7. It is recommended to install it in a separate virtual environment. Here are installation instructions for an Ubuntu 18.04 linux:
+This code runs in Python 3.8. It is recommended to install it in a separate virtual environment. Here are installation instructions for an Ubuntu 18.04 linux:
 
 ```sh
 # basics
-sudo apt install virtualenv python2.7-dev
+sudo apt install python3.8-dev
 # for lxml
 sudo apt install libxml2-dev libxslt1-dev
 # for matplotlib

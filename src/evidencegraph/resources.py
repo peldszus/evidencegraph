@@ -1,11 +1,10 @@
-from __future__ import print_function
 from collections import defaultdict
 from lxml import etree
 
 
 def loadDimlex(filename):
     discourse_markers = {}
-    print ("Loading German DimLex ...")
+    print("Loading German DimLex ...")
     dimlex_tree = etree.parse(filename)
     # iterate over all lexicon entries
     for entry in dimlex_tree.iter("eintrag"):
@@ -15,7 +14,7 @@ def loadDimlex(filename):
             if orth.get("type") == "cont":
                 for part in orth.iter("part"):
                     # dm_orth = part.text.replace(',', ' ,').lower()
-                    dm_orth = unicode(part.text.lower())
+                    dm_orth = str(part.text.lower())
                     dm_orths.append(dm_orth)
         # for each syntactic variant, extract their semantic relation
         dm_rels = []
@@ -26,13 +25,13 @@ def loadDimlex(filename):
         # store all
         for dm_orth in dm_orths:
             discourse_markers[dm_orth] = dm_rels
-    print (" found {} discourse markers.".format(len(discourse_markers)))
+    print(" found {} discourse markers.".format(len(discourse_markers)))
     return discourse_markers
 
 
 def loadConanolex(filename):
     discourse_markers = {}
-    print ("Loading English Conano Lexicon ...")
+    print("Loading English Conano Lexicon ...")
     dimlex_tree = etree.parse(filename)
     # iterate over all lexicon entries
     for entry in dimlex_tree.iter("entry"):
@@ -42,7 +41,7 @@ def loadConanolex(filename):
             if orth.get("type") == "cont":
                 for part in orth.iter("part"):
                     # dm_orth = part.text.replace(',', ' ,').lower()
-                    dm_orth = unicode(part.text.lower())
+                    dm_orth = str(part.text.lower())
                     dm_orths.append(dm_orth)
         # for each syntactic variant, extract their semantic relation
         dm_rels = []
@@ -54,13 +53,13 @@ def loadConanolex(filename):
         # store all
         for dm_orth in dm_orths:
             discourse_markers[dm_orth] = dm_rels
-    print (" found {} discourse markers.".format(len(discourse_markers)))
+    print(" found {} discourse markers.".format(len(discourse_markers)))
     return discourse_markers
 
 
 def load_educe_markers(filename):
     discourse_markers = {}
-    print ("Loading English EDUCE Lexicon ...")
+    print("Loading English EDUCE Lexicon ...")
     lines = open(filename).readlines()
     for line in lines:
         if line.startswith("#") or line.strip() == "":
@@ -70,14 +69,14 @@ def load_educe_markers(filename):
         right_parts = [r.strip() for r in right.strip().split(" ")]
         relations = [r for r in right_parts if r != ""]
         discourse_markers[marker] = relations
-    print (" found {} discourse markers.".format(len(discourse_markers)))
+    print(" found {} discourse markers.".format(len(discourse_markers)))
     return discourse_markers
 
 
 def join_lexica(lexica):
     discourse_markers = defaultdict(set)
     for lexicon in lexica:
-        for marker, relations in lexicon.iteritems():
+        for marker, relations in lexicon.items():
             discourse_markers[marker] |= set(relations)
     return discourse_markers
 

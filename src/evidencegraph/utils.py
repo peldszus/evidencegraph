@@ -35,9 +35,9 @@ def split(a, n):
     """
     http://stackoverflow.com/a/2135920
     """
-    k, m = len(a) / n, len(a) % n
+    k, m = len(a) // n, len(a) % n
     return (
-        a[i * k + min(i, m) : (i + 1) * k + min(i + 1, m)] for i in xrange(n)
+        a[i * k + min(i, m) : (i + 1) * k + min(i + 1, m)] for i in range(n)
     )
 
 
@@ -58,7 +58,7 @@ def foldsof(X, y, n=3):
     """
     assert len(X) == len(y)
     assert len(X) >= n
-    splits = list(split(zip(X, y), n))
+    splits = list(split(list(zip(X, y)), n))
     for n in range(len(splits)):
         test_X, test_y = zip(*splits[n])
         train = [e for i, l in enumerate(splits) if i != n for e in l]
@@ -74,4 +74,4 @@ def hash_of_featureset(features):
     >>> hash_of_featureset(features)
     '4518ca2'
     """
-    return md5(" ".join(sorted(features))).hexdigest()[:7]
+    return md5(" ".join(sorted(features)).encode()).hexdigest()[:7]

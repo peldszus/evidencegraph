@@ -61,9 +61,9 @@ example_data_2 = {
 
 def absolute_class_counts(data, expected_classes=None):
     """input: a dict mapping a group key to a list of class occurrences
-              [0,2,2,1,0,1,2,2,0]
-       output: a dict mapping class keys to their absolute counts
-              {0:3, 1:2, 2:4}"""
+           [0,2,2,1,0,1,2,2,0]
+    output: a dict mapping class keys to their absolute counts
+           {0:3, 1:2, 2:4}"""
     counts_class = defaultdict(int)
     if expected_classes is not None:
         for c in expected_classes:
@@ -75,9 +75,9 @@ def absolute_class_counts(data, expected_classes=None):
 
 def relative_class_counts(data):
     """input: a dict mapping class keys to their absolute counts
-       output: a dict mapping class keys to their relative counts"""
+    output: a dict mapping class keys to their relative counts"""
     counts_items = sum(data.values())
-    return {k: 1.0 * v / counts_items for k, v in data.iteritems()}
+    return {k: 1.0 * v / counts_items for k, v in data.items()}
 
 
 def diff_distribution(a, b, weights=None):
@@ -140,16 +140,14 @@ class GroupwiseStratifiedKFold(object):
          'AAAAAAAAAAAAAAABBBBBBBBBBBBBBCCCCCCCCDDDDDDDDEEEFFF']
         """
         self.fold_register = {}
-        ungrouped_data = list(chain(*data.values()))
+        ungrouped_data = list(chain(*list(data.values())))
         counts_class_absolute = absolute_class_counts(ungrouped_data)
         counts_class_relative = relative_class_counts(counts_class_absolute)
         classes = list(counts_class_absolute.keys())
-        class_weights = {
-            k: 1 - v for k, v in counts_class_relative.iteritems()
-        }
+        class_weights = {k: 1 - v for k, v in counts_class_relative.items()}
         group_distribution = {
             k: absolute_class_counts(list(v), expected_classes=classes)
-            for k, v in data.iteritems()
+            for k, v in data.items()
         }
         folds = {
             n: {k: 0 for k in counts_class_relative}
@@ -165,7 +163,7 @@ class GroupwiseStratifiedKFold(object):
             # always get the best possible draw from the pool
             if shuffle:
                 random.seed(seed + cnt_pass)
-                fold_order_in_this_pass = folds.keys()
+                fold_order_in_this_pass = list(folds.keys())
                 random.shuffle(fold_order_in_this_pass)
             else:
                 fold_order_in_this_pass = deque(folds.keys())
@@ -262,6 +260,6 @@ def build_kfold_reference_dataset(corpus):
     """
     data = {
         tid: graph.get_role_type_labels().values()
-        for tid, graph in corpus.iteritems()
+        for tid, graph in corpus.items()
     }
     return data

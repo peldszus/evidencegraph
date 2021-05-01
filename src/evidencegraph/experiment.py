@@ -1,7 +1,7 @@
 """
 @author: Andreas Peldszus
 """
-from __future__ import print_function
+
 
 from collections import defaultdict
 from datetime import datetime
@@ -29,7 +29,7 @@ def run_experiment_condition(
     decisions = defaultdict(dict)
 
     for train_tids, test_tids, i in folds:
-        print ("[{}] Iteration: {}\t".format(datetime.now(), i))
+        print("[{}] Iteration: {}\t".format(datetime.now(), i))
         ensemble_basename = condition_name.split("|")[0]
         ensemble_name = "{}__{}__{}".format(
             ensemble_basename, hash_of_featureset(features.feature_set), i
@@ -37,10 +37,10 @@ def run_experiment_condition(
         clf = EvidenceGraphClassifier(
             features.feature_function_segments,
             features.feature_function_segmentpairs,
-            **params
+            **params,
         )
-        train_txt = [g for t, g in in_corpus.iteritems() if t in train_tids]
-        train_arg = [g for t, g in out_corpus.iteritems() if t in train_tids]
+        train_txt = [g for t, g in in_corpus.items() if t in train_tids]
+        train_arg = [g for t, g in out_corpus.items() if t in train_tids]
         try:
             # load ensemble of pretrained base classifiers
             clf.load(modelpath + ensemble_name)
@@ -53,8 +53,8 @@ def run_experiment_condition(
             clf.save(modelpath + ensemble_name)
 
         # test
-        test_txt = [g for t, g in in_corpus.iteritems() if t in test_tids]
-        test_arg = [g for t, g in out_corpus.iteritems() if t in test_tids]
+        test_txt = [g for t, g in in_corpus.items() if t in test_tids]
+        test_arg = [g for t, g in out_corpus.items() if t in test_tids]
         score_msg = ""
         for level, base_classifier in clf.ensemble.items():
             maF1, miF1 = base_classifier.test(test_txt, test_arg)
@@ -68,12 +68,12 @@ def run_experiment_condition(
             predictions[i][t] = mst.get_triples()
             decisions[i][t] = clf.predict_decisions(in_corpus[t])
         score_msg += "decoded: {:.3f}\t".format(mean(decoded_scores))
-        print (score_msg)
+        print(score_msg)
 
-    print ("Average macro and micro F1:")
+    print("Average macro and micro F1:")
     for level in maF1s:
         avg_maF1 = mean(maF1s[level])
         avg_miF1 = mean(miF1s[level])
-        print (level, avg_maF1, avg_miF1)
+        print(level, avg_maF1, avg_miF1)
 
     return predictions, decisions

@@ -3,7 +3,7 @@
 """
 @author: Andreas Peldszus
 """
-from __future__ import absolute_import
+
 
 from collections import defaultdict
 import copy
@@ -55,7 +55,7 @@ def nxdigraph_to_depdigraph(g, field="weight"):
     >>> g.add_edge(2, 1, weight=0.5)
     >>> d = nxdigraph_to_depdigraph(g)
     >>> list(d.iteredges())
-    [(1, 2), (2, 1), (2, 3), (3, 1), ('root', 1), ('root', 2), ('root', 3)]
+    [(1, 2), (2, 3), (2, 1), (3, 1), ('root', 1), ('root', 2), ('root', 3)]
     """
     succs = defaultdict(list)
     weights = {}

@@ -26,7 +26,7 @@ if __name__ == "__main__":
         ]
     }
 
-    for (segmentation, relationset), conditions in settings.iteritems():
+    for (segmentation, relationset), conditions in settings.items():
         relationset = RELATION_SETS_BY_NAME.get(relationset)
         evaluate_setting(
             language,

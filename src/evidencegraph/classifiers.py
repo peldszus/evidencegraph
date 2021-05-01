@@ -6,8 +6,6 @@ Created on 06.05.2016
 
 @author: Andreas Peldszus
 """
-from __future__ import print_function
-from __future__ import absolute_import
 
 import os
 from functools import partial
@@ -15,7 +13,7 @@ from functools import partial
 import joblib
 from numpy import mean, zeros
 from sklearn.pipeline import Pipeline
-from sklearn.grid_search import GridSearchCV
+from sklearn.model_selection import GridSearchCV
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.feature_selection import SelectKBest
@@ -52,7 +50,7 @@ class BaseClassifier(object):
 
     DEFAULT_PARAM_SEARCH = {
         "sgd__alpha": [0.001, 0.005],
-        "sgd__n_iter": [100, 250, 500],
+        "sgd__max_iter": [100, 250, 500],
         "sgd__l1_ratio": [0.1, 0.15, 0.2, 0.25],
         # 'sgd__average': [False, 50, 100, 500, 1],
         # 'k_b__k': [50, 100, 500, 'all'],
@@ -63,9 +61,9 @@ class BaseClassifier(object):
         "sgd__loss": "log",
         "sgd__penalty": "elasticnet",
         "sgd__learning_rate": "optimal",
-        "sgd__class_weight": "auto",
+        "sgd__class_weight": "balanced",
         "sgd__alpha": 0.005,
-        "sgd__n_iter": 500,
+        "sgd__max_iter": 500,
         "sgd__l1_ratio": 0.2,
         "sgd__n_jobs": -1,
     }
@@ -109,14 +107,14 @@ class BaseClassifier(object):
             BaseClassifier.DEFAULT_PARAM_SEARCH,
             n_jobs=-1,
             cv=3,
-            scoring="log_loss",
+            scoring="neg_log_loss",
         )
         self.train(in_data, gold_data)
         self.best_params = filter_params(
             self.pipeline.best_estimator_.get_params(deep=False)
         )
         if verbose:
-            print (self.best_params)
+            print(self.best_params)
 
     def _train(self, features, labels):
         self.pipeline.fit(features, labels)
@@ -204,7 +202,7 @@ class EvidenceGraphClassifier(object):
 
     def train(self, input_trees, output_trees):
         # train base classifiers
-        for level, clf in self.ensemble.iteritems():
+        for level, clf in self.ensemble.items():
             if self.optimize:
                 clf.train_optimize(input_trees, output_trees, verbose=False)
             else:
@@ -246,7 +244,7 @@ class EvidenceGraphClassifier(object):
                 scores.append(self.score(mst, gold))
             return mean(scores)
 
-        callback = partial(score_weighting, items=zip(egs, output_trees))
+        callback = partial(score_weighting, items=list(zip(egs, output_trees)))
         search = EvolutionarySearch(callback, n_to_start_with=20)
         search.search(verbose=True)
         search.report()
@@ -280,7 +278,7 @@ class EvidenceGraphClassifier(object):
     def _predict(self, input_tree, prediction_type="proba"):
         # predict with base classifiers
         predictions = {}
-        for level, clf in self.ensemble.iteritems():
+        for level, clf in self.ensemble.items():
             predictions[level] = clf.predict(
                 input_tree, prediction_type=prediction_type
             )
@@ -303,7 +301,7 @@ class EvidenceGraphClassifier(object):
 
         itemized_predictions = {
             level: itemize(level, preds)
-            for level, preds in predictions.iteritems()
+            for level, preds in predictions.items()
         }
         return itemized_predictions
 
@@ -348,7 +346,7 @@ class EvidenceGraphClassifier(object):
     def _build_evidence_graph(self, itemized_predictions):
         eg = EvidenceGraph(weight_ids=["cc", "ro", "fu", "at"])
         map_fu_to_vec = self.relation_set.map_function_to_vector
-        for (source, target), p_at in itemized_predictions["at"].iteritems():
+        for (source, target), p_at in itemized_predictions["at"].items():
             p_cc = itemized_predictions["cc"][source]
             p_ro_source = itemized_predictions["ro"][source]
             p_ro_target = itemized_predictions["ro"][target]
@@ -375,9 +373,9 @@ class EvidenceGraphClassifier(object):
                 try:
                     fu_weight = p_fu[map_fu_to_vec[func_type]]
                 except IndexError:
-                    print (p_fu)
-                    print (map_fu_to_vec)
-                    print (func_type)
+                    print(p_fu)
+                    print(map_fu_to_vec)
+                    print(func_type)
                 eg.add_edge(
                     source,
                     target,
@@ -397,7 +395,7 @@ class EvidenceGraphClassifier(object):
         ]
         joblib.dump(pipelines, path, compress=1)
         if verbose:
-            print ("Saved model {}".format(path))
+            print("Saved model {}".format(path))
 
     def load(self, path, verbose=True):
         """Load an object (typically a classifier model) using joblib."""
@@ -407,4 +405,4 @@ class EvidenceGraphClassifier(object):
         for lvl, pipeline in pipelines:
             self.ensemble[lvl].pipeline = pipeline
         if verbose:
-            print ("Loaded model {}".format(path))
+            print("Loaded model {}".format(path))

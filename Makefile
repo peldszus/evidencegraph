@@ -4,12 +4,11 @@ VIRTUALENV_DIR=./env
 CORPUS_DIR=./data/corpus
 
 virtualenv:
-	if [ ! -e ${VIRTUALENV_DIR}/bin/pip ]; then virtualenv --python=python2.7 ${VIRTUALENV_DIR}; fi
+	if [ ! -e ${VIRTUALENV_DIR}/bin/pip ]; then python3.8 -m venv ${VIRTUALENV_DIR}; fi
 
 install-requirements: virtualenv
 	${VIRTUALENV_DIR}/bin/pip install --upgrade pip
-	${VIRTUALENV_DIR}/bin/pip install --upgrade wheel
-	cat requirements.txt | xargs -n 1 -L 1 ${VIRTUALENV_DIR}/bin/pip install
+	${VIRTUALENV_DIR}/bin/pip install -r requirements.txt
 	${VIRTUALENV_DIR}/bin/python setup.py develop
 	${VIRTUALENV_DIR}/bin/pre-commit install
 
@@ -23,16 +22,10 @@ download-corpora:
 	unzip -qq /tmp/arg-microtexts-2.zip -d ${CORPUS_DIR}
 
 download-spacy-data-de:
-	curl -LO https://github.com/explosion/spaCy/releases/download/v1.6.0/de-1.0.0.tar.gz
-	mkdir -p ${VIRTUALENV_DIR}/lib/python2.7/site-packages/spacy/data
-	tar -C ${VIRTUALENV_DIR}/lib/python2.7/site-packages/spacy/data -xzf de-1.0.0.tar.gz
-	rm -f de-1.0.0.tar.gz
+	${VIRTUALENV_DIR}/bin/python -m spacy download de_core_news_lg
 
 download-spacy-data-en:
-	curl -LO https://github.com/explosion/spaCy/releases/download/v1.6.0/en-1.1.0.tar.gz
-	mkdir -p ${VIRTUALENV_DIR}/lib/python2.7/site-packages/spacy/data
-	tar -C ${VIRTUALENV_DIR}/lib/python2.7/site-packages/spacy/data -xzf en-1.1.0.tar.gz
-	rm -f en-1.1.0.tar.gz
+	${VIRTUALENV_DIR}/bin/python -m spacy download en_core_web_lg
 
 test:
 	${VIRTUALENV_DIR}/bin/py.test -v --cov=src/evidencegraph --cov-report xml src test

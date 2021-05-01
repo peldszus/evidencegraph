@@ -5,8 +5,6 @@
 @author: Andreas Peldszus
 """
 
-from __future__ import print_function
-from __future__ import absolute_import
 
 import json
 import os
@@ -32,29 +30,29 @@ def evaluate(ground_truth, prediction):
     >>> d = evaluate([0,0,1,1],[0,0,1,1])
     >>> sorted(d.items())
     [('accuracy', 1.0),
-     ('classwise', {'1': {'recall': 1.0, 'precision': 1.0, 'fscore': 1.0},
-                    '0': {'recall': 1.0, 'precision': 1.0, 'fscore': 1.0}}),
+     ('classwise', {'0': {'precision': 1.0, 'recall': 1.0, 'fscore': 1.0},
+                    '1': {'precision': 1.0, 'recall': 1.0, 'fscore': 1.0}}),
      ('confusions', {0: {0: 2, 1: 0}, 1: {0: 0, 1: 2}}),
      ('k_cohen', {'k': 1.0, 'AE': 0.5, 'AO': 1.0}),
      ('k_fleiss', {'k': 1.0, 'AE': 0.5, 'AO': 1.0}),
-     ('macro_avg', {'recall': 1.0, 'precision': 1.0, 'fscore': 1.0}),
-     ('micro_avg', {'recall': 1.0, 'precision': 1.0, 'fscore': 1.0}),
+     ('macro_avg', {'precision': 1.0, 'recall': 1.0, 'fscore': 1.0}),
+     ('micro_avg', {'precision': 1.0, 'recall': 1.0, 'fscore': 1.0}),
      ('true_cat_dist', [2, 2]),
-     ('weigh_avg', {'recall': 1.0, 'precision': 1.0, 'fscore': 1.0})]
+     ('weigh_avg', {'precision': 1.0, 'recall': 1.0, 'fscore': 1.0})]
 
     >>> d = evaluate([0,1,1,2,2,2],[0,0,2,2,2,2])
     >>> sorted(d.items())
     [('accuracy', 0.666...),
-     ('classwise', {'1': {'recall': 0.0, 'precision': 0.0, 'fscore': 0.0},
-                    '0': {'recall': 1.0, 'precision': 0.5, 'fscore': 0.666...},
-                    '2': {'recall': 1.0, 'precision': 0.75, 'fscore': 0.857...}}),
+     ('classwise', {'0': {'precision': 0.5, 'recall': 1.0, 'fscore': 0.666...},
+                    '1': {'precision': 0.0, 'recall': 0.0, 'fscore': 0.0},
+                    '2': {'precision': 0.75, 'recall': 1.0, 'fscore': 0.857...}}),
      ('confusions', {0: {0: 1, 1: 0, 2: 0}, 1: {0: 1, 1: 0, 2: 1}, 2: {0: 0, 1: 0, 2: 3}}),
      ('k_cohen', {'k': 0.454..., 'AE': 0.388..., 'AO': 0.666...}),
      ('k_fleiss', {'k': 0.414..., 'AE': 0.430..., 'AO': 0.666...}),
-     ('macro_avg', {'recall': 0.666..., 'precision': 0.416..., 'fscore': 0.507...}),
-     ('micro_avg', {'recall': 0.666..., 'precision': 0.666..., 'fscore': 0.666...}),
+     ('macro_avg', {'precision': 0.416..., 'recall': 0.666..., 'fscore': 0.507...}),
+     ('micro_avg', {'precision': 0.666..., 'recall': 0.666..., 'fscore': 0.666...}),
      ('true_cat_dist', [1, 2, 3]),
-     ('weigh_avg', {'recall': 0.666..., 'precision': 0.458..., 'fscore': 0.539...})]
+     ('weigh_avg', {'precision': 0.458..., 'recall': 0.666..., 'fscore': 0.539...})]
 
     TODO: This still throws an error when calculating classwise predictions
     >> d = evaluate([1,2],[1,2])
@@ -305,7 +303,7 @@ def evaluate_iterations(predictions, gold, result_collector, condition):
         condition (string): the condition identifier to store the result for
 
     """
-    for iteration_id, texts in predictions.iteritems():
+    for iteration_id, texts in predictions.items():
         texts_in_iteration = sorted(texts.keys())
         gold_trees = [gold[tid] for tid in texts_in_iteration]
         pred_trees = [texts[tid] for tid in texts_in_iteration]
@@ -324,7 +322,7 @@ def print_scores(result_collector):
     # print("\n# Metric: Cohen's kappa")
     # result_collector.set_metric(['k_cohen', 'k'])
     # result_collector.print_all_results()
-    print ("\n# Metric: Macro avg. F1")
+    print("\n# Metric: Macro avg. F1")
     result_collector.set_metric(["macro_avg", "fscore"])
     # result_collector.print_all_results()
     result_collector.print_result_for_level("cc")
@@ -335,7 +333,7 @@ def print_scores(result_collector):
     # print("\nMetric: Positive attachment F1")
     # result_collector.set_metric(['classwise', '1', 'fscore'])
     # result_collector.print_result_for_level('at')
-    print ("\n# Metric: Labelled attachment score")
+    print("\n# Metric: Labelled attachment score")
     result_collector.set_metric(["accuracy"])
     result_collector.print_result_for_level("lat")
 
@@ -352,21 +350,21 @@ def print_significance(result_collector, conditionA, conditionB, levels=[]):
         conditionB (string): condition to compare
         levels (list): the levels to do the significance testing on
     """
-    print (
+    print(
         "\n# Testing significance of difference: {} vs. {}".format(
             conditionA, conditionB
         )
     )
     result_collector.set_metric(["macro_avg", "fscore"])
-    print ("level\tp_value")
+    print("level\tp_value")
     for level in levels:
         _, pvalue = result_collector.wilcoxon(conditionA, conditionB, level)
-        print ("{}\t{:.5f}".format(level, pvalue))
+        print("{}\t{:.5f}".format(level, pvalue))
 
     level = "lat"
     result_collector.set_metric(["accuracy"])
     _, pvalue = result_collector.wilcoxon(conditionA, conditionB, level)
-    print ("{}\t{:.5f}".format(level, pvalue))
+    print("{}\t{:.5f}".format(level, pvalue))
 
 
 def error_analysis(predictions, gold, result_collector):
@@ -374,27 +372,27 @@ def error_analysis(predictions, gold, result_collector):
     Aggregates evaluation scores of single text predictions over iterations
     """
     # scores = defaultdict(list)
-    for iteration_id, texts in predictions.iteritems():
+    for iteration_id, texts in predictions.items():
         # map iteration id to fold
         fold = str(int(iteration_id) / 5)
-        for tid, pred_tree in texts.iteritems():
+        for tid, pred_tree in texts.items():
             gold_tree = gold[tid]
-            print (iteration_id, fold, tid)
-            print (gold_tree.get_triples())
-            print (pred_tree.get_triples())
+            print(iteration_id, fold, tid)
+            print(gold_tree.get_triples())
+            print(pred_tree.get_triples())
             for level, scores in eval_prediction([gold_tree], [pred_tree]):
                 result_collector.add_result(tid, fold, level, scores)
-    print ("Done.")
+    print("Done.")
 
 
 def class_scores(result_collector, level):
-    print ("\n# Classwise scores (P, R, F1) for level {}".format(level))
+    print("\n# Classwise scores (P, R, F1) for level {}".format(level))
     result_collector.set_metric(["classwise"], ignore_type=True)
     d = defaultdict(dict)
     for condition in result_collector.conditions:
         results = result_collector._get_result(condition, level)
         if None in results:
-            print ("Warning: Classwise results not available. Fix bugs!")
+            print("Warning: Classwise results not available. Fix bugs!")
             return
         classes = sorted(
             set(key for result in results for key in result.keys())
@@ -405,13 +403,13 @@ def class_scores(result_collector, level):
             f = mean([result[class_]["fscore"] for result in results])
             d[class_][condition] = (p, r, f)
 
-    print ("\t".join(["condition"] + result_collector.conditions))
+    print("\t".join(["condition"] + result_collector.conditions))
     for class_ in sorted(d.keys()):
         line = "{}".format(class_)
         for condition in result_collector.conditions:
             p, r, f = d[class_][condition]
             line += "\t{:.3f} {:.3f} {:.3f}".format(p, r, f)
-        print (line)
+        print(line)
 
 
 def evaluate_setting(
@@ -425,7 +423,7 @@ def evaluate_setting(
     levels = ["cc", "ro", "fu", "at"]
     rc = ResultCollector()
 
-    print (
+    print(
         "\n\nEVALUATING SETTING {}, {}, {}:".format(
             language, segmentation, relationset.functions
         )
