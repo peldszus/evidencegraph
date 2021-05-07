@@ -4,7 +4,7 @@ VIRTUALENV_DIR=./env
 CORPUS_DIR=./data/corpus
 
 virtualenv:
-	if [ ! -e ${VIRTUALENV_DIR}/bin/pip ]; then python3.8 -m venv ${VIRTUALENV_DIR}; fi
+	if [ ! -e ${VIRTUALENV_DIR}/bin/pip ]; then python3 -m venv ${VIRTUALENV_DIR}; fi
 
 install-requirements: virtualenv
 	${VIRTUALENV_DIR}/bin/pip install --upgrade pip
