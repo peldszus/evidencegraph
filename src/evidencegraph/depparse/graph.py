@@ -89,7 +89,6 @@ class Digraph:
 
         Returns a new Digraph.
         """
-        mark = Digraph.new_node_id
         candidate = self.greedy()
         cycle = candidate.find_cycle()
         if not cycle:

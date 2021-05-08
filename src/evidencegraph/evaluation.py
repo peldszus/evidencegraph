@@ -58,8 +58,9 @@ def evaluate(ground_truth, prediction):
     >> d = evaluate([1,2],[1,2])
     """
 
-    def prfs_to_dict(l):
-        return {"precision": l[0], "recall": l[1], "fscore": l[2]}
+    def prfs_to_dict(prfs):
+        """Returns a precision_recall_fscore_support() result as a dict."""
+        return {"precision": prfs[0], "recall": prfs[1], "fscore": prfs[2]}
 
     results = {}
     items_count = len(ground_truth)

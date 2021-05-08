@@ -14,13 +14,13 @@ from lxml import etree
 from pydot import graph_from_dot_data
 
 
-def sorted_nicely(l):
+def sorted_nicely(iterable):
     """
     Sorts the given iterable in the way that is expected.
     http://stackoverflow.com/a/2669120
 
     Args:
-        l (iterable): The iterable to be sorted.
+        iterable: The iterable to be sorted.
 
     Returns:
         a sorted iterable
@@ -35,7 +35,7 @@ def sorted_nicely(l):
     def alphanum_key(key):
         return [convert(c) for c in re.split("([0-9]+)", key)]
 
-    return sorted(l, key=alphanum_key)
+    return sorted(iterable, key=alphanum_key)
 
 
 class ArgGraphException(nx.NetworkXException):
