@@ -1,4 +1,4 @@
-name: main ci workflow
+name: build
 
 on: [push]
 
