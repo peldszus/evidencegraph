@@ -1,6 +1,3 @@
-#!/usr/bin/env python2.7
-# -*- mode: python; coding: utf-8; -*-
-
 """
 Created on 06.05.2016
 

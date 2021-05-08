@@ -1,5 +1,3 @@
-# -*- mode: python; coding: utf-8; -*-
-
 """
 Created on 18.09.2017
 

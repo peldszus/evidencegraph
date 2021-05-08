@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 The static folds to be used for evaluation on the
 * arg-microtext corpus (m112de, m112en) and
