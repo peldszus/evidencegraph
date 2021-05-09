@@ -5,9 +5,9 @@
 
 from time import strftime
 import gzip
-import pickle as pickle
+import pickle
 
-import pandas as pd
+import pandas
 from scipy.stats import wilcoxon
 from sklearn.base import BaseEstimator
 
@@ -330,7 +330,7 @@ class ResultCollector:
 
     def _sum_result(self, condition, level):
         relevant_data = self._get_result(condition, level)
-        return pd.Series(relevant_data).describe()
+        return pandas.Series(relevant_data).describe()
 
     def _string_summary(self, condition, level):
         t = self._sum_result(condition, level)
