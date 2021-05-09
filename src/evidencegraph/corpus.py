@@ -33,7 +33,7 @@ CORPORA = {
 }
 
 
-class GraphCorpus(object):
+class GraphCorpus:
     def __init__(self):
         self.graphs = {}
 

@@ -65,7 +65,7 @@ def generate_items_segmentpairs(segments):
     return sorted(list(permutations(generate_items_segments(segments), 2)))
 
 
-class TextFeatures(object):
+class TextFeatures:
 
     F_SET_BOW_BASELINE = ["default", "bow"]
     F_SET_ALL_BUT_VECTORS = [

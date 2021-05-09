@@ -8,7 +8,7 @@ import sys
 import numpy as np
 
 
-class BasicWeightingSearch(object):
+class BasicWeightingSearch:
     def __init__(self, calc_function):
         """
         An abstract search for the best weighting, represented as a
@@ -98,7 +98,7 @@ class ThrowRiceSearch(BasicWeightingSearch):
         >>> w[0] > w[1] > w[2] > w[3]
         True
         """
-        super(ThrowRiceSearch, self).__init__(calc_function)
+        super().__init__(calc_function)
         self.n = n
 
     def search(self, verbose=False):
@@ -141,7 +141,7 @@ class EvolutionarySearch(BasicWeightingSearch):
         >>> w[0] > w[1] > w[2] > w[3]
         True
         """
-        super(EvolutionarySearch, self).__init__(calc_function)
+        super().__init__(calc_function)
         self.n_to_start_with = n_to_start_with
         self.n_to_keep_proportion = n_to_keep_proportion
         self.factor = factor

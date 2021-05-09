@@ -11,7 +11,7 @@ import networkx as nx
 from .arggraph import ArgGraph
 
 
-class RelationSet(object):
+class RelationSet:
     def __init__(self, preserving, inverting):
         """
         A set of argumentative relations.
@@ -108,7 +108,7 @@ class ArgTree(nx.DiGraph):
         [...]
         Exception: Cannot load argtree from arggraph and from triples at the same time.
         """
-        super(ArgTree, self).__init__()
+        super().__init__()
         self.relation_set = relation_set
 
         if from_arggraph and from_triples:

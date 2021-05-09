@@ -97,7 +97,7 @@ def join_distributions(a, b):
     return {k: a[k] + b[k] for k in a}
 
 
-class GroupwiseStratifiedKFold(object):
+class GroupwiseStratifiedKFold:
     def __init__(self, number_of_folds, data, shuffle=False, seed=0):
         """
         Groupwise, stratified k-fold splits of a dataset for validation.

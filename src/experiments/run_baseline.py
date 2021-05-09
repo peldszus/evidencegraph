@@ -13,7 +13,7 @@ from evidencegraph.argtree import ArgTree
 from evidencegraph.argtree import RELATION_SETS_BY_NAME
 
 
-class BaselineAttachFirst(object):
+class BaselineAttachFirst:
     """Pseudo classifier for producing the attach-to-first baseline."""
 
     def predict(self, number_of_nodes, label):
@@ -30,7 +30,7 @@ class BaselineAttachFirst(object):
         return ArgTree(from_triples=triples)
 
 
-class BaselineAttachPreceeding(object):
+class BaselineAttachPreceeding:
     """Pseudo classifier for producing the attach-to-preceeding baseline."""
 
     def predict(self, number_of_nodes, label):

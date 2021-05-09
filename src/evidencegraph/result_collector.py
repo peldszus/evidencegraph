@@ -86,7 +86,7 @@ def load_result_collector(filename):
         return pickle.load(f)
 
 
-class ResultCollector(object):
+class ResultCollector:
     """
     A datastructure for collecting the results of an experiment with one or
     condition, iterations, levels and metrics.

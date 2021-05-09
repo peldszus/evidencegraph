@@ -29,7 +29,7 @@ class EvidenceGraph(nx.MultiDiGraph):
         """
         self.main_weight_id = main_weight_id
         self.weight_ids = weight_ids if weight_ids is not None else list()
-        super(EvidenceGraph, self).__init__(data, **attr)
+        super().__init__(data, **attr)
 
     def get_weighted_evidence_graph(self, weights=None):
         """
@@ -93,4 +93,4 @@ class EvidenceGraph(nx.MultiDiGraph):
 class WeightedEvidenceGraph(nx.MultiDiGraph):
     def __init__(self, data=None, main_weight_id="weight", **attr):
         self.main_weight_id = main_weight_id
-        super(WeightedEvidenceGraph, self).__init__(data, **attr)
+        super().__init__(data, **attr)

@@ -43,7 +43,7 @@ def label_function_at(argtree):
     return argtree.get_at_vector()
 
 
-class BaseClassifier(object):
+class BaseClassifier:
 
     DEFAULT_PARAM_SEARCH = {
         "sgd__alpha": [0.001, 0.005],
@@ -161,7 +161,7 @@ class BaseClassifier(object):
         return self.label_function(gold_datum)
 
 
-class EvidenceGraphClassifier(object):
+class EvidenceGraphClassifier:
     def __init__(
         self,
         feature_function_segments,
