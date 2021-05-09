@@ -17,14 +17,14 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import precision_recall_fscore_support
 
-from .argtree import FULL_RELATION_SET
-from .decode import find_mst as find_mst
-from .result_collector import filter_params
-from .evidence_graph import EvidenceGraph
-from .search import EvolutionarySearch
-from .features_text import generate_items_segments
-from .features_text import generate_items_segmentpairs
-from .utils import foldsof
+from evidencegraph.argtree import FULL_RELATION_SET
+from evidencegraph.decode import find_mst as find_mst
+from evidencegraph.result_collector import filter_params
+from evidencegraph.evidence_graph import EvidenceGraph
+from evidencegraph.search import EvolutionarySearch
+from evidencegraph.features_text import generate_items_segments
+from evidencegraph.features_text import generate_items_segmentpairs
+from evidencegraph.utils import foldsof
 
 
 def label_function_cc(argtree):

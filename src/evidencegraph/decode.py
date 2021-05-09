@@ -9,8 +9,8 @@ from operator import itemgetter
 
 import networkx as nx
 
-from .depparse.graph import Digraph as DepDigraph
-from .argtree import ArgTree
+from evidencegraph.depparse.graph import Digraph as DepDigraph
+from evidencegraph.argtree import ArgTree
 
 
 def multidigraph_to_digraph(g, field="weight", func=max):

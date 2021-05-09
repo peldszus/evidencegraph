@@ -12,9 +12,9 @@ from scipy.spatial.distance import cosine
 import spacy
 from spacy.lookups import load_lookups
 
-from .utils import window
-from .resources import connectives_en
-from .resources import connectives_de
+from evidencegraph.utils import window
+from evidencegraph.resources import connectives_en
+from evidencegraph.resources import connectives_de
 
 
 def init_language(language):

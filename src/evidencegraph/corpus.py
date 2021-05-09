@@ -7,10 +7,10 @@ Created on 18.09.2017
 
 import os
 
-from .arggraph import ArgGraph
-from .argtree import ArgTree
-from .argtree import SIMPLE_RELATION_SET
-from .folding import RepeatedGroupwiseStratifiedKFold
+from evidencegraph.arggraph import ArgGraph
+from evidencegraph.argtree import ArgTree
+from evidencegraph.argtree import SIMPLE_RELATION_SET
+from evidencegraph.folding import RepeatedGroupwiseStratifiedKFold
 
 
 CORPORA = {

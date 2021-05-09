@@ -8,7 +8,7 @@ from itertools import permutations
 
 import networkx as nx
 
-from .arggraph import ArgGraph
+from evidencegraph.arggraph import ArgGraph
 
 
 class RelationSet:
