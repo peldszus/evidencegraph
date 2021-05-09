@@ -336,7 +336,7 @@ def print_scores(result_collector):
     result_collector.print_result_for_level("lat")
 
 
-def print_significance(result_collector, conditionA, conditionB, levels=[]):
+def print_significance(result_collector, conditionA, conditionB, levels=None):
     """
     Test and print the significance of difference between the results for
     `conditionA` and `conditionB` on the specified levels. Macro avg. F1 is
@@ -355,7 +355,7 @@ def print_significance(result_collector, conditionA, conditionB, levels=[]):
     )
     result_collector.set_metric(["macro_avg", "fscore"])
     print("level\tp_value")
-    for level in levels:
+    for level in levels or []:
         _, pvalue = result_collector.wilcoxon(conditionA, conditionB, level)
         print("{}\t{:.5f}".format(level, pvalue))
 
