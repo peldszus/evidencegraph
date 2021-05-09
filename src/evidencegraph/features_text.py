@@ -207,7 +207,7 @@ class TextFeatures:
         [('TOK_!', True), ('TOK_hi', True), ('TOK_there', True)]
 
         >>> f = features.feature_function_single_segment(segments, 2, feature_set=['first_three'])
-        >>> sorted(f.keys())
+        >>> sorted(f)
         ['F3L_1_my', 'F3L_2_name', 'F3L_3_be']
 
         >>> f = features.feature_function_single_segment(segments, 1, feature_set=['clusters'])
@@ -215,15 +215,15 @@ class TextFeatures:
         [('CLS_0', True), ('CLS_1726', True), ('CLS_986', True)]
 
         >>> f = features.feature_function_single_segment(segments, 2, feature_set=['tags'])
-        >>> sorted(f.keys())
+        >>> sorted(f)
         ['TAG_.', 'TAG_NN', 'TAG_NNP', 'TAG_PRP$', 'TAG_VBZ']
 
         >>> f = features.feature_function_single_segment(segments, 2, feature_set=['deps_lemma'])
-        >>> sorted(f.keys())
+        >>> sorted(f)
         ['DPL_._punct_be', 'DPL_Peter_attr_be', 'DPL_be_ROOT_be', 'DPL_my_poss_name', 'DPL_name_nsubj_be']
 
         >>> f = features.feature_function_single_segment(segments, 2, feature_set=['deps_tag'])
-        >>> sorted(f.keys())
+        >>> sorted(f)
         ['DPT_._punct_VBZ', 'DPT_NNP_attr_VBZ', 'DPT_NN_nsubj_VBZ', 'DPT_PRP$_poss_NN', 'DPT_VBZ_ROOT_VBZ']
 
         >>> f = features.feature_function_single_segment(segments, 2, feature_set=['punct'])

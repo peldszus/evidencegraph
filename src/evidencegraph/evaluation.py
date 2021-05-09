@@ -302,7 +302,7 @@ def evaluate_iterations(predictions, gold, result_collector, condition):
 
     """
     for iteration_id, texts in predictions.items():
-        texts_in_iteration = sorted(texts.keys())
+        texts_in_iteration = sorted(texts)
         gold_trees = [gold[tid] for tid in texts_in_iteration]
         pred_trees = [texts[tid] for tid in texts_in_iteration]
         for level, scores in eval_prediction(gold_trees, pred_trees):
@@ -392,9 +392,7 @@ def class_scores(result_collector, level):
         if None in results:
             print("Warning: Classwise results not available. Fix bugs!")
             return
-        classes = sorted(
-            set(key for result in results for key in result.keys())
-        )
+        classes = sorted(set(key for result in results for key in result))
         for class_ in classes:
             p = mean([result[class_]["precision"] for result in results])
             r = mean([result[class_]["recall"] for result in results])
@@ -402,7 +400,7 @@ def class_scores(result_collector, level):
             d[class_][condition] = (p, r, f)
 
     print("\t".join(["condition"] + result_collector.conditions))
-    for class_ in sorted(d.keys()):
+    for class_ in sorted(d):
         line = "{}".format(class_)
         for condition in result_collector.conditions:
             p, r, f = d[class_][condition]

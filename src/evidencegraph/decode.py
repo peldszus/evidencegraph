@@ -33,7 +33,7 @@ def multidigraph_to_digraph(g, field="weight", func=max):
     f = nx.DiGraph()
     f.graph = g.graph
     for n in g.nodes():
-        for m in g.succ[n].keys():
+        for m in g.succ[n]:
             # pick best edge
             ds = g.succ[n][m].values()
             d = func(ds, key=itemgetter(field))
@@ -62,8 +62,8 @@ def nxdigraph_to_depdigraph(g, field="weight"):
         succs[s].append(t)
         succs[t]
         weights[(s, t)] = w
-    succs["root"] = list(succs.keys())
-    weights.update({("root", n): 0 for n in succs.keys()})
+    succs["root"] = list(succs)
+    weights.update({("root", n): 0 for n in succs})
     return DepDigraph(succs, get_score=lambda s, t: weights[(s, t)])
 
 

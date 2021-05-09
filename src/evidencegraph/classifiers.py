@@ -195,7 +195,7 @@ class EvidenceGraphClassifier:
         }
         self.optimize = optimize
         self.optimize_weighting = optimize_weighting
-        self.weighting = {level: 0.25 for level in self.ensemble.keys()}
+        self.weighting = {level: 0.25 for level in self.ensemble}
 
     def train(self, input_trees, output_trees):
         # train base classifiers
@@ -329,7 +329,7 @@ class EvidenceGraphClassifier:
         pred = input_tree.get_vector()
         gold = output_tree.get_vector()
         score = 1.0
-        for level in self.ensemble.keys():
+        for level in self.ensemble:
             _, _, macro_f1, _ = precision_recall_fscore_support(
                 gold[level],
                 pred[level],
@@ -348,7 +348,7 @@ class EvidenceGraphClassifier:
             p_ro_source = itemized_predictions["ro"][source]
             p_ro_target = itemized_predictions["ro"][target]
             p_fu = itemized_predictions["fu"][source]
-            for func_type in map_fu_to_vec.keys():
+            for func_type in map_fu_to_vec:
                 if func_type in ["cc", "unknown"]:
                     continue
                 # probability of attachment
@@ -387,8 +387,7 @@ class EvidenceGraphClassifier:
     def save(self, path, verbose=True):
         """Save ensemble of base classifiers."""
         pipelines = [
-            (lvl, self.ensemble[lvl].pipeline)
-            for lvl in sorted(self.ensemble.keys())
+            (lvl, self.ensemble[lvl].pipeline) for lvl in sorted(self.ensemble)
         ]
         joblib.dump(pipelines, path, compress=1)
         if verbose:

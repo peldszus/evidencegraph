@@ -57,8 +57,8 @@ def foldsof(X, y, n=3):
     assert len(X) == len(y)
     assert len(X) >= n
     splits = list(split(list(zip(X, y)), n))
-    for n in range(len(splits)):
-        test_X, test_y = zip(*splits[n])
+    for n, nth_split in enumerate(splits):
+        test_X, test_y = zip(*nth_split)
         train = [e for i, l in enumerate(splits) if i != n for e in l]
         train_X, train_y = zip(*train)
         yield (train_X, train_y), (test_X, test_y)

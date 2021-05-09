@@ -292,7 +292,7 @@ class ArgGraph(nx.DiGraph):
         # serialize edus
         max_edu_count = 1
         edus = self.get_edus()
-        for node in sorted_nicely(edus.keys()):
+        for node in sorted_nicely(edus):
             edu_text = edus[node]
             new_edu_id = "e{}".format(max_edu_count)
             new_ids[node] = new_edu_id
@@ -736,7 +736,7 @@ class ArgGraph(nx.DiGraph):
         ['txt1', 'txt2', 'txt3', 'txt4', 'txt5', 'txt6', 'txt7']
         """
         edus = self.get_edus()
-        return [edus[i] for i in sorted_nicely(edus.keys())]
+        return [edus[i] for i in sorted_nicely(edus)]
 
     def get_unsegmented_text(self):
         """
@@ -843,7 +843,7 @@ class ArgGraph(nx.DiGraph):
 
         r = []
 
-        head = {edu: edu for edu in self.get_edus().keys()}
+        head = {edu: edu for edu in self.get_edus()}
 
         # direct segmentation edges (edu to adu)
         adus = self.get_adus()

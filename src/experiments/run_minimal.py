@@ -18,7 +18,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--corpus",
         "-c",
-        choices=CORPORA.keys(),
+        choices=CORPORA,
         default="m112en",
         help="the corpus to train on",
     )

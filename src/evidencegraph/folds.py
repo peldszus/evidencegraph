@@ -1231,7 +1231,7 @@ folds = [
     ],
 ]
 
-tids = sorted(list(set([tid for fold in folds for tid in fold])))
+tids = sorted({tid for fold in folds for tid in fold})
 
 
 def get_static_folds():
