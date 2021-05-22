@@ -10,8 +10,11 @@ from numpy import mean
 
 from evidencegraph.classifiers import EvidenceGraphClassifier
 from evidencegraph.utils import hash_of_featureset
+from evidencegraph.utils import set_random_seed
+
 
 modelpath = "data/models/"
+default_random_seed = 0
 
 
 def run_experiment_condition(
@@ -23,6 +26,7 @@ def run_experiment_condition(
     condition_name,
     modelpath=modelpath,
 ):
+    set_random_seed(params.get("seed", default_random_seed))
     maF1s = defaultdict(list)
     miF1s = defaultdict(list)
     predictions = defaultdict(dict)

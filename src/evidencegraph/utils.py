@@ -4,8 +4,17 @@ Created on 20.05.2016
 @author: Andreas Peldszus
 """
 
+import numpy
+import random
+
 from itertools import islice
 from hashlib import md5
+
+
+def set_random_seed(seed):
+    """Set the random seed."""
+    numpy.random.seed(seed)
+    random.seed(seed)
 
 
 def window(seq, n=2):
