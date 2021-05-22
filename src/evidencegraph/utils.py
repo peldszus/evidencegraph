@@ -1,13 +1,20 @@
-# -*- mode: python; coding: utf-8; -*-
-
 """
 Created on 20.05.2016
 
 @author: Andreas Peldszus
 """
 
+import numpy
+import random
+
 from itertools import islice
 from hashlib import md5
+
+
+def set_random_seed(seed):
+    """Set the random seed."""
+    numpy.random.seed(seed)
+    random.seed(seed)
 
 
 def window(seq, n=2):
@@ -35,9 +42,9 @@ def split(a, n):
     """
     http://stackoverflow.com/a/2135920
     """
-    k, m = len(a) / n, len(a) % n
+    k, m = len(a) // n, len(a) % n
     return (
-        a[i * k + min(i, m) : (i + 1) * k + min(i + 1, m)] for i in xrange(n)
+        a[i * k + min(i, m) : (i + 1) * k + min(i + 1, m)] for i in range(n)
     )
 
 
@@ -58,9 +65,9 @@ def foldsof(X, y, n=3):
     """
     assert len(X) == len(y)
     assert len(X) >= n
-    splits = list(split(zip(X, y), n))
-    for n in range(len(splits)):
-        test_X, test_y = zip(*splits[n])
+    splits = list(split(list(zip(X, y)), n))
+    for n, nth_split in enumerate(splits):
+        test_X, test_y = zip(*nth_split)
         train = [e for i, l in enumerate(splits) if i != n for e in l]
         train_X, train_y = zip(*train)
         yield (train_X, train_y), (test_X, test_y)
@@ -74,4 +81,4 @@ def hash_of_featureset(features):
     >>> hash_of_featureset(features)
     '4518ca2'
     """
-    return md5(" ".join(sorted(features))).hexdigest()[:7]
+    return md5(" ".join(sorted(features)).encode()).hexdigest()[:7]

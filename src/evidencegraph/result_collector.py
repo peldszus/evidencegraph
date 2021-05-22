@@ -1,17 +1,13 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """
 @author: Andreas Peldszus
 """
 
-from __future__ import print_function
 
 from time import strftime
 import gzip
-import cPickle as pickle
+import pickle
 
-import pandas as pd
+import pandas
 from scipy.stats import wilcoxon
 from sklearn.base import BaseEstimator
 
@@ -40,7 +36,7 @@ def is_numeric(obj):
     False
     """
     # http://stackoverflow.com/a/500908
-    attrs = ["__add__", "__sub__", "__mul__", "__div__", "__pow__"]
+    attrs = ["__add__", "__sub__", "__mul__", "__truediv__", "__pow__"]
     return all(hasattr(obj, attr) for attr in attrs)
 
 
@@ -90,7 +86,7 @@ def load_result_collector(filename):
         return pickle.load(f)
 
 
-class ResultCollector(object):
+class ResultCollector:
     """
     A datastructure for collecting the results of an experiment with one or
     condition, iterations, levels and metrics.
@@ -189,7 +185,7 @@ class ResultCollector(object):
                     )
                 )
         else:
-            print ("Warning: path_of_keys to the metric cannot be validated.")
+            print("Warning: path_of_keys to the metric cannot be validated.")
         self.path_to_metric = path_of_keys
 
     def save(self, filename):
@@ -227,7 +223,7 @@ class ResultCollector(object):
         max      1.500000
         dtype: float64
         """
-        print (self._sum_result(condition, level))
+        print(self._sum_result(condition, level))
 
     def print_result_for_level(self, level, print_header=True):
         """
@@ -248,8 +244,8 @@ class ResultCollector(object):
         l1  0.400 (+- 0.141)    0.325 (+- 0.106)
         """
         if print_header:
-            print ("\t".join(["level"] + self.conditions))
-        print (
+            print("\t".join(["level"] + self.conditions))
+        print(
             "\t".join(
                 [level]
                 + [
@@ -278,9 +274,9 @@ class ResultCollector(object):
         l1  0.400 (+- 0.141)    0.325 (+- 0.106)
         l2  0.375 (+- 0.177)    0.400 (+- 0.071)
         """
-        print ("\t".join(["level"] + self.conditions))
+        print("\t".join(["level"] + self.conditions))
         for level in self.levels:
-            print (
+            print(
                 "\t".join(
                     [level]
                     + [
@@ -312,7 +308,7 @@ class ResultCollector(object):
         >>> rc.add_result('c2', 2, 'l1', {'score': .40})
         >>> rc.set_metric(['score'])
         >>> rc.wilcoxon('c1', 'c2', 'l1')
-        (0.0, 0.1797...)
+        (0.0, 0.5)
         """
         result_a = self._get_result(conditionA, level)
         result_b = self._get_result(conditionB, level)
@@ -334,7 +330,7 @@ class ResultCollector(object):
 
     def _sum_result(self, condition, level):
         relevant_data = self._get_result(condition, level)
-        return pd.Series(relevant_data).describe()
+        return pandas.Series(relevant_data).describe()
 
     def _string_summary(self, condition, level):
         t = self._sum_result(condition, level)
@@ -342,11 +338,11 @@ class ResultCollector(object):
 
 
 def filter_params(params):
-    """ this function can be used to filter the get_params output for
-        Estimator instances, so that no objects but only their string
-        representations are pickled """
+    """this function can be used to filter the get_params output for
+    Estimator instances, so that no objects but only their string
+    representations are pickled"""
     out = {}
-    for k, v in params.iteritems():
+    for k, v in params.items():
         if isinstance(v, dict):
             v2 = filter_params(v)
         elif isinstance(v, BaseEstimator) or hasattr(v, "__call__"):

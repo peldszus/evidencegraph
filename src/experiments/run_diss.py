@@ -1,10 +1,7 @@
-#!/usr/bin/env python2.7
-# -*- mode: python; coding: utf-8; -*-
-
 """
 @author: Andreas Peldszus
 """
-from __future__ import print_function
+
 
 import json
 
@@ -196,7 +193,7 @@ if __name__ == "__main__":
     # run all experiment conditions
     folds = list(get_static_folds())
     for condition_name, params in conditions.items():
-        print ("### Running experiment condition", condition_name)
+        print("### Running experiment condition", condition_name)
 
         # load corpus
         corpus_name = params.pop("corpus")

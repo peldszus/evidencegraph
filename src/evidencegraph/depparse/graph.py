@@ -18,7 +18,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-'''Classes for representing and manipulating graphs.'''
+"""Classes for representing and manipulating graphs."""
 
 import logging
 import collections
@@ -27,13 +27,12 @@ import collections
 
 
 class Digraph:
-    '''We represent directed graphs using a map of outgoing edges for each node.
-    '''
+    """We represent directed graphs using a map of outgoing edges for each node."""
 
     new_node_id = 111111
 
     def __init__(self, successors, get_score=None, get_label=None):
-        '''Initialize this digraph using a successors map and a score function.
+        """Initialize this digraph using a successors map and a score function.
 
         successors: A map from source node ids to lists of target nodes that can
           be reached from each source node. For instance, {1: [2], 2: [1, 3],
@@ -44,52 +43,52 @@ class Digraph:
         get_score: A callable that takes two node ids and returns a scalar
           score for the directed edge between those two nodes. Defaults to a
           static function where all edges have score 0.
-        '''
+        """
         self.successors = successors
         self.get_score = get_score
         if not callable(self.get_score):
             self.get_score = lambda s, t: 0
         self.get_label = get_label
         if not callable(self.get_label):
-            self.get_label = lambda s, t: ''
+            self.get_label = lambda s, t: ""
 
     def __contains__(self, x):
-        '''Return True iff x is a node in our Digraph.'''
+        """Return True iff x is a node in our Digraph."""
         return x in self.successors
 
     def __iter__(self):
-        '''Iterate over the nodes in our graph.'''
+        """Iterate over the nodes in our graph."""
         return iter(self.successors)
 
     def num_nodes(self):
-        '''Return the number of nodes in this Digraph.'''
+        """Return the number of nodes in this Digraph."""
         return len(self.successors)
 
     def num_edges(self):
-        '''Return the number of edges in this Digraph.'''
+        """Return the number of edges in this Digraph."""
         return sum(1 for _ in self.iteredges())
 
     def dot(self, name):
-        '''Get this graph as a dot string.'''
-        nodes = ' '.join('_%s_%s;' % (x, name) for x in self)
-        edges = ' '.join(
-            '_%s_%s -> _%s_%s [label="%.2f/%s"];' % (
-                s, name, t, name, self.get_score(s, t), self.get_label(s, t))
-            for s, t in self.iteredges())
-        return 'digraph _%s {%s %s}' % (name, nodes, edges)
+        """Get this graph as a dot string."""
+        nodes = " ".join("_%s_%s;" % (x, name) for x in self)
+        edges = " ".join(
+            '_%s_%s -> _%s_%s [label="%.2f/%s"];'
+            % (s, name, t, name, self.get_score(s, t), self.get_label(s, t))
+            for s, t in self.iteredges()
+        )
+        return "digraph _%s {%s %s}" % (name, nodes, edges)
 
     def iteredges(self):
-        '''Iterate over the pairs of node ids in all edges in this Digraph.'''
+        """Iterate over the pairs of node ids in all edges in this Digraph."""
         for source, targets in self.successors.items():
             for target in targets:
                 yield source, target
 
     def mst(self):
-        '''Return the MST of this Digraph using the Chu-Liu-Edmonds algorithm.
+        """Return the MST of this Digraph using the Chu-Liu-Edmonds algorithm.
 
         Returns a new Digraph.
-        '''
-        mark = Digraph.new_node_id
+        """
         candidate = self.greedy()
         cycle = candidate.find_cycle()
         if not cycle:
@@ -99,7 +98,7 @@ class Digraph:
         return merged
 
     def find_cycle(self):
-        '''Find and return a cycle in our Digraph, or None.'''
+        """Find and return a cycle in our Digraph, or None."""
         # from guido's blog :
         # http://neopythonic.blogspot.com/2009/01/detecting-cycles-in-directed-graph.html
         worklist = set(self.successors)
@@ -110,9 +109,11 @@ class Digraph:
                 for node in self.successors.get(top, ()):
                     try:
                         # raises ValueError if node is not in stack.
-                        cycle = stack[stack.index(node):]
-                        succs = dict((source, [cycle[(i + 1) % len(cycle)]])
-                                     for i, source in enumerate(cycle))
+                        cycle = stack[stack.index(node) :]
+                        succs = dict(
+                            (source, [cycle[(i + 1) % len(cycle)]])
+                            for i, source in enumerate(cycle)
+                        )
                         return Digraph(succs, self.get_score, self.get_label)
                     except ValueError:
                         pass
@@ -125,12 +126,12 @@ class Digraph:
         return None
 
     def contract(self, cycle):
-        '''Given a cycle in our graph, contract it into a single node.
+        """Given a cycle in our graph, contract it into a single node.
 
         Returns a tuple (id, graph). The graph is a new Digraph instance
         containing no nodes from the cycle, with one extra new node created to
         represent the cycle. The id is the id of the new node.
-        '''
+        """
         # create a new id to represent the cycle in the resulting graph.
         new_id = Digraph.new_node_id
         Digraph.new_node_id += 1
@@ -200,12 +201,16 @@ class Digraph:
             scores[source, new_id] = cycle_score + max_score
             labels[source, new_id] = self.get_label(source, max_target)
 
-        return new_id, old_edges, Digraph(succs,
-                                          lambda s, t: scores[s, t],
-                                          lambda s, t: labels[s, t])
+        return (
+            new_id,
+            old_edges,
+            Digraph(
+                succs, lambda s, t: scores[s, t], lambda s, t: labels[s, t]
+            ),
+        )
 
     def merge(self, mst, new_id, old_edges, cycle):
-        '''Merge the nodes in an MST that were contracted from a cycle.
+        """Merge the nodes in an MST that were contracted from a cycle.
 
         We want to merge the information from the mst and the cycle into our
         graph to yield a subset of our original edges, using only edges from the
@@ -221,14 +226,14 @@ class Digraph:
         cycle: A Digraph containing nodes and edges in a cycle of our graph.
 
         Return a new Digraph containing the merged nodes and edges.
-        '''
+        """
         succs = dict((n, []) for n in self)
         for source, target in mst.iteredges():
             if source == new_id:
                 # this edge points out of the cycle into the mst. there might be
                 # more than one of these. use the old_edges to find out which
                 # cycle node is responsible for this edge, and add it.
-                logging.debug('%s -> %s: cycle -> mst', source, target)
+                logging.debug("%s -> %s: cycle -> mst", source, target)
                 for s, ts in old_edges.items():
                     for t in ts:
                         if t == target:
@@ -238,7 +243,7 @@ class Digraph:
                 # this edge points at the cycle. use the old_edges to find out
                 # where in the cycle it points, then add all the edges in the
                 # cycle except the one that completes the loop.
-                logging.debug('%s -> %s: mst -> cycle', source, target)
+                logging.debug("%s -> %s: mst -> cycle", source, target)
                 targets = old_edges[source]
                 assert len(targets) == 1, targets
                 target = targets[0]
@@ -252,13 +257,13 @@ class Digraph:
 
             else:
                 # this edge is completely in the mst, so add it and move on.
-                logging.debug('%s -> %s: in mst', source, target)
+                logging.debug("%s -> %s: in mst", source, target)
                 succs[source].append(target)
 
         return Digraph(succs, self.get_score, self.get_label)
 
     def greedy(self):
-        '''Return a Digraph consisting of the max scoring edge for each node.'''
+        """Return a Digraph consisting of the max scoring edge for each node."""
         # for each node, find the incoming link with the highest score.
         max_scores = {}
         max_sources = {}

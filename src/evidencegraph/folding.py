@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from collections import defaultdict, deque
 from itertools import chain
 import random
@@ -61,9 +59,9 @@ example_data_2 = {
 
 def absolute_class_counts(data, expected_classes=None):
     """input: a dict mapping a group key to a list of class occurrences
-              [0,2,2,1,0,1,2,2,0]
-       output: a dict mapping class keys to their absolute counts
-              {0:3, 1:2, 2:4}"""
+           [0,2,2,1,0,1,2,2,0]
+    output: a dict mapping class keys to their absolute counts
+           {0:3, 1:2, 2:4}"""
     counts_class = defaultdict(int)
     if expected_classes is not None:
         for c in expected_classes:
@@ -75,9 +73,9 @@ def absolute_class_counts(data, expected_classes=None):
 
 def relative_class_counts(data):
     """input: a dict mapping class keys to their absolute counts
-       output: a dict mapping class keys to their relative counts"""
+    output: a dict mapping class keys to their relative counts"""
     counts_items = sum(data.values())
-    return {k: 1.0 * v / counts_items for k, v in data.iteritems()}
+    return {k: 1.0 * v / counts_items for k, v in data.items()}
 
 
 def diff_distribution(a, b, weights=None):
@@ -99,7 +97,7 @@ def join_distributions(a, b):
     return {k: a[k] + b[k] for k in a}
 
 
-class GroupwiseStratifiedKFold(object):
+class GroupwiseStratifiedKFold:
     def __init__(self, number_of_folds, data, shuffle=False, seed=0):
         """
         Groupwise, stratified k-fold splits of a dataset for validation.
@@ -125,11 +123,11 @@ class GroupwiseStratifiedKFold(object):
         True
 
         Each train/test split covers the whole data.
-        >>> all(set(train) | set(test) == set(example_data_1.keys()) for train, test in folds)
+        >>> all(set(train) | set(test) == set(example_data_1) for train, test in folds)
         True
 
         All test sets of the folding cover the whole data.
-        >>> set([group for tr, test in folds for group in test]) == set(example_data_1.keys())
+        >>> set([group for tr, test in folds for group in test]) == set(example_data_1)
         True
 
         Folding is stratified, i.e. label distributions are similar.
@@ -140,23 +138,21 @@ class GroupwiseStratifiedKFold(object):
          'AAAAAAAAAAAAAAABBBBBBBBBBBBBBCCCCCCCCDDDDDDDDEEEFFF']
         """
         self.fold_register = {}
-        ungrouped_data = list(chain(*data.values()))
+        ungrouped_data = list(chain(*list(data.values())))
         counts_class_absolute = absolute_class_counts(ungrouped_data)
         counts_class_relative = relative_class_counts(counts_class_absolute)
-        classes = list(counts_class_absolute.keys())
-        class_weights = {
-            k: 1 - v for k, v in counts_class_relative.iteritems()
-        }
+        classes = list(counts_class_absolute)
+        class_weights = {k: 1 - v for k, v in counts_class_relative.items()}
         group_distribution = {
             k: absolute_class_counts(list(v), expected_classes=classes)
-            for k, v in data.iteritems()
+            for k, v in data.items()
         }
         folds = {
             n: {k: 0 for k in counts_class_relative}
             for n in range(1, number_of_folds + 1)
         }
-        fold_register = {n: [] for n in folds.keys()}
-        pool = set(group_distribution.keys())
+        fold_register = {n: [] for n in folds}
+        pool = set(group_distribution)
 
         cnt_pass = 0
         while len(pool) > 0:
@@ -165,10 +161,10 @@ class GroupwiseStratifiedKFold(object):
             # always get the best possible draw from the pool
             if shuffle:
                 random.seed(seed + cnt_pass)
-                fold_order_in_this_pass = folds.keys()
+                fold_order_in_this_pass = list(folds)
                 random.shuffle(fold_order_in_this_pass)
             else:
-                fold_order_in_this_pass = deque(folds.keys())
+                fold_order_in_this_pass = deque(folds)
                 fold_order_in_this_pass.rotate(-cnt_pass)
 
             # in a pass, fill each fold with the best group
@@ -208,8 +204,8 @@ class GroupwiseStratifiedKFold(object):
 
     def __iter__(self):
         """Yields group ids of training and testing items."""
-        for test_fold in self.fold_register.keys():
-            train_foldes = list(self.fold_register.keys())
+        for test_fold in self.fold_register:
+            train_foldes = list(self.fold_register)
             train_foldes.remove(test_fold)
             train_ids_per_fold = [self.fold_register[f] for f in train_foldes]
             train_ids = list(chain(*train_ids_per_fold))
@@ -262,6 +258,6 @@ def build_kfold_reference_dataset(corpus):
     """
     data = {
         tid: graph.get_role_type_labels().values()
-        for tid, graph in corpus.iteritems()
+        for tid, graph in corpus.items()
     }
     return data

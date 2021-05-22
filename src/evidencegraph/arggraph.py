@@ -1,13 +1,9 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """
 @author: Andreas Peldszus
 """
-from __future__ import print_function
 
 import re
-from Queue import Queue
+from queue import Queue
 from textwrap import wrap
 
 import networkx as nx
@@ -15,13 +11,13 @@ from lxml import etree
 from pydot import graph_from_dot_data
 
 
-def sorted_nicely(l):
+def sorted_nicely(iterable):
     """
     Sorts the given iterable in the way that is expected.
     http://stackoverflow.com/a/2669120
 
     Args:
-        l (iterable): The iterable to be sorted.
+        iterable: The iterable to be sorted.
 
     Returns:
         a sorted iterable
@@ -36,12 +32,12 @@ def sorted_nicely(l):
     def alphanum_key(key):
         return [convert(c) for c in re.split("([0-9]+)", key)]
 
-    return sorted(l, key=alphanum_key)
+    return sorted(iterable, key=alphanum_key)
 
 
 class ArgGraphException(nx.NetworkXException):
-    """ A class for exceptions raised in the handling of argumentation
-        graphs """
+    """A class for exceptions raised in the handling of argumentation
+    graphs"""
 
 
 class ArgGraph(nx.DiGraph):
@@ -168,7 +164,7 @@ class ArgGraph(nx.DiGraph):
 
             edge_src = elm.get("src")
             if edge_src not in self.nodes():
-                print ("Error: source unknown\n", etree.tostring(elm))
+                print("Error: source unknown\n", etree.tostring(elm))
 
             edge_trg = elm.get("trg")
             if edge_trg not in self.nodes():
@@ -191,7 +187,7 @@ class ArgGraph(nx.DiGraph):
                 ]:
                     self.add_seg_edge(edge_src, edge_trg)
                 else:
-                    print (
+                    print(
                         "Error: malformed segmentation edge\n",
                         etree.tostring(elm),
                     )
@@ -205,7 +201,7 @@ class ArgGraph(nx.DiGraph):
                         edge_id, edge_src, edge_trg, edge_type
                     )
                 else:
-                    print (
+                    print(
                         "Error: malformed direct edge\n",
                         etree.tostring(elm),
                     )
@@ -219,7 +215,7 @@ class ArgGraph(nx.DiGraph):
                         edge_id, edge_src, edge_trg, edge_type
                     )
                 else:
-                    print (
+                    print(
                         (
                             "Error: malformed undercutting edge\n",
                             etree.tostring(elm),
@@ -233,13 +229,13 @@ class ArgGraph(nx.DiGraph):
                 ):
                     self.add_edge(elm.get("src"), elm.get("trg"), type="src")
                 else:
-                    print (
+                    print(
                         "Error: malformed adding edge\n",
                         etree.tostring(elm),
                     )
 
             else:
-                print ("Error: unknown edge type\n", etree.tostring(elm))
+                print("Error: unknown edge type\n", etree.tostring(elm))
 
         # update adu short names
         self.update_adu_labels()
@@ -296,7 +292,7 @@ class ArgGraph(nx.DiGraph):
         # serialize edus
         max_edu_count = 1
         edus = self.get_edus()
-        for node in sorted_nicely(edus.keys()):
+        for node in sorted_nicely(edus):
             edu_text = edus[node]
             new_edu_id = "e{}".format(max_edu_count)
             new_ids[node] = new_edu_id
@@ -400,7 +396,7 @@ class ArgGraph(nx.DiGraph):
 
         return etree.tostring(
             doc_elm, encoding="UTF-8", pretty_print=True, xml_declaration=True
-        )
+        ).decode("utf-8")
 
     def update_adu_labels(self):
         # first label all edus
@@ -443,7 +439,7 @@ class ArgGraph(nx.DiGraph):
         return [
             i
             for i in self.predecessors(node)
-            if "type" in self.node[i] and self.node[i]["type"] == type
+            if "type" in self.node[i] and self.node[i]["type"] == node_type
         ]
 
     def predecessor_by_edge_type(self, node, edge_type):
@@ -569,11 +565,11 @@ class ArgGraph(nx.DiGraph):
         # crossing edges don't work.
 
         # template_graph = u'digraph G {\n// %s\nrankdir=LR\n%s}' # name content  # noqa
-        template_graph = u"digraph G {\n// %s\n%s}"  # name content
-        template_subgraph = u"subgraph %s {\n%s\n}"  # name content
-        template_node_label = u'%s [label="%s"];'  # id label
+        template_graph = "digraph G {\n// %s\n%s}"  # name content
+        template_subgraph = "subgraph %s {\n%s\n}"  # name content
+        template_node_label = '%s [label="%s"];'  # id label
 
-        edu_content = u""
+        edu_content = ""
 
         # first edus nodes
         node_type = "edu"
@@ -594,9 +590,7 @@ class ArgGraph(nx.DiGraph):
 
         # add invisible edges from edu to edu to enforce linearity in the graph
         # template_linearity_subgraph = '\nsubgraph linearity {\nedge [weight=8, color="#ffcccc"];\n%s}'  # noqa
-        template_linearity_subgraph = (
-            "\nsubgraph linearity {\nedge [weight=8, style=invis];\n%s}"
-        )  # noqa
+        template_linearity_subgraph = "\nsubgraph linearity {\nedge [weight=8, style=invis];\n%s}"  # noqa
         edges = ""
         for src, trg in zip(nodes, nodes[1:]):
             edges += "%s -> %s\n" % (src, trg)
@@ -614,7 +608,7 @@ class ArgGraph(nx.DiGraph):
             )
         edu_content += "\n" + subgraph
 
-        graph_content = u""
+        graph_content = ""
 
         # remaining nodes
         for node_type in styles_nodes:
@@ -659,22 +653,21 @@ class ArgGraph(nx.DiGraph):
     def show_in_ipynb(self, edu_cluster=False):
         from IPython.display import Image
 
-        dot = self.export_to_dot(edu_cluster=edu_cluster).encode("utf-8")
-        return Image(graph_from_dot_data(dot).create_png())
+        dot = self.render_as_dot(edu_cluster=edu_cluster)
+        dot_graph = graph_from_dot_data(dot)[0]
+        return Image(dot_graph.create_png())
 
     def render_as_dot(self, edu_cluster=False):
-        dot = self.export_to_dot(edu_cluster=edu_cluster)
-        dot_utf8 = dot.encode("utf-8")
-        return dot_utf8
+        return self.export_to_dot(edu_cluster=edu_cluster)
 
     def render_as_png(self, filename, edu_cluster=False):
-        dot_utf8 = self.render_as_dot(edu_cluster=edu_cluster)
-        dot_graph = graph_from_dot_data(dot_utf8)
+        dot = self.render_as_dot(edu_cluster=edu_cluster)
+        dot_graph = graph_from_dot_data(dot)[0]
         dot_graph.write_png(filename)
 
     def render_as_pdf(self, filename, edu_cluster=False):
-        dot_utf8 = self.render_as_dot(edu_cluster=edu_cluster)
-        dot_graph = graph_from_dot_data(dot_utf8)
+        dot = self.render_as_dot(edu_cluster=edu_cluster)
+        dot_graph = graph_from_dot_data(dot)[0]
         dot_graph.write_pdf(filename)
 
     def get_edus(self):
@@ -743,7 +736,7 @@ class ArgGraph(nx.DiGraph):
         ['txt1', 'txt2', 'txt3', 'txt4', 'txt5', 'txt6', 'txt7']
         """
         edus = self.get_edus()
-        return [edus[i] for i in sorted_nicely(edus.keys())]
+        return [edus[i] for i in sorted_nicely(edus)]
 
     def get_unsegmented_text(self):
         """
@@ -757,7 +750,7 @@ class ArgGraph(nx.DiGraph):
         """
         >>> g = get_very_complex_arggraph()
         >>> g.get_adu_adu_relations()
-        [('a3', 'a2', 'add'), ('a2', 'a1', 'reb'), ('a4', 'a2', 'und')]
+        [('a2', 'a1', 'reb'), ('a3', 'a2', 'add'), ('a4', 'a2', 'und')]
         """
         # make sure to extract relations from a relation node free graph
         if (
@@ -850,7 +843,7 @@ class ArgGraph(nx.DiGraph):
 
         r = []
 
-        head = {edu: edu for edu in self.get_edus().keys()}
+        head = {edu: edu for edu in self.get_edus()}
 
         # direct segmentation edges (edu to adu)
         adus = self.get_adus()
@@ -952,10 +945,10 @@ class ArgGraph(nx.DiGraph):
 def get_minimal_arggraph():
     """
     >>> a = get_minimal_arggraph()
-    >>> a.node
-    {'a1': {'role': 'pro', 'type': 'adu'}, 'c1': {'type': 'rel'}, 'a2': {'role': 'pro', 'type': 'adu'}, 'e1': {'text': 'Swim!', 'type': 'edu'}, 'e2': {'text': 'Good weather.', 'type': 'edu'}}
-    >>> a.edge
-    {'a1': {}, 'c1': {'a1': {'type': 'sup'}}, 'a2': {'c1': {'type': 'src'}}, 'e1': {'a1': {'type': 'seg'}}, 'e2': {'a2': {'type': 'seg'}}}
+    >>> sorted(a.node.items())
+    [('a1', {'type': 'adu', 'role': 'pro'}), ('a2', {'type': 'adu', 'role': 'pro'}), ('c1', {'type': 'rel'}), ('e1', {'type': 'edu', 'text': 'Swim!'}), ('e2', {'type': 'edu', 'text': 'Good weather.'})]
+    >>> sorted(a.edge.items())
+    [('a1', {}), ('a2', {'c1': {'type': 'src'}}), ('c1', {'a1': {'type': 'sup'}}), ('e1', {'a1': {'type': 'seg'}}), ('e2', {'a2': {'type': 'seg'}})]
     """
     a = ArgGraph(id="g1")
     a.add_edu_adu("e1", "Swim!", "a1", "pro")
@@ -967,10 +960,10 @@ def get_minimal_arggraph():
 def get_simple_arggraph():
     """
     >>> a = get_simple_arggraph()
-    >>> a.node
-    {'a1': {'role': 'pro', 'type': 'adu'}, 'a3': {'role': 'opp', 'type': 'adu'}, 'a2': {'role': 'pro', 'type': 'adu'}, 'a4': {'role': 'pro', 'type': 'adu'}, 'e4': {'text': 'Bought anti-sharks-spray.', 'type': 'edu'}, 'c3': {'type': 'rel'}, 'c2': {'type': 'rel'}, 'c1': {'type': 'rel'}, 'e1': {'text': 'Swim!', 'type': 'edu'}, 'e3': {'text': 'Sharks!!!!1!', 'type': 'edu'}, 'e2': {'text': 'Good weather.', 'type': 'edu'}}
-    >>> a.edge
-    {'a1': {}, 'a3': {'c2': {'type': 'src'}}, 'a2': {'c1': {'type': 'src'}}, 'a4': {'c3': {'type': 'src'}}, 'e4': {'a4': {'type': 'seg'}}, 'c3': {'c2': {'type': 'und'}}, 'c2': {'c1': {'type': 'und'}}, 'c1': {'a1': {'type': 'sup'}}, 'e1': {'a1': {'type': 'seg'}}, 'e3': {'a3': {'type': 'seg'}}, 'e2': {'a2': {'type': 'seg'}}}
+    >>> sorted(a.node.items())
+    [('a1', {'type': 'adu', 'role': 'pro'}), ('a2', {'type': 'adu', 'role': 'pro'}), ('a3', {'type': 'adu', 'role': 'opp'}), ('a4', {'type': 'adu', 'role': 'pro'}), ('c1', {'type': 'rel'}), ('c2', {'type': 'rel'}), ('c3', {'type': 'rel'}), ('e1', {'type': 'edu', 'text': 'Swim!'}), ('e2', {'type': 'edu', 'text': 'Good weather.'}), ('e3', {'type': 'edu', 'text': 'Sharks!!!!1!'}), ('e4', {'type': 'edu', 'text': 'Bought anti-sharks-spray.'})]
+    >>> sorted(a.edge.items())
+    [('a1', {}), ('a2', {'c1': {'type': 'src'}}), ('a3', {'c2': {'type': 'src'}}), ('a4', {'c3': {'type': 'src'}}), ('c1', {'a1': {'type': 'sup'}}), ('c2', {'c1': {'type': 'und'}}), ('c3', {'c2': {'type': 'und'}}), ('e1', {'a1': {'type': 'seg'}}), ('e2', {'a2': {'type': 'seg'}}), ('e3', {'a3': {'type': 'seg'}}), ('e4', {'a4': {'type': 'seg'}})]
     """
     a = ArgGraph(id="g1")
     a.add_edu_adu("e1", "Swim!", "a1", "pro")
@@ -986,10 +979,10 @@ def get_simple_arggraph():
 def get_complex_arggraph():
     """
     >>> a = get_complex_arggraph()
-    >>> a.node
-    {'E6': {'text': 'So let us swim!', 'type': 'edu'}, 'J1': {'type': 'joint'}, 'A1': {'role': 'pro', 'type': 'adu'}, 'E5': {'text': 'It is effective.', 'type': 'edu'}, 'A3': {'role': 'opp', 'type': 'adu'}, 'A2': {'role': 'pro', 'type': 'adu'}, 'A5': {'role': 'pro', 'type': 'adu'}, 'A4': {'role': 'pro', 'type': 'adu'}, 'E4': {'text': 'Bought anti-sharks-spray.', 'type': 'edu'}, 'C3': {'type': 'rel'}, 'C2': {'type': 'rel'}, 'C1': {'type': 'rel'}, 'E3.1': {'text': '!!!1!', 'type': 'edu'}, 'E1': {'text': 'Swim!', 'type': 'edu'}, 'E3': {'text': 'Sharks!', 'type': 'edu'}, 'E2': {'text': 'Good weather.', 'type': 'edu'}}
-    >>> a.edge
-    {'E6': {'A1': {'type': 'seg'}}, 'J1': {'A3': {'type': 'seg'}}, 'A1': {}, 'E5': {'A5': {'type': 'seg'}}, 'A3': {'C2': {'type': 'src'}}, 'A2': {'C1': {'type': 'src'}}, 'A5': {'C3': {'type': 'src'}}, 'A4': {'C3': {'type': 'src'}}, 'E4': {'A4': {'type': 'seg'}}, 'C3': {'C2': {'type': 'und'}}, 'C2': {'C1': {'type': 'und'}}, 'C1': {'A1': {'type': 'sup'}}, 'E3.1': {'J1': {'type': 'seg'}}, 'E1': {'A1': {'type': 'seg'}}, 'E3': {'J1': {'type': 'seg'}}, 'E2': {'A2': {'type': 'seg'}}}
+    >>> sorted(a.node.items())
+    [('A1', {'type': 'adu', 'role': 'pro'}), ('A2', {'type': 'adu', 'role': 'pro'}), ('A3', {'type': 'adu', 'role': 'opp'}), ('A4', {'type': 'adu', 'role': 'pro'}), ('A5', {'type': 'adu', 'role': 'pro'}), ('C1', {'type': 'rel'}), ('C2', {'type': 'rel'}), ('C3', {'type': 'rel'}), ('E1', {'type': 'edu', 'text': 'Swim!'}), ('E2', {'type': 'edu', 'text': 'Good weather.'}), ('E3', {'type': 'edu', 'text': 'Sharks!'}), ('E3.1', {'type': 'edu', 'text': '!!!1!'}), ('E4', {'type': 'edu', 'text': 'Bought anti-sharks-spray.'}), ('E5', {'type': 'edu', 'text': 'It is effective.'}), ('E6', {'type': 'edu', 'text': 'So let us swim!'}), ('J1', {'type': 'joint'})]
+    >>> sorted(a.edge.items())
+    [('A1', {}), ('A2', {'C1': {'type': 'src'}}), ('A3', {'C2': {'type': 'src'}}), ('A4', {'C3': {'type': 'src'}}), ('A5', {'C3': {'type': 'src'}}), ('C1', {'A1': {'type': 'sup'}}), ('C2', {'C1': {'type': 'und'}}), ('C3', {'C2': {'type': 'und'}}), ('E1', {'A1': {'type': 'seg'}}), ('E2', {'A2': {'type': 'seg'}}), ('E3', {'J1': {'type': 'seg'}}), ('E3.1', {'J1': {'type': 'seg'}}), ('E4', {'A4': {'type': 'seg'}}), ('E5', {'A5': {'type': 'seg'}}), ('E6', {'A1': {'type': 'seg'}}), ('J1', {'A3': {'type': 'seg'}})]
     """
     a = ArgGraph(id="g1")
     a.add_edu_adu("E1", "Swim!", "A1", "pro")

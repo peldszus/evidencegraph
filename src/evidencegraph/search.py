@@ -1,16 +1,14 @@
-# -*- coding: utf-8 -*-
-
 """
 @author: Andreas Peldszus
 """
-from __future__ import print_function
+
 
 import sys
 
 import numpy as np
 
 
-class BasicWeightingSearch(object):
+class BasicWeightingSearch:
     def __init__(self, calc_function):
         """
         An abstract search for the best weighting, represented as a
@@ -79,7 +77,7 @@ class BasicWeightingSearch(object):
         n = len(self.scores)
         min_score = min(self.scores.values())
         max_score = max(self.scores.values())
-        print (
+        print(
             "Searched {} weightings, scoring from {} up to {}.".format(
                 n, min_score, max_score
             )
@@ -100,7 +98,7 @@ class ThrowRiceSearch(BasicWeightingSearch):
         >>> w[0] > w[1] > w[2] > w[3]
         True
         """
-        super(ThrowRiceSearch, self).__init__(calc_function)
+        super().__init__(calc_function)
         self.n = n
 
     def search(self, verbose=False):
@@ -117,7 +115,7 @@ class ThrowRiceSearch(BasicWeightingSearch):
             searched_weightings += 1
             self.test_weighting(*weighting)
         if verbose:
-            print ("!")
+            print("!")
 
 
 class EvolutionarySearch(BasicWeightingSearch):
@@ -143,7 +141,7 @@ class EvolutionarySearch(BasicWeightingSearch):
         >>> w[0] > w[1] > w[2] > w[3]
         True
         """
-        super(EvolutionarySearch, self).__init__(calc_function)
+        super().__init__(calc_function)
         self.n_to_start_with = n_to_start_with
         self.n_to_keep_proportion = n_to_keep_proportion
         self.factor = factor
@@ -166,7 +164,7 @@ class EvolutionarySearch(BasicWeightingSearch):
             top_weightings = sorted(
                 [
                     (score, weighting)
-                    for weighting, score in self.scores.iteritems()
+                    for weighting, score in self.scores.items()
                 ],
                 reverse=True,
             )
@@ -183,7 +181,7 @@ class EvolutionarySearch(BasicWeightingSearch):
             rate = rate * self.factor
             if verbose:
                 best = top_weightings[0]
-                print (
+                print(
                     "### rate=%.4f - top weighting: score=%.3f weighting=(%s)"
                     % (rate, best[0], ", ".join(["%.3f" % w for w in best[1]]))
                 )

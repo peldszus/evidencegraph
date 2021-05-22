@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-
 """
 @author: Andreas Peldszus
 """
-from __future__ import print_function
+
 
 import networkx as nx
 
@@ -31,7 +29,7 @@ class EvidenceGraph(nx.MultiDiGraph):
         """
         self.main_weight_id = main_weight_id
         self.weight_ids = weight_ids if weight_ids is not None else list()
-        super(EvidenceGraph, self).__init__(data, **attr)
+        super().__init__(data, **attr)
 
     def get_weighted_evidence_graph(self, weights=None):
         """
@@ -63,9 +61,7 @@ class EvidenceGraph(nx.MultiDiGraph):
         # calculate the weighted sum for all weights
         for s, t, k, d in self.edges(keys=True, data=True):
             # keep all the dict entries but the weight_ids
-            new_d = {
-                u: v for u, v in d.iteritems() if u not in self.weight_ids
-            }
+            new_d = {u: v for u, v in d.items() if u not in self.weight_ids}
             # calc weight
             new_d[self.main_weight_id] = self._normalized_weighted_sum(
                 d, weights
@@ -76,9 +72,9 @@ class EvidenceGraph(nx.MultiDiGraph):
     def _normalized_weighted_sum(self, d, weights):
         sum_of_weights = 0.0
         sum_of_weighted_weights = 0.0
-        for weight_id, weight in weights.iteritems():
+        for weight_id, weight in weights.items():
             if weight_id not in self.weight_ids or weight_id not in d:
-                print (
+                print(
                     (
                         "Warning: '%s' is not a registered weight id. "
                         "skipping."
@@ -97,4 +93,4 @@ class EvidenceGraph(nx.MultiDiGraph):
 class WeightedEvidenceGraph(nx.MultiDiGraph):
     def __init__(self, data=None, main_weight_id="weight", **attr):
         self.main_weight_id = main_weight_id
-        super(WeightedEvidenceGraph, self).__init__(data, **attr)
+        super().__init__(data, **attr)

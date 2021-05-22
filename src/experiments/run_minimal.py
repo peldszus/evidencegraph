@@ -1,10 +1,7 @@
-#!/usr/bin/env python2.7
-# -*- mode: python; coding: utf-8; -*-
-
 """
 @author: Andreas Peldszus
 """
-from __future__ import print_function
+
 
 import json
 from argparse import ArgumentParser
@@ -21,7 +18,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--corpus",
         "-c",
-        choices=CORPORA.keys(),
+        choices=CORPORA,
         default="m112en",
         help="the corpus to train on",
     )
@@ -77,7 +74,7 @@ if __name__ == "__main__":
         texts, trees = corpus.segments_trees(
             params.pop("segmentation"), params["relation_set"]
         )
-        print ("### Running experiment condition", condition_name)
+        print("### Running experiment condition", condition_name)
         predictions, _decisions = run_experiment_condition(
             texts, trees, folds, features, params, condition_name
         )

@@ -13,7 +13,7 @@ if __name__ == "__main__":
         ]
     }
 
-    for (segmentation, relationset), conditions in settings.iteritems():
+    for (segmentation, relationset), conditions in settings.items():
         evaluate_setting(
             lang, segmentation, relationset, conditions, corpus_id="m112en"
         )
@@ -26,7 +26,7 @@ if __name__ == "__main__":
         ]
     }
 
-    for (segmentation, relationset), conditions in settings.iteritems():
+    for (segmentation, relationset), conditions in settings.items():
         evaluate_setting(
             lang,
             segmentation,

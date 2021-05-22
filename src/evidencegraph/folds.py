@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 The static folds to be used for evaluation on the
 * arg-microtext corpus (m112de, m112en) and
@@ -1233,7 +1231,7 @@ folds = [
     ],
 ]
 
-tids = sorted(list(set([tid for fold in folds for tid in fold])))
+tids = sorted({tid for fold in folds for tid in fold})
 
 
 def get_static_folds():

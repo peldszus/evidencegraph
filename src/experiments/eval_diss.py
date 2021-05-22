@@ -58,7 +58,7 @@ if __name__ == "__main__":
     for (
         (segmentation, relationset, lang, corpus_id),
         conditions,
-    ) in settings.iteritems():
+    ) in settings.items():
         conditions = [c.format(lang) for c in conditions]
         evaluate_setting(
             lang, segmentation, relationset, conditions, corpus_id=corpus_id

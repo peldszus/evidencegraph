@@ -1,19 +1,16 @@
-# -*- mode: python; coding: utf-8; -*-
-
 """
 Created on 18.09.2017
 
 @author: Andreas Peldszus
 """
-from __future__ import print_function
-from __future__ import absolute_import
+
 
 import os
 
-from .arggraph import ArgGraph
-from .argtree import ArgTree
-from .argtree import SIMPLE_RELATION_SET
-from .folding import RepeatedGroupwiseStratifiedKFold
+from evidencegraph.arggraph import ArgGraph
+from evidencegraph.argtree import ArgTree
+from evidencegraph.argtree import SIMPLE_RELATION_SET
+from evidencegraph.folding import RepeatedGroupwiseStratifiedKFold
 
 
 CORPORA = {
@@ -36,7 +33,7 @@ CORPORA = {
 }
 
 
-class GraphCorpus(object):
+class GraphCorpus:
     def __init__(self):
         self.graphs = {}
 
@@ -50,7 +47,7 @@ class GraphCorpus(object):
         for fn in filenames:
             if fn.endswith(".xml"):
                 if not silent:
-                    print (fn, "...")
+                    print(fn, "...")
                 g = ArgGraph()
                 g.load_from_xml(os.path.join(path, fn))
                 graph_id = g.graph["id"]
@@ -61,7 +58,7 @@ class GraphCorpus(object):
                         self.graphs[graph_id] = g
                         ids.append(graph_id)
                 except Exception as e:
-                    print ("Could not load {} :".format(fn), e)
+                    print("Could not load {} :".format(fn), e)
         return ids
 
     def segments(self, segmentation):
@@ -75,7 +72,7 @@ class GraphCorpus(object):
         else:
             segment_getter = ArgGraph.get_segmented_text
 
-        for id_, graph in self.graphs.iteritems():
+        for id_, graph in self.graphs.items():
             texts[id_] = segment_getter(graph)
         return texts
 
@@ -88,7 +85,7 @@ class GraphCorpus(object):
         from_adu = segmentation == "adu"
         long_names = relation_set != SIMPLE_RELATION_SET
         tree_corpus = {}
-        for id_, arggraph in self.graphs.iteritems():
+        for id_, arggraph in self.graphs.items():
             tree = ArgTree(relation_set=relation_set)
             tree.load_from_arggraph(
                 arggraph, from_adus=from_adu, long_names=long_names
@@ -112,11 +109,11 @@ class GraphCorpus(object):
         #     for tid, graph in self.graphs.iteritems()
         # }
         labels = {}
-        for tid, graph in self.graphs.iteritems():
+        for tid, graph in self.graphs.items():
             try:
-                labels[tid] = graph.get_role_type_labels().values()
+                labels[tid] = list(graph.get_role_type_labels().values())
             except Exception:
-                print ("Error", tid)
+                print("Error", tid)
                 pass
         return labels
 

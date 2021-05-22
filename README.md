@@ -1,7 +1,7 @@
 Evidence graphs for parsing argumentation structure
 ===================================================
 
-[![Build Status](https://travis-ci.org/peldszus/evidencegraph.svg?branch=master)](https://travis-ci.org/peldszus/evidencegraph)
+[![Build Status](https://github.com/peldszus/evidencegraph/actions/workflows/workflow.yaml/badge.svg?branch=master)](https://github.com/peldszus/evidencegraph/actions)
 [![codecov](https://codecov.io/gh/peldszus/evidencegraph/branch/master/graph/badge.svg)](https://codecov.io/gh/peldszus/evidencegraph)
 [![GitHub](https://img.shields.io/github/license/peldszus/evidencegraph)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
@@ -16,11 +16,11 @@ It basically is a re-implementation of the model presented first in [(1)](#refer
 
 ## Prerequisites
 
-This code runs in Python 2.7. It is recommended to install it in a separate virtual environment. Here are installation instructions for an Ubuntu 18.04 linux:
+This code runs in Python 3.8. It is recommended to install it in a separate virtual environment. Here are installation instructions for an Ubuntu 18.04 linux:
 
 ```sh
 # basics
-sudo apt install virtualenv python2.7-dev
+sudo apt install python3.8-dev
 # for lxml
 sudo apt install libxml2-dev libxslt1-dev
 # for matplotlib
@@ -57,14 +57,14 @@ Run a (shortened and simplified) minimal experiment, to see that everything is w
     env/bin/python src/experiments/run_minimal.py --corpus m112en
 
 You should (see last lines of the output) get an average macro F1 of the *base classifiers* similar to:  
-  (cc ~= 0.84, ro ~= 0.75, fu ~= 0.74, at ~= 0.70).
+  (cc ~= 0.82, ro ~= 0.75, fu ~= 0.74, at ~= 0.72).
 
 Evaluate the results, which have been written to `data/`:
 
     env/bin/python src/experiments/eval_minimal.py --corpus m112en
 
 You should (see first lines of the output) get an average macro F1 for the *decoded results* similar to:  
-  (cc ~= 0.86, ro ~= 0.77, fu ~= 0.75, at ~= 0.71).
+  (cc ~= 0.86, ro ~= 0.74, fu ~= 0.76, at ~= 0.71).
 
 
 ## Replicate published results
@@ -75,6 +75,8 @@ Adjust run_minimal.py:
 * In the experimental conditions, set `optimize_weights` to `True` so that the global model's hyperparameters are optimized.
 
 For more details, see the actual experiment definitions in `src/experiments`.
+
+Note that the results published in the papers were obtained using the Python 2 version of this code base. With the migration to Python 3 and various updated dependencies, the scores differ slightly. To reproduce the exact published scores, you will need to run version v0.4.0 of this code base.
 
 
 ## Reusing / extending components of the library

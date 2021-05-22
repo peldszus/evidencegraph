@@ -1,12 +1,9 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """
 Created on 05.08.2014
 
 @author: andi
 """
-from __future__ import print_function
+
 
 import argparse
 import sys
@@ -23,7 +20,7 @@ if __name__ == "__main__":
 
     for i in args.input:
         if i.endswith(".xml"):
-            print (i, "...")
+            print(i, "...")
             id = i[:-4]
             g = ArgGraph()
             g.load_from_xml(i)
