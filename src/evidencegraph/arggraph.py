@@ -439,7 +439,7 @@ class ArgGraph(nx.DiGraph):
         return [
             i
             for i in self.predecessors(node)
-            if "type" in self.node[i] and self.node[i]["type"] == type
+            if "type" in self.node[i] and self.node[i]["type"] == node_type
         ]
 
     def predecessor_by_edge_type(self, node, edge_type):

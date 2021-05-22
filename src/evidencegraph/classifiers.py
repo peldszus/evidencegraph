@@ -199,7 +199,7 @@ class EvidenceGraphClassifier:
 
     def train(self, input_trees, output_trees):
         # train base classifiers
-        for level, clf in self.ensemble.items():
+        for clf in self.ensemble.values():
             if self.optimize:
                 clf.train_optimize(input_trees, output_trees, verbose=False)
             else:
@@ -212,7 +212,7 @@ class EvidenceGraphClassifier:
         if self.optimize_weighting == "inner_cv":
             # predict all items in trainingset as unseen via inner CV
             egs = []
-            for (train_X, train_y), (test_X, test_y) in foldsof(
+            for (train_X, train_y), (test_X, _) in foldsof(
                 input_trees, output_trees
             ):
                 egclf = EvidenceGraphClassifier(
