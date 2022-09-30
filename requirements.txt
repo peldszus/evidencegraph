@@ -10,5 +10,5 @@ matplotlib>=3.3.4
 lxml==4.6.5
 pydot==1.4.2
 spacy[lookups]==3.0.6
-joblib==1.0.1
+joblib==1.2.0
 pre-commit==1.17.0
